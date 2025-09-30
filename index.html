@@ -3,13 +3,23 @@
 	<head>
 		<title>Navella</title>
 		<meta charset="UTF-8">
-		<meta property="og:title" content="Navella"/>
-		<meta property="og:type" content="website"/>
+		<meta property="og:title" content="Navella">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://drkdragon.github.io/Navella/favicon.png">
+		<link rel="icon" type="image/png" href="/Navella/favicon.png">
+		<link rel="stylesheet" href="index.css">
 		<script src="index.js"></script>
 	</head>
 	<body>
 		<noscript>
 			This site requires JavaScript to function.
 		</noscript>
+		<div class="tabs">
+			<button class="tab-button">System Map</button>
+			<button class="tab-button">System Directory</button>
+		</div>
+		<div class="tab">
+			<canvas id="map" width="3329" height="3329"></canvas>
+		</div>
 	</body>
 </html>
