@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bd3le6gt1rqkv"]
 
-[ext_resource type="Script" uid="uid://dt7y4ilhgx6qi" path="res://system_map.gd" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://dt7y4ilhgx6qi" path="res://galaxy_map.gd" id="1_fyqef"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyqef"]
 bg_color = Color(0, 0, 0, 1)
@@ -58,17 +58,19 @@ theme_override_styles/tab_selected = SubResource("StyleBoxFlat_m6e0p")
 theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_fyqef")
 current_tab = 0
 
-[node name="Galaxy Map" type="ScrollContainer" parent="."]
+[node name="Galaxy Map" type="SubViewportContainer" parent="."]
 layout_mode = 2
+stretch = true
 metadata/_tab_index = 0
 
-[node name="System Map" type="GridContainer" parent="Galaxy Map"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-columns = 26
+[node name="SubViewport" type="SubViewport" parent="Galaxy Map"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 616)
+render_target_update_mode = 4
+
+[node name="Galaxy Map" type="Node2D" parent="Galaxy Map/SubViewport"]
+position = Vector2(0, 32)
 script = ExtResource("1_fyqef")
 
 [node name="System Map" type="ScrollContainer" parent="."]

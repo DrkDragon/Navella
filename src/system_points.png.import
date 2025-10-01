@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cbwgqpb8xt4lc"
+path="res://.godot/imported/system_points.png-bf41f1cfb4530096902eb172f767f325.res"
+
+[deps]
+
+source_file="res://system_points.png"
+dest_files=["res://.godot/imported/system_points.png-bf41f1cfb4530096902eb172f767f325.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
