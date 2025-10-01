@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd3le6gt1rqkv"]
+
+[ext_resource type="Script" uid="uid://dt7y4ilhgx6qi" path="res://system_map.gd" id="1_fyqef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyqef"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 1
+border_color = Color(0.8, 0, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27fn8"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.175, 0.175, 0.175, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nltto"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.06469653, 0.064696535, 0.06469648, 1)
+border_color = Color(0.175, 0.175, 0.175, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6e0p"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(1, 0, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyqef"]
+
+[node name="UI" type="TabContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_selected_color = Color(0, 1, 1, 1)
+theme_override_colors/font_hovered_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_unselected_color = Color(0, 0.69803923, 0.69803923, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_fyqef")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_27fn8")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_nltto")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_m6e0p")
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_fyqef")
+current_tab = 0
+
+[node name="Galaxy Map" type="ScrollContainer" parent="."]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="System Map" type="GridContainer" parent="Galaxy Map"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 26
+script = ExtResource("1_fyqef")
+
+[node name="System Map" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
