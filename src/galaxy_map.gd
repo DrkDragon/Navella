@@ -160,35 +160,57 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.position -= event.screen_relative / camera.zoom
 
 func _draw() -> void:
+	var line_width := (
+		1 if real_size(Vector2.ONE).x > 2 else 2
+	) if real_size(Vector2.ONE).x > 1 else -1
+	
+	draw_line(
+		Vector2(0, MAP_SIZE),
+		Vector2(MAP_SIZE, MAP_SIZE),
+		Color.RED,
+		line_width
+	)
+	
 	for row in range(TILE_SIZE):
-		for column in range(TILE_SIZE):
-			draw_rect(
-				Rect2(
-					column * SECTOR_SIZE,
-					row * SECTOR_SIZE,
-					SECTOR_SIZE,
-					SECTOR_SIZE
-				),
-				Color.RED,
-				false,
-				(1 if real_size(Vector2.ONE).x > 2 else 2) if real_size(Vector2.ONE).x > 1 else -1
-			)
-			
+		draw_line(
+			Vector2(0, row * SECTOR_SIZE),
+			Vector2(MAP_SIZE, row * SECTOR_SIZE),
+			Color.RED,
+			line_width
+		)
+		
+		if real_size(Vector2.ONE).x > 1:
 			for subrow in range(TILE_COUNT):
-				for subcolumn in range(TILE_COUNT):
-					if real_size(Vector2.ONE).x > 1:
-						draw_rect(
-							Rect2(
-								column * SECTOR_SIZE +
-									subcolumn * TILE_SIZE,
-								row * SECTOR_SIZE +
-									subrow * TILE_SIZE,
-								TILE_SIZE,
-								TILE_SIZE
-							),
-							Color.RED,
-							false
-						)
+				var subpos := row * SECTOR_SIZE + subrow * TILE_SIZE
+				draw_line(
+					Vector2(0, subpos),
+					Vector2(MAP_SIZE, subpos),
+					Color.RED
+				)
+	
+	draw_line(
+		Vector2(MAP_SIZE, 0),
+		Vector2(MAP_SIZE, MAP_SIZE),
+		Color.RED,
+		line_width
+	)
+	
+	for column in range(TILE_SIZE):
+		draw_line(
+			Vector2(column * SECTOR_SIZE, 0),
+			Vector2(column * SECTOR_SIZE, MAP_SIZE),
+			Color.RED,
+			line_width
+		)
+		
+		if real_size(Vector2.ONE).x > 1:
+			for subcolumn in range(TILE_COUNT):
+				var subpos := column * SECTOR_SIZE + subcolumn * TILE_SIZE
+				draw_line(
+					Vector2(subpos, 0),
+					Vector2(subpos, MAP_SIZE),
+					Color.RED
+				)
 
 static func get_coord(row: int, column: int, subrow: int, subcolumn: int) -> String:
 	return LETTERS[column - 1] + str(row) + "-" + LETTERS[subcolumn] + str(subrow + 1)
