@@ -13,6 +13,8 @@ config_version=5
 config/name="Navella"
 run/main_scene="uid://bd3le6gt1rqkv"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://ccp01oxtofo5r"
 config/icon="uid://b25y8ddw0nqnt"
 
 [rendering]

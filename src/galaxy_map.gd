@@ -1,5 +1,7 @@
 extends Node2D
 
+const BACKGROUND := preload("res://background.png")
+const DISTORT := preload("res://distort.tres")
 const CIRCLE := preload("res://circle.tres")
 const SYSTEM_POINTS := preload("res://system_points.png")
 const TILE_SIZE := 25
@@ -11,6 +13,7 @@ const POINT_SCALE := 1.0 / 512
 const LABEL_SCALE := 1.0 / 2
 const LETTERS := "ABCDEFGHIJKLMNOPQRSTUVWXY"
 
+signal display_system(system: String)
 signal zoom_changed
 
 class GridLabel extends Label:
@@ -59,6 +62,11 @@ class GridLabel extends Label:
 			)
 
 class SystemPoint extends Sprite2D:
+	var coord: String
+	var discriminator: int
+	
+	signal display_system(system: String)
+	
 	func _init() -> void:
 		texture = CIRCLE
 	
@@ -66,6 +74,7 @@ class SystemPoint extends Sprite2D:
 		for point in get_tree().get_nodes_in_group("selected_system"):
 			point.deselect()
 		add_to_group("selected_system")
+		display_system.emit(coord + "-" + str(discriminator))
 		queue_redraw()
 	
 	func deselect() -> void:
@@ -89,12 +98,22 @@ class SystemPoint extends Sprite2D:
 			false
 		)
 
+var background := Sprite2D.new()
 var camera := Camera2D.new()
 
 func real_size(size: Vector2) -> Vector2:
 	return size * camera.zoom
 
 func _init() -> void:
+	background.z_index = -1
+	background.centered = false
+	background.texture = BACKGROUND
+	background.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+	background.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	background.scale = (Vector2.ONE * MAP_SIZE) / BACKGROUND.get_size()
+	background.material = DISTORT
+	add_child(background)
+	
 	camera.position = Vector2.ONE * MAP_SIZE / 2
 	add_child(camera)
 	
@@ -107,13 +126,33 @@ func _init() -> void:
 		column_label.fix_to_column(i)
 		add_child(column_label)
 	
+	var system_counts: Dictionary[String, int] = {}
+	
 	for y in range(MAP_SIZE):
 		for x in range(MAP_SIZE):
 			if not SYSTEM_POINTS.get_bit(x, y): continue
 			
-			var point := SystemPoint.new()
+			var tile := Vector2i(x, y) / (Vector2i.ONE * TILE_SIZE)
+			var coord := tile / (Vector2i.ONE * TILE_COUNT)
+			var subcoord := tile % (Vector2i.ONE * TILE_COUNT)
 			
+			var coord_text := (
+				LETTERS[coord.x] +
+				str(SECTOR_COUNT - coord.y) +
+				"-" +
+				LETTERS[subcoord.x] +
+				str(subcoord.y + 1)
+			)
+			
+			if not system_counts.has(coord_text): system_counts[coord_text] = 0
+			system_counts[coord_text] += 1
+			
+			var point := SystemPoint.new()
+			point.coord = coord_text
+			point.discriminator = system_counts[coord_text]
 			point.position = Vector2(x, y)
+			
+			point.display_system.connect(display_system.emit)
 			
 			zoom_changed.connect(func():
 				point.scale = ((Vector2.ONE / camera.zoom) * POINT_SCALE).maxf(
