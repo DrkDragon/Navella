@@ -1,9 +1,10 @@
-class_name SystemProperties
+class_name PlanetProperties
 extends Resource
 
-@export var coord_name := ""
-@export var planets: Array[PlanetProperties] = []
-@export var notes := ""
+@export var size := 1
+@export var color := Color.MAGENTA
+@export var buildings: Dictionary[String, int] = {}
+@export var points_per_turn := 0
 
 func reflect_properties() -> Array[Dictionary]:
 	var result: Array[Dictionary] = []

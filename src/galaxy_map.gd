@@ -2,7 +2,6 @@ extends Node2D
 
 const BACKGROUND := preload("res://background.png")
 const DISTORT := preload("res://distort.tres")
-const CIRCLE := preload("res://circle.tres")
 const SYSTEM_POINTS := preload("res://system_points.png")
 const TILE_SIZE := 25
 const TILE_COUNT := 4
@@ -61,45 +60,10 @@ class GridLabel extends Label:
 				fix_index * SECTOR_SIZE
 			)
 
-class SystemPoint extends Sprite2D:
-	var coord: String
-	var discriminator: int
-	
-	signal display_system(system: String)
-	
-	func _init() -> void:
-		texture = CIRCLE
-	
-	func select() -> void:
-		for point in get_tree().get_nodes_in_group("selected_system"):
-			point.deselect()
-		add_to_group("selected_system")
-		display_system.emit(coord + "-" + str(discriminator))
-		queue_redraw()
-	
-	func deselect() -> void:
-		remove_from_group("selected_system")
-		queue_redraw()
-	
-	func _process(_delta: float) -> void:
-		if not is_in_group("selected_system"): return
-		queue_redraw()
-	
-	func _draw() -> void:
-		if not is_in_group("selected_system"): return
-		
-		draw_circle(
-			Vector2.ZERO,
-			texture.get_size().x / 2,
-			Color.CYAN.lerp(
-				Color.MAGENTA,
-				clampf((sin(Time.get_ticks_msec() / 1000.0 * TAU) + 1) / 2, 0, 1)
-			),
-			false
-		)
-
 var background := Sprite2D.new()
 var camera := Camera2D.new()
+var show_ftl := false
+var show_detection := false
 
 func real_size(size: Vector2) -> Vector2:
 	return size * camera.zoom
@@ -147,7 +111,7 @@ func _init() -> void:
 			if not system_counts.has(coord_text): system_counts[coord_text] = 0
 			system_counts[coord_text] += 1
 			
-			var point := SystemPoint.new()
+			var point := SystemDisplay.new()
 			point.coord = coord_text
 			point.discriminator = system_counts[coord_text]
 			point.position = Vector2(x, y)
@@ -175,11 +139,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			zoom_changed.emit()
 			queue_redraw()
 		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			var top_node: SystemPoint = null
+			var top_node: SystemDisplay = null
 			var top_distance := INF
 			
 			for node in get_children():
-				if node is not SystemPoint: continue
+				if node is not SystemDisplay: continue
 				
 				var distance: float = node.position.distance_to(
 					get_local_mouse_position()

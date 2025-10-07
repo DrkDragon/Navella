@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bd3le6gt1rqkv"]
+[gd_scene load_steps=15 format=3 uid="uid://bd3le6gt1rqkv"]
 
 [ext_resource type="Script" uid="uid://dt7y4ilhgx6qi" path="res://galaxy_map.gd" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://c575u4ccl0arv" path="res://ui.gd" id="1_m6e0p"]
+[ext_resource type="Script" uid="uid://dj2rk8gcvsjob" path="res://star.gd" id="3_27fn8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyqef"]
 bg_color = Color(0, 0, 0, 1)
@@ -48,6 +49,10 @@ bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27fn8"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nltto"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ibotj"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5ude"]
 bg_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 
@@ -74,7 +79,6 @@ script = ExtResource("1_m6e0p")
 layout_mode = 2
 theme_override_constants/separation = 6
 theme_override_styles/split_bar_background = SubResource("StyleBoxFlat_ibotj")
-split_offset = 300
 metadata/_tab_index = 0
 
 [node name="Options" type="VBoxContainer" parent="Galaxy Map"]
@@ -87,13 +91,34 @@ layout_mode = 2
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_27fn8")
 disabled = true
-text = "View Map"
+text = "System Map"
 
-[node name="Properties" type="ScrollContainer" parent="Galaxy Map/Options"]
+[node name="Toggles" type="VBoxContainer" parent="Galaxy Map/Options/Toolbar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FTLButton" type="CheckButton" parent="Galaxy Map/Options/Toolbar/Toggles"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nltto")
+text = "Show FTL"
+
+[node name="DetectionButton" type="CheckButton" parent="Galaxy Map/Options/Toolbar/Toggles"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ibotj")
+text = "Show Det."
+
+[node name="Margin" type="MarginContainer" parent="Galaxy Map/Options"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
 
-[node name="PropertyList" type="GridContainer" parent="Galaxy Map/Options/Properties"]
+[node name="Properties" type="ScrollContainer" parent="Galaxy Map/Options/Margin"]
+layout_mode = 2
+
+[node name="PropertyList" type="GridContainer" parent="Galaxy Map/Options/Margin/Properties"]
 layout_mode = 2
 size_flags_horizontal = 3
 columns = 2
@@ -105,7 +130,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Galaxy Map/View"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(844, 616)
+size = Vector2i(911, 616)
 render_target_update_mode = 4
 
 [node name="GalaxyMap" type="Node2D" parent="Galaxy Map/View/SubViewport"]
@@ -117,7 +142,7 @@ visible = false
 layout_mode = 2
 theme_override_constants/separation = 6
 theme_override_styles/split_bar_background = SubResource("StyleBoxFlat_n5ude")
-split_offset = 300
+split_offset = 200
 metadata/_tab_index = 1
 
 [node name="Options" type="VBoxContainer" parent="System Map"]
@@ -131,13 +156,38 @@ layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m6e0p")
 text = "Back"
 
+[node name="Margin" type="MarginContainer" parent="System Map/Options"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Properties" type="ScrollContainer" parent="System Map/Options/Margin"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="PropertyList" type="GridContainer" parent="System Map/Options/Margin/Properties"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
 [node name="View" type="ScrollContainer" parent="System Map"]
 layout_mode = 2
 
 [node name="Layout" type="HBoxContainer" parent="System Map/View"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Star" type="Control" parent="System Map/View/Layout"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+script = ExtResource("3_27fn8")
+
 [connection signal="pressed" from="Galaxy Map/Options/Toolbar/ViewMapButton" to="." method="_on_view_map_button_pressed"]
+[connection signal="toggled" from="Galaxy Map/Options/Toolbar/Toggles/FTLButton" to="." method="_on_ftl_button_toggled"]
+[connection signal="toggled" from="Galaxy Map/Options/Toolbar/Toggles/DetectionButton" to="." method="_on_detection_button_toggled"]
 [connection signal="display_system" from="Galaxy Map/View/SubViewport/GalaxyMap" to="." method="_on_galaxy_map_display_system"]
 [connection signal="pressed" from="System Map/Options/Toolbar/BackButton" to="." method="_on_back_button_pressed"]
