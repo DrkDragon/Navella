@@ -44,10 +44,14 @@ func _init() -> void:
 func _ready() -> void:
 	var http := HTTPClient.new()
 	
+	print("Connecting to host...")
+	
 	var connection := http.connect_to_host("https://drkdragon.github.io")
 	if connection != OK:
 		OS.alert("Game state could not be downloaded from the server.")
 		return
+	
+	print("Waiting for connection...")
 	
 	while (
 		http.get_status() == HTTPClient.STATUS_CONNECTING
@@ -56,11 +60,15 @@ func _ready() -> void:
 	):
 		http.poll()
 	
+	print("Requesting game state...")
+	
 	var error := http.request(HTTPClient.METHOD_GET, "/Navella/game_state.json", PackedStringArray())
 	if error != OK:
 		http.close()
 		OS.alert("Game state could not be downloaded from the server. Error: " + error_string(error))
 		return
+	
+	print("Waiting for game state...")
 	
 	while http.get_status() == HTTPClient.STATUS_REQUESTING: http.poll()
 	
@@ -69,6 +77,8 @@ func _ready() -> void:
 		OS.alert("Game state could not be downloaded from the server. HTTP Code: " + str(http.get_response_code()))
 		return
 	
+	print("Reading game state...")
+	
 	var body := PackedByteArray()
 	while http.get_status() == HTTPClient.STATUS_BODY:
 		http.poll()
@@ -76,7 +86,11 @@ func _ready() -> void:
 	
 	http.close()
 	
+	print("Deserializing game state...")
+	
 	loaded_save.deserialize(JSON.parse_string(body.get_string_from_utf8()))
+	
+	print("Ready!")
 	
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 0
