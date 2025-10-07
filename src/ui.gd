@@ -70,7 +70,8 @@ func _ready() -> void:
 		return
 	
 	var body := PackedByteArray()
-	while body.size() < http.get_response_body_length():
+	while http.get_status() == HTTPClient.STATUS_BODY:
+		http.poll()
 		body.append_array(http.read_response_body_chunk())
 	
 	http.close()
