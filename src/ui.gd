@@ -59,6 +59,7 @@ func _ready() -> void:
 		http.get_status() == HTTPClient.STATUS_RESOLVING
 	):
 		http.poll()
+		await get_tree().process_frame
 	
 	print("Requesting game state...")
 	
@@ -70,7 +71,9 @@ func _ready() -> void:
 	
 	print("Waiting for game state...")
 	
-	while http.get_status() == HTTPClient.STATUS_REQUESTING: http.poll()
+	while http.get_status() == HTTPClient.STATUS_REQUESTING:
+		http.poll()
+		await get_tree().process_frame
 	
 	if http.get_response_code() != 200:
 		http.close()
@@ -82,6 +85,7 @@ func _ready() -> void:
 	var body := PackedByteArray()
 	while http.get_status() == HTTPClient.STATUS_BODY:
 		http.poll()
+		await get_tree().process_frame
 		body.append_array(http.read_response_body_chunk())
 	
 	http.close()
