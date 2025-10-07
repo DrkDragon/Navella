@@ -8,10 +8,67 @@ extends TabContainer
 @onready var galaxy_map := $"Galaxy Map/View/SubViewport/GalaxyMap"
 @onready var system_map := $"System Map/View/Layout"
 
-var loaded_save: SaveData
+var loaded_save := SaveData.new()
+
+func _init() -> void:
+	tab_changed.connect(func(tab: int) -> void:
+		if tab != 2: return
+		current_tab = 0
+		
+		var json := JSON.stringify(loaded_save.serialize()).to_utf8_buffer()
+		
+		if OS.get_name() == "web":
+			JavaScriptBridge.download_buffer(
+				json,
+				"game_state.json",
+				"application/json"
+			)
+		else:
+			var dialog := FileDialog.new()
+			dialog.access = FileDialog.ACCESS_FILESYSTEM
+			dialog.use_native_dialog = true
+			dialog.file_mode = FileDialog.FILE_MODE_SAVE_FILE
+			dialog.add_filter("*.json", "JSON File")
+			dialog.file_selected.connect(func(path: String) -> void:
+				var file := FileAccess.open(path, FileAccess.WRITE)
+				file.store_buffer(json)
+				file.close()
+			)
+			dialog.close_requested.connect(func() -> void:
+				dialog.queue_free()
+			)
+			add_child(dialog)
+			dialog.show()
+	)
 
 func _ready() -> void:
-	loaded_save = preload("res://default_save.tres")
+	var http := HTTPClient.new()
+	http.blocking_mode_enabled = true
+	var connection := http.connect_to_host("https://drkdragon.github.io")
+	if connection != OK:
+		OS.alert("Game state could not be downloaded from the server.")
+		return
+	
+	while (
+		http.get_status() == HTTPClient.STATUS_CONNECTING
+	) or (
+		http.get_status() == HTTPClient.STATUS_RESOLVING
+	):
+		http.poll()
+	
+	http.request(HTTPClient.METHOD_GET, "/Navella/game_state.json", PackedStringArray())
+	if http.get_response_code() != 200:
+		http.close()
+		OS.alert("Game state could not be downloaded from the server.")
+		return
+	
+	var body := PackedByteArray()
+	while body.size() < http.get_response_body_length():
+		body.append_array(http.read_response_body_chunk())
+	
+	http.close()
+	
+	loaded_save.deserialize(JSON.parse_string(body.get_string_from_utf8()))
 	
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 0
@@ -63,25 +120,56 @@ func display_system_info(system: String) -> void:
 	view_map_button.disabled = false
 
 func create_property_grid(grid, target) -> void:
-	for property in target.reflect_properties():
+	var property_names: Array[String] = []
+	if target is Dictionary:
+		for key in target.keys():
+			property_names.append(key)
+	else:
+		for property in target.reflect_properties():
+			property_names.append(property.name)
+	
+	for property in property_names:
 		var key_label := Label.new()
-		key_label.text = property.name.capitalize() + ":"
+		key_label.text = property.capitalize() + ":"
 		
-		var value = target.get(property.name)
+		var value = target.get(property)
 		
 		var value_label: Control
 		
 		if value is Color:
 			value_label = AspectRatioContainer.new()
 			
-			var color_square := ColorRect.new()
+			var color_square := ColorPickerButton.new()
 			color_square.color = value
 			color_square.custom_minimum_size = Vector2.ONE
+			color_square.color_changed.connect(func(result: Color) -> void:
+				target.set(property, result)
+			)
 			
 			value_label.add_child(color_square)
+		elif value is Dictionary:
+			value_label = GridContainer.new()
+			create_property_grid(value_label, value)
+		elif value is int:
+			value_label = SpinBox.new()
+			value_label.value = value
+			var line_edit: LineEdit = value_label.get_line_edit()
+			line_edit.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+			value_label.value_changed.connect(func(result: float) -> void:
+				target.set(property, int(result))
+			)
+		elif value is String:
+			value_label = LineEdit.new()
+			value_label.text = value
+			value_label.text_changed.connect(func(text: String) -> void:
+				target.set(property, text)
+			)
 		else:
 			value_label = Label.new()
 			value_label.text = str(len(value)) if value is Array else str(value)
+		
+		value_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		value_label.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 		
 		grid.add_child(key_label)
 		grid.add_child(value_label)

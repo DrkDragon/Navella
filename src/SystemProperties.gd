@@ -18,3 +18,32 @@ func reflect_properties() -> Array[Dictionary]:
 		result.append(property)
 	
 	return result
+
+func serialize() -> Dictionary[String, Variant]:
+	var structure: Dictionary[String, Variant] = {}
+	
+	for property in reflect_properties():
+		var value = get(property.name)
+		
+		if value is Array:
+			var new_value := []
+			for i in len(value): new_value.push_back(value[i].serialize())
+			value = new_value
+		
+		structure[property.name] = value
+	
+	return structure
+
+func deserialize(structure: Dictionary) -> void:
+	for property in reflect_properties():
+		if not structure.has(property.name): continue
+		var value = structure[property.name]
+		
+		if property.name == "planets":
+			planets.clear()
+			for planet_info in value:
+				var planet := PlanetProperties.new()
+				planet.deserialize(planet_info)
+				planets.append(planet)
+		else:
+			set(property.name, value)

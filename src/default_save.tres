@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="SaveData" load_steps=3 format=3 uid="uid://kq1oth7ieqw3"]
-
-[ext_resource type="Script" uid="uid://b82sh5ryn3o85" path="res://SaveData.gd" id="1_g57yl"]
-[ext_resource type="Script" uid="uid://c05koh1cxhy23" path="res://SystemProperties.gd" id="2_d38v0"]
-
-[resource]
-script = ExtResource("1_g57yl")
-metadata/_custom_type_script = "uid://b82sh5ryn3o85"

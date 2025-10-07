@@ -142,7 +142,7 @@ visible = false
 layout_mode = 2
 theme_override_constants/separation = 6
 theme_override_styles/split_bar_background = SubResource("StyleBoxFlat_n5ude")
-split_offset = 200
+split_offset = 250
 metadata/_tab_index = 1
 
 [node name="Options" type="VBoxContainer" parent="System Map"]
@@ -185,6 +185,11 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 script = ExtResource("3_27fn8")
+
+[node name="Export" type="Control" parent="."]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
 
 [connection signal="pressed" from="Galaxy Map/Options/Toolbar/ViewMapButton" to="." method="_on_view_map_button_pressed"]
 [connection signal="toggled" from="Galaxy Map/Options/Toolbar/Toggles/FTLButton" to="." method="_on_ftl_button_toggled"]
