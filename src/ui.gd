@@ -43,7 +43,7 @@ func _init() -> void:
 
 func _ready() -> void:
 	var http := HTTPClient.new()
-	http.blocking_mode_enabled = true
+	
 	var connection := http.connect_to_host("https://drkdragon.github.io")
 	if connection != OK:
 		OS.alert("Game state could not be downloaded from the server.")
@@ -56,10 +56,17 @@ func _ready() -> void:
 	):
 		http.poll()
 	
-	http.request(HTTPClient.METHOD_GET, "/Navella/game_state.json", PackedStringArray())
+	var error := http.request(HTTPClient.METHOD_GET, "/Navella/game_state.json", PackedStringArray())
+	if error != OK:
+		http.close()
+		OS.alert("Game state could not be downloaded from the server. Error: " + error_string(error))
+		return
+	
+	while http.get_status() == HTTPClient.STATUS_REQUESTING: http.poll()
+	
 	if http.get_response_code() != 200:
 		http.close()
-		OS.alert("Game state could not be downloaded from the server.")
+		OS.alert("Game state could not be downloaded from the server. HTTP Code: " + str(http.get_response_code()))
 		return
 	
 	var body := PackedByteArray()

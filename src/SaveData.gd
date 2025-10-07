@@ -17,7 +17,7 @@ func serialize() -> Dictionary[String, Variant]:
 		"systems": serialized_systems
 	}
 
-func deserialize(structure: Dictionary[String, Variant]) -> void:
+func deserialize(structure: Dictionary) -> void:
 	if structure.has("systems"):
 		systems.clear()
 		
