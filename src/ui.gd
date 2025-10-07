@@ -17,7 +17,7 @@ func _init() -> void:
 		
 		var json := JSON.stringify(loaded_save.serialize()).to_utf8_buffer()
 		
-		if OS.get_name() == "web":
+		if OS.get_name() == "Web":
 			JavaScriptBridge.download_buffer(
 				json,
 				"game_state.json",
