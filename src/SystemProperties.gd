@@ -1,7 +1,7 @@
 class_name SystemProperties
 extends Resource
 
-@export var coord_name := ""
+@export_custom(PROPERTY_HINT_OBJECT_ID, "") var coord_name := ""
 @export var planets: Array[PlanetProperties] = []
 @export var notes := ""
 

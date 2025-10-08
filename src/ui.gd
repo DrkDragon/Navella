@@ -147,12 +147,15 @@ func display_system_info(system: String) -> void:
 
 func create_property_grid(grid, target) -> void:
 	var property_names: Array[String] = []
+	var read_only: Array[String] = []
 	if target is Dictionary:
 		for key in target.keys():
 			property_names.append(key)
 	else:
 		for property in target.reflect_properties():
 			property_names.append(property.name)
+			if property.hint & PROPERTY_HINT_OBJECT_ID:
+				read_only.append(property.name)
 	
 	for property in property_names:
 		var key_label := Label.new()
@@ -187,6 +190,7 @@ func create_property_grid(grid, target) -> void:
 		elif value is String:
 			value_label = LineEdit.new()
 			value_label.text = value
+			value_label.editable = not read_only.has(property)
 			value_label.text_changed.connect(func(text: String) -> void:
 				target.set(property, text)
 			)

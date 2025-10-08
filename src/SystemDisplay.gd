@@ -22,9 +22,10 @@ signal display_system(system: String)
 func _init() -> void:
 	texture = CIRCLE
 
-func select() -> void:
-	for point in get_tree().get_nodes_in_group("selected_system"):
-		point.deselect()
+func select(addition: bool) -> void:
+	if not addition:
+		for point in get_tree().get_nodes_in_group("selected_system"):
+			point.deselect()
 	add_to_group("selected_system")
 	display_system.emit(name)
 	queue_redraw()

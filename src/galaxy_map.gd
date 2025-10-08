@@ -154,7 +154,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				top_distance = distance
 			
 			if top_node != null:
-				top_node.select()
+				top_node.select(Input.is_key_pressed(KEY_CTRL))
 			else:
 				for point in get_tree().get_nodes_in_group("selected_system"):
 					point.deselect()
