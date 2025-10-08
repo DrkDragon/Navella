@@ -3,6 +3,7 @@ extends CenterContainer
 
 const SCALE := 20.0
 
+var binding: PlanetProperties
 var render := ColorRect.new()
 
 signal planet_selected
@@ -23,8 +24,15 @@ func _gui_input(event: InputEvent) -> void:
 			select()
 
 func bind(data: PlanetProperties) -> void:
-	render.color = data.color
-	custom_minimum_size = Vector2.ONE * data.size * SCALE
+	if binding: binding.changed.disconnect(_on_data_changed)
+	binding = data
+	if binding:
+		binding.changed.connect(_on_data_changed)
+		_on_data_changed()
+
+func _on_data_changed() -> void:
+	render.color = binding.color
+	custom_minimum_size = Vector2.ONE * binding.size * SCALE
 	render.custom_minimum_size = custom_minimum_size
 
 func select() -> void:

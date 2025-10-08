@@ -2,6 +2,7 @@ class_name SaveData
 extends Resource
 
 @export var systems: Array[SystemProperties] = []
+@export var ftl_routes := {}
 
 func get_system_by_name(name: String) -> SystemProperties:
 	for system in systems:
@@ -14,14 +15,18 @@ func serialize() -> Dictionary[String, Variant]:
 		serialized_systems.append(system.serialize())
 	
 	return {
-		"systems": serialized_systems
+		"systems": serialized_systems,
+		"ftl_routes": ftl_routes
 	}
 
 func deserialize(structure: Dictionary) -> void:
 	if structure.has("systems"):
 		systems.clear()
 		
-		for system_info in structure["systems"]:
+		for system_info in structure.systems:
 			var system := SystemProperties.new()
 			system.deserialize(system_info)
 			systems.append(system)
+	
+	if structure.has("ftl_routes"):
+		ftl_routes = structure.ftl_routes

@@ -1,10 +1,28 @@
 class_name PlanetProperties
 extends Resource
 
-@export var size := 1
-@export var color := Color.MAGENTA
+@export var size: int :
+	get: return _size
+	set(value):
+		_size = value
+		emit_changed()
+var _size := 1
+
+@export var color: Color :
+	get: return _color
+	set(value):
+		_color = value
+		emit_changed()
+var _color := Color.MAGENTA
+
 @export var buildings: Dictionary[String, int] = {}
-@export var points_per_turn := 0
+
+@export var points_per_turn: int :
+	get: return _points_per_turn
+	set(value):
+		_points_per_turn = value
+		emit_changed()
+var _points_per_turn := 0
 
 func reflect_properties() -> Array[Dictionary]:
 	var result: Array[Dictionary] = []

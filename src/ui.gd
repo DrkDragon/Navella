@@ -5,6 +5,9 @@ extends TabContainer
 
 @onready var view_map_button := $"Galaxy Map/Options/Toolbar/ViewMapButton"
 
+@onready var add_planet_button := $"System Map/Options/Toolbar/AddButton"
+@onready var delete_planet_button := $"System Map/Options/Toolbar/DeleteButton"
+
 @onready var galaxy_map := $"Galaxy Map/View/SubViewport/GalaxyMap"
 @onready var system_map := $"System Map/View/Layout"
 
@@ -123,9 +126,18 @@ func display_system_info(system: String) -> void:
 		child.queue_free()
 	
 	view_map_button.disabled = true
+	add_planet_button.disabled = true
+	delete_planet_button.disabled = true
 	
 	var properties := loaded_save.get_system_by_name(system)
 	if properties == null: return
+	
+	for connection in add_planet_button.pressed.get_connections():
+		add_planet_button.pressed.disconnect(connection.callable)
+	add_planet_button.pressed.connect(func() -> void:
+		properties.planets.push_back(PlanetProperties.new())
+		display_system_info(system)
+	)
 	
 	create_property_grid(system_property_list, properties)
 	
@@ -137,13 +149,23 @@ func display_system_info(system: String) -> void:
 		planet_display.name = system + "-" + str(i + 1)
 		planet_display.planet_selected.connect(func() -> void:
 			for child in planet_property_list.get_children(): child.queue_free()
+			delete_planet_button.disabled = true
+			
+			for connection in delete_planet_button.pressed.get_connections():
+				delete_planet_button.pressed.disconnect(connection.callable)
+			delete_planet_button.pressed.connect(func() -> void:
+				properties.planets.erase(planet)
+				display_system_info(system)
+			)
 			
 			create_property_grid(planet_property_list, planet)
+			delete_planet_button.disabled = false
 		)
 		
 		system_map.add_child(planet_display)
 	
 	view_map_button.disabled = false
+	add_planet_button.disabled = false
 
 func create_property_grid(grid, target) -> void:
 	var property_names: Array[String] = []
@@ -182,6 +204,8 @@ func create_property_grid(grid, target) -> void:
 		elif value is int:
 			value_label = SpinBox.new()
 			value_label.value = value
+			value_label.allow_greater = true
+			value_label.allow_lesser = true
 			var line_edit: LineEdit = value_label.get_line_edit()
 			line_edit.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 			value_label.value_changed.connect(func(result: float) -> void:
@@ -218,3 +242,46 @@ func _on_ftl_button_toggled(toggled_on: bool) -> void:
 
 func _on_detection_button_toggled(toggled_on: bool) -> void:
 	galaxy_map.show_detection = toggled_on
+
+func _on_galaxy_map_request_ftl_routes(system: String, callback: Callable) -> void:
+	var result = loaded_save.ftl_routes.get(system)
+	if result == null: return
+	callback.call(Array(result, TYPE_STRING, "", null))
+
+func _on_add_ftl_button_pressed() -> void:
+	for from in get_tree().get_nodes_in_group("selected_system"):
+		for to in get_tree().get_nodes_in_group("selected_system"):
+			if from == to: continue
+			add_ftl_route(from.name, to.name)
+
+func _on_delete_ftl_button_pressed() -> void:
+	for from in get_tree().get_nodes_in_group("selected_system"):
+		for to in get_tree().get_nodes_in_group("selected_system"):
+			if from == to: continue
+			delete_ftl_route(from.name, to.name)
+
+func add_ftl_route(from: String, to: String) -> void:
+	if not loaded_save: return
+	elif from == to: return
+	
+	var from_routes: Array = loaded_save.ftl_routes.get(from, [])
+	var to_routes: Array = loaded_save.ftl_routes.get(to, [])
+	
+	if from_routes.has(to): return
+	elif to_routes.has(from): return
+	
+	from_routes.append(to)
+	loaded_save.ftl_routes[from] = from_routes
+	
+	galaxy_map.queue_redraw()
+
+func delete_ftl_route(from: String, to: String) -> void:
+	if not loaded_save: return
+	
+	var from_routes: Array = loaded_save.ftl_routes.get(from, [])
+	var to_routes: Array = loaded_save.ftl_routes.get(to, [])
+	
+	from_routes.erase(to)
+	to_routes.erase(from)
+	
+	galaxy_map.queue_redraw()

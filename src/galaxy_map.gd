@@ -13,6 +13,7 @@ const LABEL_SCALE := 1.0 / 2
 const LETTERS := "ABCDEFGHIJKLMNOPQRSTUVWXY"
 
 signal display_system(system: String)
+signal request_ftl_routes(system: String, callback: Callable)
 signal zoom_changed
 
 class GridLabel extends Label:
@@ -214,6 +215,20 @@ func _draw() -> void:
 					Vector2(subpos, MAP_SIZE),
 					Color.RED
 				)
+	
+	for child in get_children():
+		if child is not SystemDisplay: continue
+		request_ftl_routes.emit(child.name, func(routes: Array[String]) -> void:
+			for route in routes:
+				var target: SystemDisplay = get_node_or_null(route)
+				if target == null: continue
+				
+				if target.position.y < child.position.y: continue
+				elif target.position.y == child.position.y:
+					if target.position.x < child.position.x: continue
+				
+				draw_line(child.position, target.position, Color.WHITE)
+		)
 
 static func get_coord(row: int, column: int, subrow: int, subcolumn: int) -> String:
 	return LETTERS[column - 1] + str(row) + "-" + LETTERS[subcolumn] + str(subrow + 1)
