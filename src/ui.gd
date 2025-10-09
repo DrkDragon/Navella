@@ -2,20 +2,22 @@ extends TabContainer
 
 @onready var system_property_list := $"Galaxy Map/Options/Margin/Properties/PropertyList"
 @onready var planet_property_list := $"System Map/Options/Margin/Properties/PropertyList"
+@onready var building_list := $Buildings/Layout/List
 
-@onready var view_map_button := $"Galaxy Map/Options/Toolbar/ViewMapButton"
+@onready var system_star := $"System Map/View/Layout/Star"
 
 @onready var add_planet_button := $"System Map/Options/Toolbar/AddButton"
 @onready var delete_planet_button := $"System Map/Options/Toolbar/DeleteButton"
+@onready var add_building_button := $Buildings/Layout/AddBuildingButton
 
 @onready var galaxy_map := $"Galaxy Map/View/SubViewport/GalaxyMap"
-@onready var system_map := $"System Map/View/Layout"
+@onready var system_map := $"System Map/View/Layout/System"
 
 var loaded_save := SaveData.new()
 
 func _init() -> void:
 	tab_changed.connect(func(tab: int) -> void:
-		if tab != 2: return
+		if (tab + 1) != get_child_count(): return
 		current_tab = 0
 		
 		var json := JSON.stringify(loaded_save.serialize()).to_utf8_buffer()
@@ -120,126 +122,203 @@ func _ready() -> void:
 			if loaded_save.get_system_by_name(system.coord_name) == null:
 				loaded_save.systems.append(system)
 
-func display_system_info(system: String) -> void:
-	for child in system_property_list.get_children(): child.queue_free()
-	for child in planet_property_list.get_children(): child.queue_free()
-	
-	while system_map.get_child_count() > 1:
-		var child := system_map.get_child(1)
-		system_map.remove_child(child)
+static func clear_children(node: Node) -> void:
+	for child in node.get_children():
 		child.queue_free()
+
+static func clear_connections(event: Signal) -> void:
+	for connection in event.get_connections():
+		event.disconnect(connection.callable)
+
+func add_system_property(property: String, editor: Control) -> void:
+	var key_label := Label.new()
+	key_label.text = property.capitalize() + ":"
 	
-	view_map_button.disabled = true
+	editor.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	
+	system_property_list.add_child(key_label)
+	system_property_list.add_child(editor)
+
+func add_planet_property(property: String, editor: Control) -> void:
+	var key_label := Label.new()
+	key_label.text = property.capitalize() + ":"
+	
+	editor.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	
+	planet_property_list.add_child(key_label)
+	planet_property_list.add_child(editor)
+
+func display_system_info(system_name: String) -> void:
+	clear_children(system_property_list)
+	clear_children(planet_property_list)
+	clear_children(system_map)
+	
+	system_star.visible = false
 	add_planet_button.disabled = true
 	delete_planet_button.disabled = true
+	add_building_button.disabled = true
 	
-	var properties := loaded_save.get_system_by_name(system)
-	if properties == null: return
+	var system := loaded_save.get_system_by_name(system_name)
+	if system == null: return
 	
-	for connection in add_planet_button.pressed.get_connections():
-		add_planet_button.pressed.disconnect(connection.callable)
+	clear_connections(add_planet_button.pressed)
 	add_planet_button.pressed.connect(func() -> void:
-		properties.planets.push_back(PlanetProperties.new())
-		display_system_info(system)
+		system.planets.push_back(PlanetProperties.new())
+		display_system_info(system_name)
 	)
 	
-	create_property_grid(system_property_list, properties)
+	add_system_property("coordinate", create_string_display(system, "coord_name"))
+	add_system_property("name", create_string_editor(system, "name"))
+	add_system_property("planets", create_string_display(system, "planets"))
+	add_system_property("notes", create_string_editor(system, "notes"))
 	
-	for i in len(properties.planets):
-		var planet := properties.planets[i]
+	for i in len(system.planets):
+		var planet := system.planets[i]
 		
 		var planet_display := PlanetDisplay.new()
 		planet_display.bind(planet)
-		planet_display.name = system + "-" + str(i + 1)
+		planet_display.name = system_name + "-" + str(i + 1)
 		planet_display.planet_selected.connect(func() -> void:
-			for child in planet_property_list.get_children(): child.queue_free()
-			delete_planet_button.disabled = true
-			
-			for connection in delete_planet_button.pressed.get_connections():
-				delete_planet_button.pressed.disconnect(connection.callable)
+			clear_connections(delete_planet_button.pressed)
 			delete_planet_button.pressed.connect(func() -> void:
-				properties.planets.erase(planet)
-				display_system_info(system)
+				system.planets.erase(planet)
+				display_system_info(system_name)
 			)
 			
-			create_property_grid(planet_property_list, planet)
-			delete_planet_button.disabled = false
+			display_planet_info(planet)
 		)
 		
 		system_map.add_child(planet_display)
 	
-	view_map_button.disabled = false
+	system_star.visible = true
 	add_planet_button.disabled = false
 
-func create_property_grid(grid, target) -> void:
-	var property_names: Array[String] = []
-	var read_only: Array[String] = []
-	if target is Dictionary:
-		for key in target.keys():
-			property_names.append(key)
-	else:
-		for property in target.reflect_properties():
-			property_names.append(property.name)
-			if property.hint & PROPERTY_HINT_OBJECT_ID:
-				read_only.append(property.name)
+func display_planet_info(planet: PlanetProperties) -> void:
+	clear_children(planet_property_list)
+	clear_children(building_list)
 	
-	for property in property_names:
-		var key_label := Label.new()
-		key_label.text = property.capitalize() + ":"
-		
-		var value = target.get(property)
-		
-		var value_label: Control
-		
-		if value is Color:
-			value_label = AspectRatioContainer.new()
-			
-			var color_square := ColorPickerButton.new()
-			color_square.color = value
-			color_square.custom_minimum_size = Vector2.ONE
-			color_square.color_changed.connect(func(result: Color) -> void:
-				target.set(property, result)
-			)
-			
-			value_label.add_child(color_square)
-		elif value is Dictionary:
-			value_label = GridContainer.new()
-			create_property_grid(value_label, value)
-		elif value is int:
-			value_label = SpinBox.new()
-			value_label.allow_greater = true
-			value_label.allow_lesser = true
-			value_label.value = value
-			var line_edit: LineEdit = value_label.get_line_edit()
-			line_edit.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
-			value_label.value_changed.connect(func(result: float) -> void:
-				target.set(property, int(result))
-			)
-		elif value is String:
-			value_label = LineEdit.new()
-			value_label.text = value
-			value_label.editable = not read_only.has(property)
-			value_label.text_changed.connect(func(text: String) -> void:
-				target.set(property, text)
-			)
-		else:
-			value_label = Label.new()
-			value_label.text = str(len(value)) if value is Array else str(value)
-		
-		value_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		value_label.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
-		
-		grid.add_child(key_label)
-		grid.add_child(value_label)
+	delete_planet_button.disabled = true
+	add_building_button.disabled = true
+	
+	add_planet_property("size", create_int_editor(planet, "size"))
+	add_planet_property("class", create_int_editor(planet, "class_level"))
+	add_planet_property("color", create_color_editor(planet, "color"))
+	add_planet_property("buildings", create_string_display(planet, "buildings"))
+	add_planet_property("points_per_turn", create_int_editor(planet, "points_per_turn"))
+	
+	for building in planet.buildings:
+		building_list.add_child(create_building_editor(planet, building))
+	
+	clear_connections(add_building_button.pressed)
+	add_building_button.pressed.connect(func() -> void:
+		planet.buildings.append(Building.new())
+		display_planet_info(planet)
+	)
+	
+	delete_planet_button.disabled = false
+	add_building_button.disabled = false
+
+static func create_string_display(object: Resource, property: String) -> Control:
+	var result := Label.new()
+	var update := func() -> void:
+		var value = object.get(property)
+		result.text = str(len(value)) if (
+			value is Array or value is Dictionary
+		) else str(value)
+	
+	object.changed.connect(update)
+	result.tree_exiting.connect(func() -> void:
+		object.changed.disconnect(update)
+	)
+	
+	update.call()
+	return result
+
+static func create_string_editor(object: Resource, property: String) -> Control:
+	var result := LineEdit.new()
+	var update := func() -> void:
+		result.text = str(object.get(property))
+	
+	result.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	
+	object.changed.connect(update)
+	result.text_changed.connect(func(value: String) -> void:
+		object.set(property, int(value))
+		update.call()
+	)
+	result.tree_exiting.connect(func() -> void:
+		object.changed.disconnect(update)
+	)
+	
+	update.call()
+	return result
+
+static func create_int_editor(object: Resource, property: String) -> Control:
+	var result := SpinBox.new()
+	var update := func() -> void:
+		result.value = int(object.get(property))
+	
+	result.allow_greater = true
+	result.allow_lesser = true
+	result.get_line_edit().add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	
+	object.changed.connect(update)
+	result.value_changed.connect(func(value: float) -> void:
+		object.set(property, int(value))
+		update.call()
+	)
+	result.tree_exiting.connect(func() -> void:
+		object.changed.disconnect(update)
+	)
+	
+	update.call()
+	return result
+
+static func create_color_editor(object: Resource, property: String) -> Control:
+	var result := AspectRatioContainer.new()
+	var color_square := ColorPickerButton.new()
+	var update := func() -> void:
+		color_square.color = object.get(property)
+	
+	color_square.custom_minimum_size = Vector2.ONE
+	color_square.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	
+	object.changed.connect(update)
+	color_square.color_changed.connect(func(value: Color) -> void:
+		object.set(property, value)
+		update.call()
+	)
+	color_square.tree_exiting.connect(func() -> void:
+		object.changed.disconnect(update)
+	)
+	
+	result.add_child(color_square)
+	
+	update.call()
+	return result
+
+static func create_building_editor(planet: PlanetProperties, building: Building) -> Control:
+	var result := HBoxContainer.new()
+	
+	var type_editor := create_string_editor(building, "type")
+	type_editor.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	result.add_child(type_editor)
+	
+	result.add_child(create_int_editor(building, "level"))
+	
+	var delete_button := Button.new()
+	delete_button.text = "Remove"
+	delete_button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	delete_button.pressed.connect(func() -> void:
+		planet.buildings.erase(building)
+		result.queue_free()
+	)
+	result.add_child(delete_button)
+	
+	return result
 
 func _on_galaxy_map_display_system(system: String) -> void:
 	display_system_info(system)
-
-func _on_view_map_button_pressed() -> void:
-	current_tab = 1
-
-func _on_back_button_pressed() -> void:
-	current_tab = 0
 
 func _on_ftl_button_toggled(toggled_on: bool) -> void:
 	galaxy_map.show_ftl = toggled_on
@@ -253,39 +332,34 @@ func _on_galaxy_map_request_ftl_routes(system: String, callback: Callable) -> vo
 	callback.call(Array(result, TYPE_STRING, "", null))
 
 func _on_add_ftl_button_pressed() -> void:
+	if not loaded_save: return
+	
 	for from in get_tree().get_nodes_in_group("selected_system"):
 		for to in get_tree().get_nodes_in_group("selected_system"):
-			if from == to: continue
-			add_ftl_route(from.name, to.name)
+			if from.name == to.name: continue
+			
+			var from_routes: Array = loaded_save.ftl_routes.get(from.name, [])
+			var to_routes: Array = loaded_save.ftl_routes.get(to.name, [])
+			
+			if from_routes.has(to.name): continue
+			elif to_routes.has(from.name): continue
+			
+			from_routes.append(to.name)
+			loaded_save.ftl_routes[from.name] = from_routes
+			
+			galaxy_map.queue_redraw()
 
 func _on_delete_ftl_button_pressed() -> void:
+	if not loaded_save: return
+	
 	for from in get_tree().get_nodes_in_group("selected_system"):
 		for to in get_tree().get_nodes_in_group("selected_system"):
-			if from == to: continue
-			delete_ftl_route(from.name, to.name)
-
-func add_ftl_route(from: String, to: String) -> void:
-	if not loaded_save: return
-	elif from == to: return
-	
-	var from_routes: Array = loaded_save.ftl_routes.get(from, [])
-	var to_routes: Array = loaded_save.ftl_routes.get(to, [])
-	
-	if from_routes.has(to): return
-	elif to_routes.has(from): return
-	
-	from_routes.append(to)
-	loaded_save.ftl_routes[from] = from_routes
-	
-	galaxy_map.queue_redraw()
-
-func delete_ftl_route(from: String, to: String) -> void:
-	if not loaded_save: return
-	
-	var from_routes: Array = loaded_save.ftl_routes.get(from, [])
-	var to_routes: Array = loaded_save.ftl_routes.get(to, [])
-	
-	from_routes.erase(to)
-	to_routes.erase(from)
+			if from.name == to.name: continue
+			
+			var from_routes: Array = loaded_save.ftl_routes.get(from.name, [])
+			var to_routes: Array = loaded_save.ftl_routes.get(to.name, [])
+			
+			from_routes.erase(to.name)
+			to_routes.erase(from.name)
 	
 	galaxy_map.queue_redraw()

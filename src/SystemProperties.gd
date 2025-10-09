@@ -1,7 +1,7 @@
 class_name SystemProperties
 extends Resource
 
-@export_custom(PROPERTY_HINT_OBJECT_ID, "") var coord_name := ""
+@export var coord_name := ""
 @export var name := ""
 @export var planets: Array[PlanetProperties] = []
 @export var notes := ""
@@ -21,30 +21,26 @@ func reflect_properties() -> Array[Dictionary]:
 	return result
 
 func serialize() -> Dictionary[String, Variant]:
-	var structure: Dictionary[String, Variant] = {}
+	var serialized_planets := []
+	for planet in planets:
+		serialized_planets.append(planet.serialize())
 	
-	for property in reflect_properties():
-		var value = get(property.name)
-		
-		if value is Array:
-			var new_value := []
-			for i in len(value): new_value.push_back(value[i].serialize())
-			value = new_value
-		
-		structure[property.name] = value
-	
-	return structure
+	return {
+		"coord_name": coord_name,
+		"name": name,
+		"planets": serialized_planets,
+		"notes": notes
+	}
 
 func deserialize(structure: Dictionary) -> void:
-	for property in reflect_properties():
-		if not structure.has(property.name): continue
-		var value = structure[property.name]
+	coord_name = str(structure.get("coord_name", ""))
+	name = str(structure.get("name", ""))
+	notes = str(structure.get("notes", ""))
+	
+	if structure.has("planets") and structure.planets is Array:
+		planets.clear()
 		
-		if property.name == "planets":
-			planets.clear()
-			for planet_info in value:
-				var planet := PlanetProperties.new()
-				planet.deserialize(planet_info)
-				planets.append(planet)
-		else:
-			set(property.name, value)
+		for planet_info in structure.planets:
+			var planet := PlanetProperties.new()
+			planet.deserialize(planet_info)
+			planets.append(planet)

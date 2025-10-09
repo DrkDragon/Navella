@@ -22,7 +22,7 @@ var _class_level := 1
 		emit_changed()
 var _color := Color.MAGENTA
 
-@export var buildings: Dictionary[String, int] = {}
+@export var buildings: Array[Building] = []
 
 @export var points_per_turn: int :
 	get: return _points_per_turn
@@ -31,57 +31,41 @@ var _color := Color.MAGENTA
 		emit_changed()
 var _points_per_turn := 0
 
-func reflect_properties() -> Array[Dictionary]:
-	var result: Array[Dictionary] = []
-	
-	var ignore: Array[String] = []
-	for property in Resource.new().get_property_list():
-		ignore.append(property.name)
-	
-	for property in get_property_list():
-		if not (property.usage & PROPERTY_USAGE_STORAGE): continue
-		if ignore.has(property.name): continue
-		result.append(property)
-	
-	return result
-
 func serialize() -> Dictionary[String, Variant]:
-	var structure: Dictionary[String, Variant] = {}
+	var serialized_buildings := []
+	for building in buildings:
+		serialized_buildings.append(building.serialize())
 	
-	for property in reflect_properties():
-		var value = get(property.name)
-		if value is Color:
-			value = {
-				"r": value.r,
-				"g": value.g,
-				"b": value.b,
-				"a": value.a
-			}
-		structure[property.name] = value
-	
-	return structure
+	return {
+		"size": size,
+		"class_level": class_level,
+		"color": {
+			"r": color.r,
+			"g": color.g,
+			"b": color.b,
+			"a": color.a
+		},
+		"buildings": serialized_buildings,
+		"points_per_turn": points_per_turn
+	}
 
 func deserialize(structure: Dictionary) -> void:
-	for property in reflect_properties():
-		if not structure.has(property.name): continue
+	size = int(structure.get("size", size))
+	class_level = int(structure.get("class_level", class_level))
+	points_per_turn = int(structure.get("points_per_turn", points_per_turn))
+	
+	if structure.has("color") and structure.color is Dictionary:
+		color = Color(
+			structure.color.get("r", 0.0),
+			structure.color.get("g", 0.0),
+			structure.color.get("b", 0.0),
+			structure.color.get("a", 1.0)
+		)
+	
+	if structure.has("buildings") and structure.buildings is Array:
+		buildings.clear()
 		
-		if get(property.name) is Color:
-			if structure[property.name] is String:
-				var c = structure[property.name]
-				c = c.replace("(", "").replace(")", "")
-				c = c.split(", ")
-				structure[property.name] = {
-					"r": float(c[0]),
-					"g": float(c[1]),
-					"b": float(c[2]),
-					"a": float(c[3])
-				}
-			
-			set(property.name, Color(
-				structure[property.name].r,
-				structure[property.name].g,
-				structure[property.name].b,
-				structure[property.name].a
-			))
-		else:
-			set(property.name, structure[property.name])
+		for building_info in structure.buildings:
+			var building := Building.new()
+			building.deserialize(building_info)
+			buildings.append(building)
