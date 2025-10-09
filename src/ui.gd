@@ -100,9 +100,11 @@ func _ready() -> void:
 	print("Ready!")
 	
 	var rng := RandomNumberGenerator.new()
+	var class_rng := RandomNumberGenerator.new()
 	rng.seed = 0
+	class_rng.seed = 0
 	
-	for child in $"Galaxy Map/View/SubViewport/GalaxyMap".get_children():
+	for child in galaxy_map.get_children():
 		if child is SystemDisplay:
 			var system := SystemProperties.new()
 			system.coord_name = child.name
@@ -110,7 +112,9 @@ func _ready() -> void:
 			for _i in [1, 2, 4, 6, 8, 10, 12, 14][rng.randi_range(0, 7)]:
 				var planet := PlanetProperties.new()
 				planet.size = rng.randi_range(1, 10)
+				planet.class_level = class_rng.randi_range(1, 10)
 				planet.color = Color.from_ok_hsl(rng.randf(), 1, 0.5)
+				planet.points_per_turn = planet.class_level * 50
 				system.planets.append(planet)
 			
 			if loaded_save.get_system_by_name(system.coord_name) == null:
@@ -203,9 +207,9 @@ func create_property_grid(grid, target) -> void:
 			create_property_grid(value_label, value)
 		elif value is int:
 			value_label = SpinBox.new()
-			value_label.value = value
 			value_label.allow_greater = true
 			value_label.allow_lesser = true
+			value_label.value = value
 			var line_edit: LineEdit = value_label.get_line_edit()
 			line_edit.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 			value_label.value_changed.connect(func(result: float) -> void:

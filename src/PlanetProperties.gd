@@ -8,6 +8,13 @@ extends Resource
 		emit_changed()
 var _size := 1
 
+@export var class_level: int :
+	get: return _class_level
+	set(value):
+		_class_level = value
+		emit_changed()
+var _class_level := 1
+
 @export var color: Color :
 	get: return _color
 	set(value):
