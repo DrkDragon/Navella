@@ -274,8 +274,8 @@ static func create_string_big_editor(object: Resource, property: String) -> Cont
 	result.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 	
 	object.changed.connect(update)
-	result.text_changed.connect(func(value: String) -> void:
-		object.set(property, value)
+	result.text_changed.connect(func() -> void:
+		object.set(property, result.text)
 		update.call()
 	)
 	result.tree_exiting.connect(func() -> void:
