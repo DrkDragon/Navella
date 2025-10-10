@@ -368,6 +368,7 @@ static func create_planet_type_editor(planet: PlanetProperties) -> Control:
 	planet.changed.connect(update)
 	result.item_selected.connect(func(index: int) -> void:
 		planet.type = index as PlanetProperties.PlanetType
+		update.call()
 	)
 	result.tree_exiting.connect(func() -> void:
 		planet.changed.disconnect(update)

@@ -34,6 +34,18 @@ func _on_data_changed() -> void:
 	render.color = binding.color
 	custom_minimum_size = Vector2.ONE * binding.size * SCALE
 	render.custom_minimum_size = custom_minimum_size
+	
+	var texture: Texture2D = preload("res://blank_texture.png")
+	match binding.type:
+		PlanetProperties.PlanetType.GAS:
+			texture = preload("res://gas_texture.tres")
+		PlanetProperties.PlanetType.LIQUID:
+			texture = preload("res://liquid_texture.tres")
+		PlanetProperties.PlanetType.TERRAIN:
+			texture = preload("res://terrain_texture.tres")
+		PlanetProperties.PlanetType.ASTEROID_BELT:
+			texture = preload("res://debris_texture.tres")
+	render.material.set_shader_parameter("texture_overlay", texture)
 
 func select() -> void:
 	for point in get_tree().get_nodes_in_group("selected_planet"):

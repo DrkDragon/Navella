@@ -21,6 +21,7 @@ var _class_level := 1
 	get: return _type
 	set(value):
 		_type = value
+		emit_changed()
 var _type := PlanetType.BARREN
 
 @export var color: Color :
