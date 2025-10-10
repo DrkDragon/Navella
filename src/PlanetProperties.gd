@@ -1,7 +1,7 @@
 class_name PlanetProperties
 extends Resource
 
-enum PlanetType { BARREN, GAS, TERRAIN, LIQUID }
+enum PlanetType { BARREN, GAS, TERRAIN, LIQUID, ASTEROID_BELT }
 
 @export var size: int :
 	get: return _size
@@ -47,6 +47,7 @@ func serialize() -> Dictionary[String, Variant]:
 	return {
 		"size": size,
 		"class_level": class_level,
+		"type": int(type),
 		"color": {
 			"r": color.r,
 			"g": color.g,
@@ -60,6 +61,7 @@ func serialize() -> Dictionary[String, Variant]:
 func deserialize(structure: Dictionary) -> void:
 	size = int(structure.get("size", size))
 	class_level = int(structure.get("class_level", class_level))
+	type = int(structure.get("type", int(type))) as PlanetType
 	points_per_turn = int(structure.get("points_per_turn", points_per_turn))
 	
 	if structure.has("color") and structure.color is Dictionary:

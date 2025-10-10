@@ -103,8 +103,10 @@ func _ready() -> void:
 	
 	var rng := RandomNumberGenerator.new()
 	var class_rng := RandomNumberGenerator.new()
+	var type_rng := RandomNumberGenerator.new()
 	rng.seed = 0
 	class_rng.seed = 0
+	type_rng.seed = 1
 	
 	for child in galaxy_map.get_children():
 		if child is SystemDisplay:
@@ -115,6 +117,7 @@ func _ready() -> void:
 				var planet := PlanetProperties.new()
 				planet.size = rng.randi_range(1, 10)
 				planet.class_level = class_rng.randi_range(1, 10)
+				planet.type = type_rng.randi_range(0, 3) as PlanetProperties.PlanetType
 				planet.color = Color.from_ok_hsl(rng.randf(), 1, 0.5)
 				planet.points_per_turn = planet.class_level * 50
 				system.planets.append(planet)
@@ -137,7 +140,7 @@ static func clear_connections(event: Signal) -> void:
 
 func add_system_property(property: String, editor: Control) -> void:
 	var key_label := Label.new()
-	key_label.text = property.capitalize() + ":"
+	key_label.text = property + ":"
 	
 	editor.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
@@ -146,7 +149,7 @@ func add_system_property(property: String, editor: Control) -> void:
 
 func add_planet_property(property: String, editor: Control) -> void:
 	var key_label := Label.new()
-	key_label.text = property.capitalize() + ":"
+	key_label.text = property + ":"
 	
 	editor.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
@@ -172,11 +175,11 @@ func display_system_info(system_name: String) -> void:
 		display_system_info(system_name)
 	)
 	
-	add_system_property("coordinate", create_string_display(system, "coord_name"))
-	add_system_property("name", create_string_editor(system, "name"))
-	add_system_property("color", create_color_editor(system, "color"))
-	add_system_property("planets", create_string_display(system, "planets"))
-	add_system_property("notes", create_string_editor(system, "notes"))
+	add_system_property("Coordinate", create_string_display(system, "coord_name"))
+	add_system_property("Name", create_string_editor(system, "name"))
+	add_system_property("Color", create_color_editor(system, "color"))
+	add_system_property("Planets", create_string_display(system, "planets"))
+	add_system_property("Notes", create_string_editor(system, "notes"))
 	
 	for i in len(system.planets):
 		var planet := system.planets[i]
@@ -206,11 +209,12 @@ func display_planet_info(planet: PlanetProperties) -> void:
 	delete_planet_button.disabled = true
 	add_building_button.disabled = true
 	
-	add_planet_property("size", create_int_editor(planet, "size"))
-	add_planet_property("class", create_int_editor(planet, "class_level"))
-	add_planet_property("color", create_color_editor(planet, "color"))
-	add_planet_property("buildings", create_string_display(planet, "buildings"))
-	add_planet_property("points_per_turn", create_int_editor(planet, "points_per_turn"))
+	add_planet_property("Size", create_int_editor(planet, "size"))
+	add_planet_property("Class", create_int_editor(planet, "class_level"))
+	add_planet_property("Type", create_planet_type_editor(planet))
+	add_planet_property("Color", create_color_editor(planet, "color"))
+	add_planet_property("Buildings", create_string_display(planet, "buildings"))
+	add_planet_property("Points/Turn", create_int_editor(planet, "points_per_turn"))
 	
 	for building in planet.buildings:
 		building_list.add_child(create_building_editor(planet, building))
@@ -300,6 +304,26 @@ static func create_color_editor(object: Resource, property: String) -> Control:
 	)
 	
 	result.add_child(color_square)
+	
+	update.call()
+	return result
+
+static func create_planet_type_editor(planet: PlanetProperties) -> Control:
+	var result := OptionButton.new()
+	var update := func() -> void:
+		result.select(planet.type)
+	
+	result.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	for key in PlanetProperties.PlanetType.keys():
+		result.add_item(str(key).capitalize())
+	
+	planet.changed.connect(update)
+	result.item_selected.connect(func(index: int) -> void:
+		planet.type = index as PlanetProperties.PlanetType
+	)
+	result.tree_exiting.connect(func() -> void:
+		planet.changed.disconnect(update)
+	)
 	
 	update.call()
 	return result
