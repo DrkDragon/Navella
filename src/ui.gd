@@ -215,6 +215,7 @@ func display_planet_info(planet: PlanetProperties) -> void:
 	add_planet_property("Color", create_color_editor(planet, "color"))
 	add_planet_property("Buildings", create_string_display(planet, "buildings"))
 	add_planet_property("Points/Turn", create_int_editor(planet, "points_per_turn"))
+	add_planet_property("Notes", create_string_big_editor(planet, "notes"))
 	
 	for building in planet.buildings:
 		building_list.add_child(create_building_editor(planet, building))

@@ -39,6 +39,13 @@ var _color := Color.MAGENTA
 		emit_changed()
 var _points_per_turn := 0
 
+@export var notes: String :
+	get: return _notes
+	set(value):
+		_notes = value
+		emit_changed()
+var _notes := ""
+
 func serialize() -> Dictionary[String, Variant]:
 	var serialized_buildings := []
 	for building in buildings:
@@ -55,7 +62,8 @@ func serialize() -> Dictionary[String, Variant]:
 			"a": color.a
 		},
 		"buildings": serialized_buildings,
-		"points_per_turn": points_per_turn
+		"points_per_turn": points_per_turn,
+		"notes": notes
 	}
 
 func deserialize(structure: Dictionary) -> void:
@@ -63,6 +71,7 @@ func deserialize(structure: Dictionary) -> void:
 	class_level = int(structure.get("class_level", class_level))
 	type = int(structure.get("type", int(type))) as PlanetType
 	points_per_turn = int(structure.get("points_per_turn", points_per_turn))
+	notes = str(structure.get("notes", ""))
 	
 	if structure.has("color") and structure.color is Dictionary:
 		color = Color(
