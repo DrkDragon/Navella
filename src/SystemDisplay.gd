@@ -17,10 +17,22 @@ var discriminator: int :
 		name = coord + "-" + str(value)
 var _discriminator: int
 
+var binding: SystemProperties
+
 signal display_system(system: String)
 
 func _init() -> void:
 	texture = CIRCLE
+
+func bind(data: SystemProperties) -> void:
+	if binding: data.changed.disconnect(_on_data_changed)
+	binding = data
+	if binding:
+		data.changed.connect(_on_data_changed)
+		_on_data_changed()
+
+func _on_data_changed() -> void:
+	modulate = binding.color
 
 func select(addition: bool) -> void:
 	if not addition:

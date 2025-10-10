@@ -119,8 +119,13 @@ func _ready() -> void:
 				planet.points_per_turn = planet.class_level * 50
 				system.planets.append(planet)
 			
-			if loaded_save.get_system_by_name(system.coord_name) == null:
+			var saved := loaded_save.get_system_by_name(system.coord_name)
+			if saved == null:
 				loaded_save.systems.append(system)
+			else:
+				system = saved
+			
+			child.bind(system)
 
 static func clear_children(node: Node) -> void:
 	for child in node.get_children():
@@ -169,6 +174,7 @@ func display_system_info(system_name: String) -> void:
 	
 	add_system_property("coordinate", create_string_display(system, "coord_name"))
 	add_system_property("name", create_string_editor(system, "name"))
+	add_system_property("color", create_color_editor(system, "color"))
 	add_system_property("planets", create_string_display(system, "planets"))
 	add_system_property("notes", create_string_editor(system, "notes"))
 	
@@ -243,7 +249,7 @@ static func create_string_editor(object: Resource, property: String) -> Control:
 	
 	object.changed.connect(update)
 	result.text_changed.connect(func(value: String) -> void:
-		object.set(property, int(value))
+		object.set(property, value)
 		update.call()
 	)
 	result.tree_exiting.connect(func() -> void:
