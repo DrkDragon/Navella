@@ -20,7 +20,7 @@ func _init() -> void:
 		if (tab + 1) != get_child_count(): return
 		current_tab = 0
 		
-		var json := JSON.stringify(loaded_save.serialize()).to_utf8_buffer()
+		var json := JSON.stringify(loaded_save.serialize(), "\t").to_utf8_buffer()
 		
 		if OS.get_name() == "Web":
 			JavaScriptBridge.download_buffer(
