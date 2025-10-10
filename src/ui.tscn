@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bd3le6gt1rqkv"]
+[gd_scene load_steps=20 format=3 uid="uid://bd3le6gt1rqkv"]
 
 [ext_resource type="Script" uid="uid://dt7y4ilhgx6qi" path="res://galaxy_map.gd" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://c575u4ccl0arv" path="res://ui.gd" id="1_m6e0p"]
@@ -59,6 +59,10 @@ bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
 bg_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5ude"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27fn8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2l4f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4yjw"]
 
@@ -171,6 +175,22 @@ disabled = true
 text = "Add"
 
 [node name="Spacer" type="Control" parent="System Map/Options/Toolbar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MoveLeftButton" type="Button" parent="System Map/Options/Toolbar"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_27fn8")
+disabled = true
+text = "<"
+
+[node name="MoveRightButton" type="Button" parent="System Map/Options/Toolbar"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e2l4f")
+disabled = true
+text = ">"
+
+[node name="Spacer2" type="Control" parent="System Map/Options/Toolbar"]
 layout_mode = 2
 size_flags_horizontal = 3
 

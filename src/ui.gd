@@ -7,6 +7,8 @@ extends TabContainer
 @onready var system_star := $"System Map/View/Layout/Star"
 
 @onready var add_planet_button := $"System Map/Options/Toolbar/AddButton"
+@onready var move_planet_left_button := $"System Map/Options/Toolbar/MoveLeftButton"
+@onready var move_planet_right_button := $"System Map/Options/Toolbar/MoveRightButton"
 @onready var delete_planet_button := $"System Map/Options/Toolbar/DeleteButton"
 @onready var add_building_button := $Buildings/Layout/AddBuildingButton
 
@@ -163,6 +165,8 @@ func display_system_info(system_name: String) -> void:
 	
 	system_star.visible = false
 	add_planet_button.disabled = true
+	move_planet_left_button.disabled = true
+	move_planet_right_button.disabled = true
 	delete_planet_button.disabled = true
 	add_building_button.disabled = true
 	
@@ -194,6 +198,29 @@ func display_system_info(system_name: String) -> void:
 				display_system_info(system_name)
 			)
 			
+			clear_connections(move_planet_left_button.pressed)
+			move_planet_left_button.pressed.connect(func() -> void:
+				var index := planet_display.get_index() - 1
+				if index < 0: return
+				
+				planet_display.get_parent().move_child(planet_display, index)
+				
+				system.planets.erase(planet)
+				system.planets.insert(index, planet)
+			)
+			
+			clear_connections(move_planet_right_button.pressed)
+			move_planet_right_button.pressed.connect(func() -> void:
+				var index := planet_display.get_index() + 1
+				var parent := planet_display.get_parent()
+				if index >= parent.get_child_count(): return
+				
+				parent.move_child(planet_display, index)
+				
+				system.planets.erase(planet)
+				system.planets.insert(index, planet)
+			)
+			
 			display_planet_info(planet)
 		)
 		
@@ -205,9 +232,6 @@ func display_system_info(system_name: String) -> void:
 func display_planet_info(planet: PlanetProperties) -> void:
 	clear_children(planet_property_list)
 	clear_children(building_list)
-	
-	delete_planet_button.disabled = true
-	add_building_button.disabled = true
 	
 	add_planet_property("Size", create_int_editor(planet, "size"))
 	add_planet_property("Class", create_int_editor(planet, "class_level"))
@@ -227,6 +251,8 @@ func display_planet_info(planet: PlanetProperties) -> void:
 	)
 	
 	delete_planet_button.disabled = false
+	move_planet_left_button.disabled = false
+	move_planet_right_button.disabled = false
 	add_building_button.disabled = false
 
 static func create_string_display(object: Resource, property: String) -> Control:
