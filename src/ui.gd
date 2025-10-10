@@ -179,7 +179,7 @@ func display_system_info(system_name: String) -> void:
 	add_system_property("Name", create_string_editor(system, "name"))
 	add_system_property("Color", create_color_editor(system, "color"))
 	add_system_property("Planets", create_string_display(system, "planets"))
-	add_system_property("Notes", create_string_editor(system, "notes"))
+	add_system_property("Notes", create_string_big_editor(system, "notes"))
 	
 	for i in len(system.planets):
 		var planet := system.planets[i]
@@ -250,6 +250,27 @@ static func create_string_editor(object: Resource, property: String) -> Control:
 		if result.has_focus(): return
 		result.text = str(object.get(property))
 	
+	result.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	
+	object.changed.connect(update)
+	result.text_changed.connect(func(value: String) -> void:
+		object.set(property, value)
+		update.call()
+	)
+	result.tree_exiting.connect(func() -> void:
+		object.changed.disconnect(update)
+	)
+	
+	update.call()
+	return result
+
+static func create_string_big_editor(object: Resource, property: String) -> Control:
+	var result := TextEdit.new()
+	var update := func() -> void:
+		if result.has_focus(): return
+		result.text = str(object.get(property))
+	
+	result.custom_minimum_size = Vector2(0, 300)
 	result.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 	
 	object.changed.connect(update)
