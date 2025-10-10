@@ -243,6 +243,7 @@ static func create_string_display(object: Resource, property: String) -> Control
 static func create_string_editor(object: Resource, property: String) -> Control:
 	var result := LineEdit.new()
 	var update := func() -> void:
+		if result.has_focus(): return
 		result.text = str(object.get(property))
 	
 	result.add_theme_stylebox_override("focus", StyleBoxEmpty.new())

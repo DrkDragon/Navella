@@ -1,6 +1,8 @@
 class_name PlanetProperties
 extends Resource
 
+enum PlanetType { BARREN, GAS, TERRAIN, LIQUID }
+
 @export var size: int :
 	get: return _size
 	set(value):
@@ -14,6 +16,12 @@ var _size := 1
 		_class_level = value
 		emit_changed()
 var _class_level := 1
+
+@export var type: PlanetType :
+	get: return _type
+	set(value):
+		_type = value
+var _type := PlanetType.BARREN
 
 @export var color: Color :
 	get: return _color
