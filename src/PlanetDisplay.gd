@@ -37,12 +37,14 @@ func _on_data_changed() -> void:
 	
 	var texture: Texture2D = preload("res://blank_texture.png")
 	match binding.type:
+		PlanetProperties.PlanetType.BARREN:
+			texture = preload("res://barren_texture.tres")
 		PlanetProperties.PlanetType.GAS:
 			texture = preload("res://gas_texture.tres")
 		PlanetProperties.PlanetType.LIQUID:
 			texture = preload("res://liquid_texture.tres")
 		PlanetProperties.PlanetType.TERRAIN:
-			texture = preload("res://terrain_texture.tres")
+			texture = preload("res://terrain_texture.png")
 		PlanetProperties.PlanetType.ASTEROID_BELT:
 			texture = preload("res://debris_texture.tres")
 	render.material.set_shader_parameter("texture_overlay", texture)

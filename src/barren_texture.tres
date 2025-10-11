@@ -5,9 +5,9 @@ colors = PackedColorArray(0.74558026, 0.7455802, 0.7455802, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_plfql"]
 noise_type = 2
-frequency = 0.0255
-fractal_type = 0
+frequency = 0.0105
 fractal_octaves = 4
+fractal_lacunarity = 6.66
 
 [resource]
 noise = SubResource("FastNoiseLite_plfql")
