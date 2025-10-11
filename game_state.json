@@ -94189,124 +94189,12 @@
 			"planets": [
 				{
 					"buildings": [],
-					"class_level": 2,
-					"color": {
-						"a": 1.0,
-						"b": 0.455715954303741,
-						"g": 0.545217752456665,
-						"r": 0.0
-					},
-					"notes": "",
-					"points_per_turn": 100,
-					"size": 5,
-					"type": 0
-				},
-				{
-					"buildings": [],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 0.0,
-						"g": 0.449686467647552,
-						"r": 0.572455763816833
-					},
-					"notes": "",
-					"points_per_turn": 500,
-					"size": 5,
-					"type": 2
-				},
-				{
-					"buildings": [],
-					"class_level": 2,
-					"color": {
-						"a": 1.0,
-						"b": 0.507609069347382,
-						"g": 0.538878977298737,
-						"r": 0.00000293597577183391
-					},
-					"notes": "",
-					"points_per_turn": 100,
-					"size": 5,
-					"type": 0
-				},
-				{
-					"buildings": [],
-					"class_level": 4,
-					"color": {
-						"a": 1.0,
-						"b": 0.999999940395355,
-						"g": 0.403115391731262,
-						"r": 0.123148165643215
-					},
-					"notes": "",
-					"points_per_turn": 200,
-					"size": 3,
-					"type": 1
-				},
-				{
-					"buildings": [],
-					"class_level": 1,
-					"color": {
-						"a": 1.0,
-						"b": 0.00000019252300376138,
-						"g": 0.3660569190979,
-						"r": 0.698327302932739
-					},
-					"notes": "",
-					"points_per_turn": 50,
-					"size": 1,
-					"type": 0
-				},
-				{
-					"buildings": [],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 0.0,
-						"g": 0.511631488800049,
-						"r": 0.41876757144928
-					},
-					"notes": "",
-					"points_per_turn": 500,
-					"size": 6,
-					"type": 0
-				},
-				{
-					"buildings": [],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 0.171275228261948,
-						"g": 0.0,
-						"r": 0.872316837310791
-					},
-					"notes": "",
-					"points_per_turn": 500,
-					"size": 4,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 0.999999940395355,
-						"g": 0.105047814548016,
-						"r": 0.605661332607269
-					},
-					"notes": "",
-					"points_per_turn": 500,
-					"size": 10,
-					"type": 2
-				},
-				{
-					"buildings": [],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
-						"b": 0.00000019252300376138,
-						"g": 0.392538130283356,
-						"r": 0.664803564548492
+						"b": 0.666666686534882,
+						"g": 0.479166686534882,
+						"r": 0.0
 					},
 					"notes": "",
 					"points_per_turn": 300,
@@ -94315,45 +94203,142 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] unique resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 3,
+							"type": "city | upgrade: (not in progress) | siege attack: 9000, siege defense: 10000, health: 20000"
+						},
+						{
+							"level": 1,
+							"type": "research center | upgrade: (not in progress) | "
+						},
+						{
+							"level": 1,
+							"type": "mine | upgrade: (not in progress) | 450 points per turn"
+						}
+					],
+					"class_level": 9,
+					"color": {
+						"a": 1.0,
+						"b": 0.953125,
+						"g": 1.0,
+						"r": 0.0
+					},
+					"notes": "",
+					"points_per_turn": 450,
+					"size": 8,
+					"type": 2
+				},
+				{
+					"buildings": [],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
-						"b": 0.690770506858826,
-						"g": 0.000178276299266145,
-						"r": 0.780406475067139
+						"b": 0.0,
+						"g": 0.75,
+						"r": 1.0
 					},
 					"notes": "",
 					"points_per_turn": 100,
-					"size": 9,
+					"size": 3,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] unique resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
-						"b": 0.989297926425934,
-						"g": 0.0041502183303237,
-						"r": 0.635367691516876
+						"b": 0.411488950252533,
+						"g": 0.988235294818878,
+						"r": 0.00392155349254608
 					},
 					"notes": "",
 					"points_per_turn": 150,
-					"size": 2,
+					"size": 3,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 500,
+					"size": 10,
+					"type": 2
 				},
 				{
 					"buildings": [],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
-						"b": 1.0,
-						"g": 0.343236744403839,
-						"r": 0.36338022351265
+						"b": 0.83984375,
+						"g": 0.83984375,
+						"r": 0.83984375
 					},
 					"notes": "",
 					"points_per_turn": 400,
-					"size": 4,
+					"size": 6,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.732421875,
+						"g": 0.75,
+						"r": 0.0
+					},
+					"notes": "AD 18k",
+					"points_per_turn": 0,
+					"size": 18,
+					"type": 4
 				}
 			]
 		},
@@ -174558,31 +174543,128 @@
 			"planets": [
 				{
 					"buildings": [],
-					"class_level": 3,
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
-						"b": 0.000000288784519852925,
-						"g": 0.366265565156937,
-						"r": 0.698081493377686
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
 					},
-					"notes": "",
-					"points_per_turn": 150,
-					"size": 5,
-					"type": 0
+					"notes": "1 [tbd] Unique Resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
-						"b": 0.0476855337619781,
-						"g": 0.567992985248566,
+						"b": 1.0,
+						"g": 0.484375,
 						"r": 0.0
 					},
 					"notes": "",
 					"points_per_turn": 200,
 					"size": 3,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] Unique Resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 3,
+							"type": "city | upgrade: (not in progress) | siege attack: 9000, siege defense: 10000, health: 20000"
+						},
+						{
+							"level": 1,
+							"type": "research center | upgrade: (not in progress) |"
+						},
+						{
+							"level": 1,
+							"type": "mine | upgrade: (not in progress) | 500 points/turn"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 0.632598042488098,
+						"g": 0.69803923368454,
+						"r": 0.0
+					},
+					"notes": "",
+					"points_per_turn": 500,
+					"size": 10,
+					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] Unique Resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] Unique Resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "AD 15k",
+					"points_per_turn": 0,
+					"size": 15,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 150,
+					"size": 4,
+					"type": 4
 				}
 			]
 		},
