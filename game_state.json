@@ -27932,27 +27932,165 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
+				"b": 0.578125,
 				"g": 1.0,
-				"r": 1.0
+				"r": 0.0
 			},
 			"coord_name": "E21-B4-1",
 			"name": "",
 			"notes": "",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 2,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 4,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 17000,\tdef 87000,\thp 86000\n  Dravok Matriarch  x1\n  Defender x10\n  Builder x10 \n  Gatherer x10 \n  Hatchling x10 ",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 3,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 4,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 6,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 3,
+							"type": "crystal reef"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
-						"b": 0.00000009626150188069,
-						"g": 0.391245603561401,
-						"r": 0.666554927825928
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
 					},
-					"notes": "",
-					"points_per_turn": 350,
-					"size": 9,
-					"type": 3
+					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
 				}
 			]
 		},
@@ -88243,8 +88381,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.7578125
 			},
 			"coord_name": "O14-C1-1",
 			"name": "Yo Momma",
@@ -159817,27 +159955,120 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
+				"b": 0.953125,
 				"g": 1.0,
-				"r": 1.0
+				"r": 0.0
 			},
 			"coord_name": "G7-C2-1",
-			"name": "",
+			"name": "The Great Weakage",
 			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.0859375,
+						"g": 1.0,
+						"r": 0.0
+					},
+					"notes": "AD 1k",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 1.0,
+						"r": 0.828125
+					},
+					"notes": "AD 2k",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.8125,
+						"r": 0.0
+					},
+					"notes": "AD 17k",
+					"points_per_turn": 0,
+					"size": 17,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 4,
+							"type": "zrathi hive core"
+						},
+						{
+							"level": 4,
+							"type": "cargo | 0/32000 points"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
-						"b": 0.575310051441193,
-						"g": 0.529087722301483,
-						"r": 0.0
+						"b": 0.30078125,
+						"g": 0.0082244873046875,
+						"r": 0.0379372835159302
 					},
-					"notes": "",
+					"notes": "Dormant Hive core\n  Landed Fleet\n    Devourer x50\n    Reclaimer x50\n    Scrapper x50\n    Infester x50",
 					"points_per_turn": 350,
-					"size": 2,
-					"type": 1
+					"size": 5,
+					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.140625,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "AD 20k",
+					"points_per_turn": 0,
+					"size": 20,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.5390625,
+						"r": 1.0
+					},
+					"notes": "AD 10k",
+					"points_per_turn": 0,
+					"size": 10,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 1.0,
+						"r": 0.8984375
+					},
+					"notes": "AD 4k",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
 				}
 			]
 		},
@@ -193397,8 +193628,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.25,
+				"r": 0.0
 			},
 			"coord_name": "W4-C4-1",
 			"name": "",
@@ -193406,31 +193637,82 @@
 			"planets": [
 				{
 					"buildings": [],
-					"class_level": 1,
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
-						"b": 0.626066982746124,
-						"g": 0.520508766174316,
+						"b": 1.0,
+						"g": 0.1796875,
 						"r": 0.0
 					},
-					"notes": "",
-					"points_per_turn": 50,
-					"size": 2,
-					"type": 2
+					"notes": "AD 3k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
 				},
 				{
 					"buildings": [],
-					"class_level": 4,
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.0413818359375,
+						"g": 0.554128646850586,
+						"r": 0.8828125
+					},
+					"notes": "AD 4k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 4,
+							"type": "cobal bee hive"
+						},
+						{
+							"level": 4,
+							"type": "cargo | 0/32000 points"
+						}
+					],
+					"class_level": 20,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.2734375,
+						"r": 0.0
+					},
+					"notes": "Orbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40\n\nLanded Fleet Atk:56100,\tDef:57100,\tHP:61100\n  Queen x1\n  Driller Drone x20\n  Collector Bee x40\n  Nanobee x10",
+					"points_per_turn": 1000,
+					"size": 4,
+					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
 						"b": 0.0,
-						"g": 0.424371242523193,
-						"r": 0.617330074310303
+						"g": 0.6953125,
+						"r": 0.021728515625
 					},
-					"notes": "",
-					"points_per_turn": 200,
-					"size": 7,
-					"type": 0
+					"notes": "AD 3k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.7734375,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "AD 3k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
 				}
 			]
 		},
