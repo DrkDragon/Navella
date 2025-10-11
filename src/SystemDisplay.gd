@@ -36,6 +36,7 @@ func bind(data: SystemProperties) -> void:
 
 func _on_data_changed() -> void:
 	sprite.modulate = binding.color
+	get_parent().queue_redraw()
 
 func select(addition: bool) -> void:
 	if not addition:

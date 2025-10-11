@@ -11,6 +11,7 @@ const MAP_SIZE := SECTOR_SIZE * SECTOR_COUNT
 const POINT_SCALE := 1.0 / 256
 const LABEL_SCALE := 1.0 / 2
 const LETTERS := "ABCDEFGHIJKLMNOPQRSTUVWXY"
+const FTL_SEGMENTS := 4
 
 signal display_system(system: String)
 signal request_ftl_routes(system: String, callback: Callable)
@@ -227,7 +228,20 @@ func _draw() -> void:
 				elif target.position.y == child.position.y:
 					if target.position.x < child.position.x: continue
 				
-				draw_line(child.position, target.position, Color.WHITE)
+				for i in FTL_SEGMENTS:
+					var from: Vector2 = target.position.lerp(
+						child.position,
+						float(i) / FTL_SEGMENTS
+					)
+					var to: Vector2 = target.position.lerp(
+						child.position,
+						float(i + 1) / FTL_SEGMENTS
+					)
+					var color := target.binding.color.lerp(
+						child.binding.color,
+						float(i) / (FTL_SEGMENTS + 1)
+					)
+					draw_line(from, to, color)
 		)
 
 static func get_coord(row: int, column: int, subrow: int, subcolumn: int) -> String:
