@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsauiuygv1guk"]
+
+[ext_resource type="AudioStream" uid="uid://di188j8bf63qe" path="res://slow-travel.wav" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bouhue1v14esh" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bd3le6gt1rqkv" path="res://ui.tscn" id="2_h2yge"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2yge"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2yge")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_0xm2m")
+volume_db = -36.0
+autoplay = true
+
+[node name="UI" parent="." instance=ExtResource("2_h2yge")]
+layout_mode = 1
+
+[node name="MuteButton" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -89.0
+offset_bottom = 31.0
+grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h2yge")
+text = "Mute"
+
+[connection signal="pressed" from="MuteButton" to="." method="_on_mute_button_pressed"]

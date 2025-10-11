@@ -1,5 +1,5 @@
 class_name SystemDisplay
-extends Sprite2D
+extends Node2D
 
 const CIRCLE := preload("res://circle.tres")
 var LABEL := Label.new()
@@ -19,11 +19,13 @@ var discriminator: int :
 var _discriminator: int
 
 var binding: SystemProperties
+var sprite := Sprite2D.new()
 
 signal display_system(system: String)
 
 func _init() -> void:
-	texture = CIRCLE
+	sprite.texture = CIRCLE
+	add_child(sprite)
 
 func bind(data: SystemProperties) -> void:
 	if binding: data.changed.disconnect(_on_data_changed)
@@ -33,7 +35,7 @@ func bind(data: SystemProperties) -> void:
 		_on_data_changed()
 
 func _on_data_changed() -> void:
-	modulate = binding.color
+	sprite.modulate = binding.color
 
 func select(addition: bool) -> void:
 	if not addition:
@@ -119,7 +121,7 @@ func _draw() -> void:
 	
 	draw_circle(
 		Vector2.ZERO,
-		texture.get_size().x / 2,
+		sprite.texture.get_size().x / 2,
 		Color.CYAN.lerp(
 			Color.MAGENTA,
 			clampf((sin(Time.get_ticks_msec() / 1000.0 * TAU) + 1) / 2, 0, 1)
