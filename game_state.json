@@ -5478,13 +5478,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
+				"b": 0.9296875,
 				"g": 1.0,
-				"r": 1.0
+				"r": 0.0
 			},
 			"coord_name": "T24-C3-1",
-			"name": "",
-			"notes": "",
+			"name": "Raptor Start",
+			"notes": "Ship Start",
 			"planets": [
 				{
 					"buildings": [],
@@ -94179,13 +94179,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"b": 0.737254917621613,
+				"g": 0.168627455830574,
+				"r": 0.160784319043159
 			},
 			"coord_name": "A14-C3-1",
-			"name": "",
-			"notes": "",
+			"name": "Orion Start",
+			"notes": "Ship Yard 1",
 			"planets": [
 				{
 					"buildings": [],
@@ -122288,12 +122288,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.96875
 			},
 			"coord_name": "X11-B2-1",
-			"name": "",
-			"notes": "",
+			"name": "Varill Start",
+			"notes": "Shipyard 1",
 			"planets": [
 				{
 					"buildings": [],
@@ -174548,13 +174548,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"b": 0.270588248968124,
+				"g": 0.133333340287209,
+				"r": 0.7843137383461
 			},
 			"coord_name": "Y6-A3-2",
-			"name": "",
-			"notes": "",
+			"name": "Rob Start",
+			"notes": "Ship Yard 1",
 			"planets": [
 				{
 					"buildings": [],
