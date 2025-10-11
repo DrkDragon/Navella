@@ -172,7 +172,7 @@ func _draw() -> void:
 	draw_line(
 		Vector2(0, MAP_SIZE),
 		Vector2(MAP_SIZE, MAP_SIZE),
-		Color.RED,
+		Color.DIM_GRAY,
 		line_width
 	)
 	
@@ -180,7 +180,7 @@ func _draw() -> void:
 		draw_line(
 			Vector2(0, row * SECTOR_SIZE),
 			Vector2(MAP_SIZE, row * SECTOR_SIZE),
-			Color.RED,
+			Color.DIM_GRAY,
 			line_width
 		)
 		
@@ -190,13 +190,13 @@ func _draw() -> void:
 				draw_line(
 					Vector2(0, subpos),
 					Vector2(MAP_SIZE, subpos),
-					Color.RED
+					Color.DIM_GRAY
 				)
 	
 	draw_line(
 		Vector2(MAP_SIZE, 0),
 		Vector2(MAP_SIZE, MAP_SIZE),
-		Color.RED,
+		Color.DIM_GRAY,
 		line_width
 	)
 	
@@ -204,7 +204,7 @@ func _draw() -> void:
 		draw_line(
 			Vector2(column * SECTOR_SIZE, 0),
 			Vector2(column * SECTOR_SIZE, MAP_SIZE),
-			Color.RED,
+			Color.DIM_GRAY,
 			line_width
 		)
 		
@@ -214,7 +214,7 @@ func _draw() -> void:
 				draw_line(
 					Vector2(subpos, 0),
 					Vector2(subpos, MAP_SIZE),
-					Color.RED
+					Color.DIM_GRAY
 				)
 	
 	for child in get_children():
