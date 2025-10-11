@@ -2,6 +2,7 @@ class_name SystemDisplay
 extends Sprite2D
 
 const CIRCLE := preload("res://circle.tres")
+var LABEL := Label.new()
 
 var coord: String :
 	get: return _coord
@@ -53,8 +54,6 @@ func _process(_delta: float) -> void:
 func _draw() -> void:
 	if not is_in_group("selected_system"): return
 	
-	var dummy := Label.new()
-	
 	if get_parent().show_ftl:
 		const FTLS := [225, 175, 120, 70, 30]
 		const FTL_TIERS := ["T4", "T3", "T2", "T1", "T0"]
@@ -68,7 +67,7 @@ func _draw() -> void:
 			)
 			
 			draw_string(
-				dummy.get_theme_default_font(),
+				LABEL.get_theme_default_font(),
 				Vector2(0, FTLS[i] / -scale.x),
 				FTL_TIERS[i],
 				HORIZONTAL_ALIGNMENT_LEFT,
@@ -90,7 +89,7 @@ func _draw() -> void:
 			)
 			
 			draw_string(
-				dummy.get_theme_default_font(),
+				LABEL.get_theme_default_font(),
 				Vector2(0, DETECTIONS[i] / -scale.x),
 				DETECTION_TIERS[i],
 				HORIZONTAL_ALIGNMENT_LEFT,
@@ -107,7 +106,7 @@ func _draw() -> void:
 			)
 			
 			draw_string(
-				dummy.get_theme_default_font(),
+				LABEL.get_theme_default_font(),
 				Vector2(0, -268).rotated(
 					(angle * TAU / 8) + (PI / 8)
 				) / scale,
