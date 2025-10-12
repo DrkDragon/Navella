@@ -122282,30 +122282,155 @@
 			"planets": [
 				{
 					"buildings": [],
-					"class_level": 6,
+					"class_level": 8,
 					"color": {
 						"a": 1.0,
-						"b": 0.147722363471985,
+						"b": 0.0,
 						"g": 0.0,
-						"r": 0.87353241443634
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 300,
+					"points_per_turn": 0,
 					"size": 2,
+					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 7,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.40625,
+						"r": 0.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 0.734375,
+						"g": 1.0,
+						"r": 0.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 2
 				},
 				{
 					"buildings": [],
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
-						"b": 0.466232001781464,
-						"g": 0.000000818222758880438,
-						"r": 0.838095366954803
+						"b": 0.875,
+						"g": 1.0,
+						"r": 0.0
 					},
 					"notes": "",
-					"points_per_turn": 50,
-					"size": 7,
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] Unique Resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 3,
+							"type": "city | updrade: (not in progess) siege attack: 9000, siege defense: 10000, siege health: 20000"
+						},
+						{
+							"level": 1,
+							"type": "research center | updreage: (not in progress) |"
+						},
+						{
+							"level": 1,
+							"type": "mine | upgrade: (not in progress) | 450 points per turn"
+						}
+					],
+					"class_level": 9,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 450,
+					"size": 8,
+					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 [tbd] Unique Resource",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.625,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 9,
 					"type": 1
 				}
 			]
