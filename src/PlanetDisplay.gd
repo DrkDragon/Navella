@@ -47,6 +47,8 @@ func _on_data_changed() -> void:
 			texture = preload("res://terrain_texture.png")
 		PlanetProperties.PlanetType.ASTEROID_BELT:
 			texture = preload("res://debris_texture.png")
+		PlanetProperties.PlanetType.SHATTERED:
+			texture = preload("res://shattered_texture.png")
 	render.material.set_shader_parameter("texture_overlay", texture)
 
 func select() -> void:

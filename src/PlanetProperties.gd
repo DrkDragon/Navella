@@ -1,7 +1,14 @@
 class_name PlanetProperties
 extends Resource
 
-enum PlanetType { BARREN, GAS, TERRAIN, LIQUID, ASTEROID_BELT }
+enum PlanetType {
+	BARREN,
+	GAS,
+	TERRAIN,
+	LIQUID,
+	ASTEROID_BELT,
+	SHATTERED
+}
 
 @export var size: int :
 	get: return _size
