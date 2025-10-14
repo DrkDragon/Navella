@@ -1,6 +1,8 @@
 {
 	"ftl_routes": {
-
+		"N15-C4-1": [
+			"N15-C4-2"
+		]
 	},
 	"systems": [
 		{
@@ -86202,55 +86204,144 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"b": 0.600224852561951,
+				"g": 0.600224852561951,
+				"r": 0.600224852561951
 			},
 			"coord_name": "N15-C4-1",
-			"name": "",
+			"name": "Avadawn",
 			"notes": "",
 			"planets": [
-				{
-					"buildings": [],
-					"class_level": 5,
-					"color": {
-						"a": 1.0,
-						"b": 0.722058832645416,
-						"g": 0.500998497009277,
-						"r": 0.00000298410645882541
-					},
-					"notes": "",
-					"points_per_turn": 250,
-					"size": 2,
-					"type": 2
-				},
 				{
 					"buildings": [],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
-						"b": 0.00000057756903970585,
-						"g": 0.429972738027573,
-						"r": 0.608011245727539
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 150,
-					"size": 5,
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 1.0,
+						"r": 0.98552131652832
+					},
+					"notes": "AD 7k\n\nStealthed fleet:\n  Precursor Dreadnough 1x Class 10 tier 5\n  Precursor battleship 2x Class 9 tier 5\n  Precursor crusier x3 class 5 tier 5\n  Precursor destroyer x2 class 4 tier 5",
+					"points_per_turn": 0,
+					"size": 7,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 6,
+							"type": "abandoned city | upgrade: (not in progress) | research: (not in progress)"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 0.48862162232399,
+						"g": 0.789825201034546,
+						"r": 0.913044810295105
+					},
+					"notes": "Stealthed fleet:\n  Precursor battleship 2x Class 9 tier 5\n  Precursor crusier x3 class 5 tier 5\n  Precursor destroyer x2 class 4 tier 5",
+					"points_per_turn": 300,
+					"size": 20,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.850473761558533,
+						"g": 0.760714828968048,
+						"r": 0.139530852437019
+					},
+					"notes": "AD 20k\n\nStealthed fleet:\n  Precursor Dreadnough 1x Class 10 tier 5\n  Precursor battleship 2x Class 9 tier 5\n  Precursor crusier x3 class 5 tier 5\n  Precursor destroyer x2 class 4 tier 5",
+					"points_per_turn": 0,
+					"size": 20,
+					"type": 4
 				}
 			]
 		},
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"b": 0.600000023841858,
+				"g": 0.600000023841858,
+				"r": 0.600000023841858
 			},
 			"coord_name": "N15-C4-2",
-			"name": "",
+			"name": "Crezell",
 			"notes": "",
 			"planets": [
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 1.0,
+						"r": 0.774344205856323
+					},
+					"notes": "AD 11k",
+					"points_per_turn": 0,
+					"size": 11,
+					"type": 4
+				},
 				{
 					"buildings": [],
 					"class_level": 5,
@@ -86260,24 +86351,80 @@
 						"g": 0.482964158058167,
 						"r": 0.500065624713898
 					},
-					"notes": "",
+					"notes": "Shattered world",
 					"points_per_turn": 250,
 					"size": 5,
-					"type": 3
+					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.568712949752808,
+						"r": 0.0
+					},
+					"notes": "AD 6k",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
 				},
 				{
 					"buildings": [],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
-						"b": 0.846906960010529,
-						"g": 0.00133148906752467,
-						"r": 0.717100977897644
+						"b": 0.533707499504089,
+						"g": 0.510774731636047,
+						"r": 0.530203878879547
+					},
+					"notes": "Shattered world",
+					"points_per_turn": 350,
+					"size": 10,
+					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.288577735424042,
+						"g": 0.803545475006104,
+						"r": 0.276218771934509
+					},
+					"notes": "AD 9k",
+					"points_per_turn": 0,
+					"size": 9,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 350,
-					"size": 7,
-					"type": 0
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -86288,10 +86435,24 @@
 						"g": 0.465583622455597,
 						"r": 0.0
 					},
-					"notes": "",
+					"notes": "Shattered world",
 					"points_per_turn": 450,
-					"size": 3,
+					"size": 6,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.364592164754868,
+						"g": 0.364592164754868,
+						"r": 0.752706408500671
+					},
+					"notes": "AD 20k",
+					"points_per_turn": 0,
+					"size": 20,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -86302,10 +86463,10 @@
 						"g": 0.507027685642242,
 						"r": 0.433487981557846
 					},
-					"notes": "",
+					"notes": "Shattered world",
 					"points_per_turn": 50,
-					"size": 5,
-					"type": 1
+					"size": 4,
+					"type": 2
 				}
 			]
 		},
