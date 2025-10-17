@@ -12,6 +12,7 @@ const POINT_SCALE := 1.0 / 256
 const LABEL_SCALE := 1.0 / 2
 const LETTERS := "ABCDEFGHIJKLMNOPQRSTUVWXY"
 const FTL_SEGMENTS := 4
+const GRID_LINE_COLOR := Color(0.25, 0.25, 0.25, 0.5)
 
 signal display_system(system: String)
 signal request_ftl_routes(system: String, callback: Callable)
@@ -172,7 +173,7 @@ func _draw() -> void:
 	draw_line(
 		Vector2(0, MAP_SIZE),
 		Vector2(MAP_SIZE, MAP_SIZE),
-		Color.DIM_GRAY,
+		GRID_LINE_COLOR,
 		line_width
 	)
 	
@@ -180,7 +181,7 @@ func _draw() -> void:
 		draw_line(
 			Vector2(0, row * SECTOR_SIZE),
 			Vector2(MAP_SIZE, row * SECTOR_SIZE),
-			Color.DIM_GRAY,
+			GRID_LINE_COLOR,
 			line_width
 		)
 		
@@ -190,13 +191,13 @@ func _draw() -> void:
 				draw_line(
 					Vector2(0, subpos),
 					Vector2(MAP_SIZE, subpos),
-					Color.DIM_GRAY
+					GRID_LINE_COLOR
 				)
 	
 	draw_line(
 		Vector2(MAP_SIZE, 0),
 		Vector2(MAP_SIZE, MAP_SIZE),
-		Color.DIM_GRAY,
+		GRID_LINE_COLOR,
 		line_width
 	)
 	
@@ -204,7 +205,7 @@ func _draw() -> void:
 		draw_line(
 			Vector2(column * SECTOR_SIZE, 0),
 			Vector2(column * SECTOR_SIZE, MAP_SIZE),
-			Color.DIM_GRAY,
+			GRID_LINE_COLOR,
 			line_width
 		)
 		
@@ -214,7 +215,7 @@ func _draw() -> void:
 				draw_line(
 					Vector2(subpos, 0),
 					Vector2(subpos, MAP_SIZE),
-					Color.DIM_GRAY
+					GRID_LINE_COLOR
 				)
 	
 	for child in get_children():
