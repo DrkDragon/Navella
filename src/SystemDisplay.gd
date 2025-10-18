@@ -28,10 +28,10 @@ func _init() -> void:
 	add_child(sprite)
 
 func bind(data: SystemProperties) -> void:
-	if binding: data.changed.disconnect(_on_data_changed)
+	if binding: binding.changed.disconnect(_on_data_changed)
 	binding = data
 	if binding:
-		data.changed.connect(_on_data_changed)
+		binding.changed.connect(_on_data_changed)
 		_on_data_changed()
 
 func _on_data_changed() -> void:

@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://bd3le6gt1rqkv"]
+[gd_scene load_steps=27 format=3 uid="uid://bd3le6gt1rqkv"]
 
 [ext_resource type="Script" uid="uid://dt7y4ilhgx6qi" path="res://galaxy_map.gd" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://c575u4ccl0arv" path="res://ui.gd" id="1_m6e0p"]
 [ext_resource type="Script" uid="uid://dj2rk8gcvsjob" path="res://star.gd" id="3_27fn8"]
+[ext_resource type="Script" uid="uid://da6moh3t6n4om" path="res://map_render.gd" id="4_nltto"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyqef"]
 bg_color = Color(0, 0, 0, 1)
@@ -67,6 +68,28 @@ bg_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4yjw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irxef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4yjw"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+border_width_bottom = 1
+border_color = Color(0.8, 0, 0.8, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gs482"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5rqp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxd00"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxd00"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ibotj"]
+viewport_path = NodePath("Game State/MapRender/Render/SubViewport")
 
 [node name="UI" type="TabContainer"]
 anchors_preset = 15
@@ -253,10 +276,53 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_irxef")
 disabled = true
 text = "Add Building"
 
-[node name="Export" type="Control" parent="."]
+[node name="Game State" type="VBoxContainer" parent="."]
 visible = false
 layout_mode = 2
+theme_override_constants/separation = 0
 metadata/_tab_index = 3
+
+[node name="GameState" type="PanelContainer" parent="Game State"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y4yjw")
+
+[node name="Layout" type="HBoxContainer" parent="Game State/GameState"]
+layout_mode = 2
+
+[node name="DownloadGameButton" type="Button" parent="Game State/GameState/Layout"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gs482")
+text = "Download Latest Game State"
+
+[node name="SaveGameButton" type="Button" parent="Game State/GameState/Layout"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n5rqp")
+text = "Save Game State (JSON)"
+
+[node name="SaveMapButton" type="Button" parent="Game State/GameState/Layout"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cxd00")
+text = "Save Map Render (PNG)"
+
+[node name="MapRender" type="PanelContainer" parent="Game State"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_cxd00")
+
+[node name="Render" type="TextureRect" parent="Game State/MapRender"]
+layout_mode = 2
+texture = SubResource("ViewportTexture_ibotj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SubViewport" type="SubViewport" parent="Game State/MapRender/Render"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(2500, 2500)
+render_target_update_mode = 4
+
+[node name="MapRender" type="Node2D" parent="Game State/MapRender/Render/SubViewport"]
+script = ExtResource("4_nltto")
 
 [connection signal="pressed" from="Galaxy Map/Options/FTL/AddFTLButton" to="." method="_on_add_ftl_button_pressed"]
 [connection signal="pressed" from="Galaxy Map/Options/FTL/DeleteFTLButton" to="." method="_on_delete_ftl_button_pressed"]
@@ -264,3 +330,6 @@ metadata/_tab_index = 3
 [connection signal="toggled" from="Galaxy Map/Options/Toolbar/DetectionButton" to="." method="_on_detection_button_toggled"]
 [connection signal="display_system" from="Galaxy Map/View/SubViewport/GalaxyMap" to="." method="_on_galaxy_map_display_system"]
 [connection signal="request_ftl_routes" from="Galaxy Map/View/SubViewport/GalaxyMap" to="." method="_on_galaxy_map_request_ftl_routes"]
+[connection signal="pressed" from="Game State/GameState/Layout/DownloadGameButton" to="." method="_on_download_game_button_pressed"]
+[connection signal="pressed" from="Game State/GameState/Layout/SaveGameButton" to="." method="_on_save_game_button_pressed"]
+[connection signal="pressed" from="Game State/GameState/Layout/SaveMapButton" to="." method="_on_save_map_button_pressed"]

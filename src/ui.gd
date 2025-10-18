@@ -15,40 +15,57 @@ extends TabContainer
 @onready var galaxy_map := $"Galaxy Map/View/SubViewport/GalaxyMap"
 @onready var system_map := $"System Map/View/Layout/System"
 
+@onready var map_render := $"Game State/MapRender/Render/SubViewport"
+
 var loaded_save := SaveData.new()
 
-func _init() -> void:
-	tab_changed.connect(func(tab: int) -> void:
-		if (tab + 1) != get_child_count(): return
-		current_tab = 0
-		
-		var json := JSON.stringify(loaded_save.serialize(), "\t").to_utf8_buffer()
-		
-		if OS.get_name() == "Web":
-			JavaScriptBridge.download_buffer(
-				json,
-				"game_state.json",
-				"application/json"
-			)
-		else:
-			var dialog := FileDialog.new()
-			dialog.access = FileDialog.ACCESS_FILESYSTEM
-			dialog.use_native_dialog = true
-			dialog.file_mode = FileDialog.FILE_MODE_SAVE_FILE
-			dialog.add_filter("*.json", "JSON File")
-			dialog.file_selected.connect(func(path: String) -> void:
-				var file := FileAccess.open(path, FileAccess.WRITE)
-				file.store_buffer(json)
-				file.close()
-			)
-			dialog.close_requested.connect(func() -> void:
-				dialog.queue_free()
-			)
-			add_child(dialog)
-			dialog.show()
-	)
-
 func _ready() -> void:
+	download_game_state()
+
+func get_system_positions() -> Dictionary[String, Vector2]:
+	var result: Dictionary[String, Vector2] = {}
+	
+	for child in galaxy_map.get_children():
+		if child is SystemDisplay:
+			result[child.name] = child.position
+	
+	return result
+
+func save_game_state() -> void:
+	var json = JSON.stringify(loaded_save.serialize(), "\t").to_utf8_buffer()
+	save_data(json, "game_state.json", "application/json")
+
+func save_map() -> void:
+	var image = map_render.get_texture().get_image().save_png_to_buffer()
+	save_data(image, "map_render.png", "image/png")
+
+func save_data(data: PackedByteArray, file: String, mime_type: String) -> void:
+	if OS.get_name() == "Web":
+		JavaScriptBridge.download_buffer(data, file, mime_type)
+	else:
+		var dialog := FileDialog.new()
+		dialog.access = FileDialog.ACCESS_FILESYSTEM
+		dialog.use_native_dialog = true
+		dialog.file_mode = FileDialog.FILE_MODE_SAVE_FILE
+		
+		if file.get_extension() != "":
+			dialog.add_filter(
+				"*." + file.get_extension().to_lower(),
+				file.get_extension().to_upper() + " File"
+			)
+		
+		dialog.file_selected.connect(func(path: String) -> void:
+			var stream := FileAccess.open(path, FileAccess.WRITE)
+			stream.store_buffer(data)
+			stream.close()
+		)
+		dialog.close_requested.connect(func() -> void:
+			dialog.queue_free()
+		)
+		add_child(dialog)
+		dialog.show()
+
+func download_game_state() -> void:
 	var http := HTTPClient.new()
 	
 	print("Connecting to host...")
@@ -443,3 +460,12 @@ func _on_delete_ftl_button_pressed() -> void:
 			to_routes.erase(from.name)
 	
 	galaxy_map.queue_redraw()
+
+func _on_download_game_button_pressed() -> void:
+	download_game_state()
+
+func _on_save_game_button_pressed() -> void:
+	save_game_state()
+
+func _on_save_map_button_pressed() -> void:
+	save_map()
