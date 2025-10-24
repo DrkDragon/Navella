@@ -5850,8 +5850,8 @@
 				"r": 0.0
 			},
 			"coord_name": "T24-C3-1",
-			"name": "Raptor Start",
-			"notes": "Ship Start",
+			"name": "",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -117312,10 +117312,10 @@
 				"a": 1.0,
 				"b": 1.0,
 				"g": 1.0,
-				"r": 1.0
+				"r": 0.0
 			},
 			"coord_name": "N12-D4-1",
-			"name": "",
+			"name": "mozo start",
 			"notes": "",
 			"planets": [
 				{
