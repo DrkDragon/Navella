@@ -477,7 +477,23 @@ func _on_delete_ftl_button_pressed() -> void:
 	galaxy_map.queue_redraw()
 
 func _on_download_game_button_pressed() -> void:
-	download_game_state()
+	var confirm := ConfirmationDialog.new()
+	confirm.dialog_text = "Are you sure you want to download the latest game state?\nAll changes will be lost."
+	confirm.confirmed.connect(func() -> void:
+		confirm.queue_free()
+		download_game_state()
+	)
+	confirm.canceled.connect(func() -> void:
+		confirm.queue_free()
+	)
+	confirm.visibility_changed.connect(func() -> void:
+		confirm.position = Vector2i(get_viewport_rect().size / 2) - (confirm.size / 2)
+	)
+	confirm.close_requested.connect(func() -> void:
+		confirm.queue_free()
+	)
+	add_child(confirm)
+	confirm.show()
 
 func _on_save_game_button_pressed() -> void:
 	save_game_state()

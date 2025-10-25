@@ -79,11 +79,11 @@ border_width_bottom = 1
 border_color = Color(0.8, 0, 0.8, 1)
 corner_detail = 1
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gs482"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5rqp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxd00"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gs482"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxd00"]
 bg_color = Color(0, 0, 0, 1)
@@ -289,11 +289,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_y4yjw")
 [node name="Layout" type="HBoxContainer" parent="Game State/GameState"]
 layout_mode = 2
 
-[node name="DownloadGameButton" type="Button" parent="Game State/GameState/Layout"]
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_gs482")
-text = "Download Latest Game State"
-
 [node name="SaveGameButton" type="Button" parent="Game State/GameState/Layout"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_n5rqp")
@@ -303,6 +298,15 @@ text = "Save Game State (JSON)"
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cxd00")
 text = "Save Map Render (PNG)"
+
+[node name="Spacer" type="Control" parent="Game State/GameState/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DownloadGameButton" type="Button" parent="Game State/GameState/Layout"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gs482")
+text = "Download Latest Game State"
 
 [node name="MapRender" type="PanelContainer" parent="Game State"]
 layout_mode = 2
@@ -330,6 +334,6 @@ script = ExtResource("4_nltto")
 [connection signal="toggled" from="Galaxy Map/Options/Toolbar/DetectionButton" to="." method="_on_detection_button_toggled"]
 [connection signal="display_system" from="Galaxy Map/View/SubViewport/GalaxyMap" to="." method="_on_galaxy_map_display_system"]
 [connection signal="request_ftl_routes" from="Galaxy Map/View/SubViewport/GalaxyMap" to="." method="_on_galaxy_map_request_ftl_routes"]
-[connection signal="pressed" from="Game State/GameState/Layout/DownloadGameButton" to="." method="_on_download_game_button_pressed"]
 [connection signal="pressed" from="Game State/GameState/Layout/SaveGameButton" to="." method="_on_save_game_button_pressed"]
 [connection signal="pressed" from="Game State/GameState/Layout/SaveMapButton" to="." method="_on_save_map_button_pressed"]
+[connection signal="pressed" from="Game State/GameState/Layout/DownloadGameButton" to="." method="_on_download_game_button_pressed"]
