@@ -175630,7 +175630,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -175658,7 +175658,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -175676,6 +175676,14 @@
 						{
 							"level": 1,
 							"type": "mine | upgrade: (not in progress) | 500 points/turn"
+						},
+						{
+							"level": 1,
+							"type": "cargo"
+						},
+						{
+							"level": 1,
+							"type": "cargo"
 						}
 					],
 					"class_level": 10,
@@ -175691,7 +175699,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -175699,13 +175712,18 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -175713,7 +175731,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -175733,7 +175751,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
