@@ -5850,8 +5850,8 @@
 				"r": 0.0
 			},
 			"coord_name": "T24-C3-1",
-			"name": "",
-			"notes": "",
+			"name": "Velzel",
+			"notes": "Ship yard 1",
 			"planets": [
 				{
 					"buildings": [],
@@ -8865,7 +8865,7 @@
 			},
 			"coord_name": "Y24-A4-1",
 			"name": "Lucida Start",
-			"notes": "",
+			"notes": "Ship Yard 1",
 			"planets": [
 				{
 					"buildings": [],
@@ -94786,7 +94786,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] unique resource",
+					"notes": "1 Alien Artifact",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -94841,7 +94841,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] unique resource",
+					"notes": "1 Alien Artifact",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -194581,7 +194581,7 @@
 				"r": 0.0
 			},
 			"coord_name": "W4-C4-1",
-			"name": "",
+			"name": "The Hive",
 			"notes": "",
 			"planets": [
 				{
