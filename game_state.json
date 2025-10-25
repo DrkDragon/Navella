@@ -175630,7 +175630,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -175658,7 +175658,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -175676,6 +175676,14 @@
 						{
 							"level": 1,
 							"type": "mine | upgrade: (not in progress) | 500 points/turn"
+						},
+						{
+							"level": 1,
+							"type": "cargo"
+						},
+						{
+							"level": 1,
+							"type": "cargo"
 						}
 					],
 					"class_level": 10,
@@ -175691,7 +175699,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -175699,13 +175712,18 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -175713,7 +175731,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 [tbd] Unique Resource",
+					"notes": "1 Voepon",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -175733,7 +175751,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -204326,7 +204349,12 @@
 			"notes": "Shipyard 1",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -204334,7 +204362,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 tbd unique resource",
+					"notes": "1 Fusion fuel",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -204367,7 +204395,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "space colony station | upgrade: (building 2t) | def power: 500xtier attack power: 900xtier, cargo: 100xtier^2"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -204376,12 +204409,17 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -204390,12 +204428,17 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 450,
 					"size": 7,
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -204418,7 +204461,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 200,
 					"size": 4,
 					"type": 4
 				},
@@ -204431,7 +204474,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 tbd unique resource",
+					"notes": "1 Fusion fuel",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
