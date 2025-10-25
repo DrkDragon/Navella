@@ -224,6 +224,7 @@ func display_system_info(system_name: String) -> void:
 				
 				system.planets.erase(planet)
 				system.planets.insert(index, planet)
+				system.changed.emit()
 			)
 			
 			clear_connections(move_planet_right_button.pressed)
@@ -236,9 +237,10 @@ func display_system_info(system_name: String) -> void:
 				
 				system.planets.erase(planet)
 				system.planets.insert(index, planet)
+				system.changed.emit()
 			)
 			
-			display_planet_info(planet)
+			display_planet_info(system, planet)
 		)
 		
 		system_map.add_child(planet_display)
@@ -246,10 +248,23 @@ func display_system_info(system_name: String) -> void:
 	system_star.visible = true
 	add_planet_button.disabled = false
 
-func display_planet_info(planet: PlanetProperties) -> void:
+class PlanetNumber extends Resource:
+	var system: SystemProperties
+	var planet: PlanetProperties
+	
+	var value: String :
+		get: return str(system.planets.find(planet) + 1)
+
+func display_planet_info(system: SystemProperties, planet: PlanetProperties) -> void:
 	clear_children(planet_property_list)
 	clear_children(building_list)
 	
+	var planet_number = PlanetNumber.new()
+	planet_number.system = system
+	planet_number.planet = planet
+	system.changed.connect(planet_number.changed.emit)
+	
+	add_planet_property("Planet #", create_string_display(planet_number, "value"))
 	add_planet_property("Size", create_int_editor(planet, "size"))
 	add_planet_property("Class", create_int_editor(planet, "class_level"))
 	add_planet_property("Type", create_planet_type_editor(planet))
@@ -264,7 +279,7 @@ func display_planet_info(planet: PlanetProperties) -> void:
 	clear_connections(add_building_button.pressed)
 	add_building_button.pressed.connect(func() -> void:
 		planet.buildings.append(Building.new())
-		display_planet_info(planet)
+		display_planet_info(system, planet)
 	)
 	
 	delete_planet_button.disabled = false
