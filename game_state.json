@@ -284,6 +284,19 @@
 		"T4-D1-1": [
 			"T4-D1-2"
 		],
+		"T4-D1-2": [
+			"T4-B2-1",
+			"T4-D4-1"
+		],
+		"T5-A3-1": [
+			"T4-D1-2"
+		],
+		"T5-A4-1": [
+			"T4-D1-2"
+		],
+		"T5-B2-1": [
+			"U5-A3-1"
+		],
 		"U14-A3-1": [
 			"U14-A3-2"
 		],
@@ -295,6 +308,9 @@
 		],
 		"U5-A3-1": [
 			"T4-D1-1"
+		],
+		"U5-C3-1": [
+			"U5-A3-1"
 		],
 		"W2-B1-1": [
 			"X2-B3-1"
@@ -125193,7 +125209,7 @@
 				"r": 1.0
 			},
 			"coord_name": "P11-C3-1",
-			"name": "",
+			"name": "NPC 3",
 			"notes": "",
 			"planets": [
 				{
@@ -125456,7 +125472,7 @@
 				"r": 0.5
 			},
 			"coord_name": "E11-A3-1",
-			"name": "",
+			"name": "npc 1",
 			"notes": "shipyard 2",
 			"planets": [
 				{
@@ -128865,59 +128881,86 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
+				"b": 0.422114849090576,
 				"g": 1.0,
-				"r": 1.0
+				"r": 0.0
 			},
 			"coord_name": "Q11-D4-1",
-			"name": "",
-			"notes": "",
+			"name": "Refredom",
+			"notes": "Shipyard 1",
 			"planets": [
 				{
-					"buildings": [],
-					"class_level": 6,
-					"color": {
-						"a": 1.0,
-						"b": 0.454948306083679,
-						"g": 0.0,
-						"r": 0.840168356895447
-					},
-					"notes": "",
-					"points_per_turn": 300,
-					"size": 1,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 7,
-					"color": {
-						"a": 1.0,
-						"b": 0.0,
-						"g": 0.295053899288177,
-						"r": 0.76813805103302
-					},
-					"notes": "",
-					"points_per_turn": 350,
-					"size": 3,
-					"type": 2
-				},
-				{
-					"buildings": [],
-					"class_level": 2,
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 3,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
-						"g": 0.346213430166245,
-						"r": 0.356379270553589
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 100,
-					"size": 9,
+					"points_per_turn": 150,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "city"
+						},
+						{
+							"level": 1,
+							"type": "research"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo building 1 turn | 0/2000"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 0.868020594120026,
+						"g": 1.0,
+						"r": 0.34509801864624
+					},
+					"notes": "System generates 1,350 points/turn",
+					"points_per_turn": 500,
+					"size": 10,
 					"type": 2
 				},
 				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 200,
+					"size": 3,
+					"type": 4
+				},
+				{
 					"buildings": [],
-					"class_level": 1,
+					"class_level": 4,
 					"color": {
 						"a": 1.0,
 						"b": 0.00000019252300376138,
@@ -128925,9 +128968,61 @@
 						"r": 0.567831218242645
 					},
 					"notes": "",
-					"points_per_turn": 50,
-					"size": 2,
+					"points_per_turn": 200,
+					"size": 4,
 					"type": 2
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 200,
+					"size": 5,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 300,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 150,
+					"size": 2,
+					"type": 4
 				}
 			]
 		},
@@ -182964,8 +183059,8 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "T5-B2-1",
@@ -185425,8 +185520,8 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "U5-C3-1",
@@ -189301,7 +189396,7 @@
 				"r": 0.9505615234375
 			},
 			"coord_name": "T4-D1-2",
-			"name": "",
+			"name": "npc 2",
 			"notes": "Shipyard 2",
 			"planets": [
 				{
