@@ -284,19 +284,6 @@
 		"T4-D1-1": [
 			"T4-D1-2"
 		],
-		"T4-D1-2": [
-			"T4-B2-1",
-			"T4-D4-1"
-		],
-		"T5-A3-1": [
-			"T4-D1-2"
-		],
-		"T5-A4-1": [
-			"T4-D1-2"
-		],
-		"T5-B2-1": [
-			"U5-A3-1"
-		],
 		"U14-A3-1": [
 			"U14-A3-2"
 		],
@@ -308,9 +295,6 @@
 		],
 		"U5-A3-1": [
 			"T4-D1-1"
-		],
-		"U5-C3-1": [
-			"U5-A3-1"
 		],
 		"W2-B1-1": [
 			"X2-B3-1"
@@ -326,6 +310,10 @@
 		],
 		"X11-A4-1": [
 			"X11-A4-2"
+		],
+		"X11-B2-1": [
+			"X11-B3-1",
+			"X11-C3-1"
 		],
 		"X14-A3-1": [
 			"X14-A3-2"
@@ -123111,7 +123099,7 @@
 						"g": 0.625,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Size 10   (20 build slots)",
 					"points_per_turn": 0,
 					"size": 4,
 					"type": 1
@@ -123124,7 +123112,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | updreage: (not in progress) |"
+							"type": "research center | updreage: (not in progress) | researching: (research center 2) 2 turns"
 						},
 						{
 							"level": 1,
@@ -123138,7 +123126,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "Dormant Class 11, tier 6, Precuser ship 20 W, 20 U, 20 D, 6 F",
+					"notes": "class 9  (18 build slots)\nDormant Class 11, tier 6, precursor  ship 20 W, 20 U, 20 D, 6 F | 2 super weapon, 1 precursor cargo tier 1 (1000*tier cargo) ",
 					"points_per_turn": 450,
 					"size": 4,
 					"type": 0
@@ -123152,7 +123140,7 @@
 						"g": 1.0,
 						"r": 0.828125
 					},
-					"notes": "",
+					"notes": "class 5  (10 build slots)\n",
 					"points_per_turn": 0,
 					"size": 4,
 					"type": 2
@@ -123166,7 +123154,7 @@
 						"g": 1.0,
 						"r": 0.0
 					},
-					"notes": "",
+					"notes": "class 4  (8 build slots)",
 					"points_per_turn": 0,
 					"size": 4,
 					"type": 2
@@ -123180,13 +123168,22 @@
 						"g": 0.40625,
 						"r": 0.0
 					},
-					"notes": "",
+					"notes": "class 3 (6 build slots)",
 					"points_per_turn": 0,
 					"size": 4,
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine | 400 points/turn"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -123194,8 +123191,8 @@
 						"g": 0.0,
 						"r": 1.0
 					},
-					"notes": "",
-					"points_per_turn": 0,
+					"notes": "class 2 (4 build slots)",
+					"points_per_turn": 400,
 					"size": 4,
 					"type": 1
 				},
@@ -123214,7 +123211,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -123228,7 +123230,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -123242,7 +123249,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -123251,7 +123263,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
 				}
@@ -124954,13 +124966,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "X11-B3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Centravetra atk 6k, def 1k, hp 2k",
 			"planets": [
 				{
 					"buildings": [],
@@ -125093,6 +125105,20 @@
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
 						"b": 0.508682310581207,
 						"g": 0.538737595081329,
 						"r": 0.000000625699783540767
@@ -125101,6 +125127,20 @@
 					"points_per_turn": 250,
 					"size": 10,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.0,
+						"r": 0.85546875
+					},
+					"notes": "AD 2k",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -125114,7 +125154,21 @@
 					"notes": "",
 					"points_per_turn": 350,
 					"size": 4,
-					"type": 2
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.06591796875,
+						"g": 0.9375,
+						"r": 0.419998168945312
+					},
+					"notes": "AD 10k",
+					"points_per_turn": 0,
+					"size": 10,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -125129,6 +125183,20 @@
 					"points_per_turn": 300,
 					"size": 9,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
 				}
 			]
 		},
@@ -125209,7 +125277,7 @@
 				"r": 1.0
 			},
 			"coord_name": "P11-C3-1",
-			"name": "NPC 3",
+			"name": "",
 			"notes": "",
 			"planets": [
 				{
@@ -125472,7 +125540,7 @@
 				"r": 0.5
 			},
 			"coord_name": "E11-A3-1",
-			"name": "npc 1",
+			"name": "",
 			"notes": "shipyard 2",
 			"planets": [
 				{
@@ -126019,6 +126087,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 decranium",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -126044,6 +126126,20 @@
 					"points_per_turn": 300,
 					"size": 4,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 manzite",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -128881,86 +128977,59 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 0.422114849090576,
+				"b": 1.0,
 				"g": 1.0,
-				"r": 0.0
+				"r": 1.0
 			},
 			"coord_name": "Q11-D4-1",
-			"name": "Refredom",
-			"notes": "Shipyard 1",
+			"name": "",
+			"notes": "",
 			"planets": [
 				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 3,
+					"buildings": [],
+					"class_level": 6,
 					"color": {
 						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
+						"b": 0.454948306083679,
+						"g": 0.0,
+						"r": 0.840168356895447
 					},
 					"notes": "",
-					"points_per_turn": 150,
-					"size": 4,
-					"type": 4
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "city"
-						},
-						{
-							"level": 1,
-							"type": "research"
-						},
-						{
-							"level": 1,
-							"type": "mine"
-						},
-						{
-							"level": 1,
-							"type": "cargo building 1 turn | 0/2000"
-						}
-					],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 0.868020594120026,
-						"g": 1.0,
-						"r": 0.34509801864624
-					},
-					"notes": "System generates 1,350 points/turn",
-					"points_per_turn": 500,
-					"size": 10,
-					"type": 2
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 4,
-					"color": {
-						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
-					},
-					"notes": "",
-					"points_per_turn": 200,
-					"size": 3,
-					"type": 4
+					"points_per_turn": 300,
+					"size": 1,
+					"type": 3
 				},
 				{
 					"buildings": [],
-					"class_level": 4,
+					"class_level": 7,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.295053899288177,
+						"r": 0.76813805103302
+					},
+					"notes": "",
+					"points_per_turn": 350,
+					"size": 3,
+					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.346213430166245,
+						"r": 0.356379270553589
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 9,
+					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
 					"color": {
 						"a": 1.0,
 						"b": 0.00000019252300376138,
@@ -128968,61 +129037,9 @@
 						"r": 0.567831218242645
 					},
 					"notes": "",
-					"points_per_turn": 200,
-					"size": 4,
-					"type": 2
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 4,
-					"color": {
-						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
-					},
-					"notes": "",
-					"points_per_turn": 200,
-					"size": 5,
-					"type": 4
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 6,
-					"color": {
-						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
-					},
-					"notes": "",
-					"points_per_turn": 300,
-					"size": 1,
-					"type": 4
-				},
-				{
-					"buildings": [],
-					"class_level": 3,
-					"color": {
-						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
-					},
-					"notes": "",
-					"points_per_turn": 150,
+					"points_per_turn": 50,
 					"size": 2,
-					"type": 4
+					"type": 2
 				}
 			]
 		},
@@ -183059,8 +183076,8 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 0.0,
-				"g": 0.0,
+				"b": 1.0,
+				"g": 1.0,
 				"r": 1.0
 			},
 			"coord_name": "T5-B2-1",
@@ -185520,8 +185537,8 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 0.0,
-				"g": 0.0,
+				"b": 1.0,
+				"g": 1.0,
 				"r": 1.0
 			},
 			"coord_name": "U5-C3-1",
@@ -189396,7 +189413,7 @@
 				"r": 0.9505615234375
 			},
 			"coord_name": "T4-D1-2",
-			"name": "npc 2",
+			"name": "",
 			"notes": "Shipyard 2",
 			"planets": [
 				{
