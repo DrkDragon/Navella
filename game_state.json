@@ -281,6 +281,10 @@
 		"T21-D4-1": [
 			"T21-C4-1"
 		],
+		"T24-C3-1": [
+			"T24-D3-1",
+			"T24-C4-1"
+		],
 		"T4-D1-1": [
 			"T4-D1-2"
 		],
@@ -5870,49 +5874,20 @@
 			"notes": "Ship yard 1",
 			"planets": [
 				{
-					"buildings": [],
-					"class_level": 1,
-					"color": {
-						"a": 1.0,
-						"b": 0.900414705276489,
-						"g": 0.450464129447937,
-						"r": 0.0
-					},
-					"notes": "",
-					"points_per_turn": 50,
-					"size": 1,
-					"type": 0
-				},
-				{
-					"buildings": [],
-					"class_level": 2,
-					"color": {
-						"a": 1.0,
-						"b": 0.00000019252300376138,
-						"g": 0.408021450042725,
-						"r": 0.642803490161896
-					},
-					"notes": "",
-					"points_per_turn": 100,
-					"size": 7,
-					"type": 2
-				},
-				{
-					"buildings": [],
-					"class_level": 3,
-					"color": {
-						"a": 1.0,
-						"b": 0.979208052158356,
-						"g": 0.00397328985854983,
-						"r": 0.642117321491241
-					},
-					"notes": "",
-					"points_per_turn": 150,
-					"size": 5,
-					"type": 3
-				},
-				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "city"
+						},
+						{
+							"level": 1,
+							"type": "research center"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -5922,25 +5897,39 @@
 					},
 					"notes": "",
 					"points_per_turn": 500,
-					"size": 7,
+					"size": 10,
 					"type": 3
 				},
 				{
-					"buildings": [],
-					"class_level": 4,
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 5,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
-						"g": 0.405626982450485,
-						"r": 0.097683347761631
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 200,
-					"size": 2,
-					"type": 0
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "city"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -5954,32 +5943,42 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
-					"class_level": 3,
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 4,
 					"color": {
 						"a": 1.0,
 						"b": 0.0,
-						"g": 0.44947212934494,
-						"r": 0.572867870330811
+						"g": 0.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 150,
+					"points_per_turn": 0,
 					"size": 6,
-					"type": 2
-				},
-				{
-					"buildings": [],
-					"class_level": 2,
-					"color": {
-						"a": 1.0,
-						"b": 0.758982062339783,
-						"g": 0.492209076881409,
-						"r": 0.00000173270700543071
-					},
-					"notes": "",
-					"points_per_turn": 100,
-					"size": 1,
-					"type": 2
+					"type": 5
 				}
 			]
 		},
@@ -6314,6 +6313,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -6339,6 +6352,20 @@
 					"points_per_turn": 500,
 					"size": 8,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -8666,13 +8693,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "T24-C4-1",
 			"name": "",
-			"notes": "",
+			"notes": "hostile creature 1k 1k 1k",
 			"planets": [
 				{
 					"buildings": [],
@@ -8774,6 +8801,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
@@ -8802,6 +8843,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 5
+				},
+				{
+					"buildings": [],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -8827,6 +8882,20 @@
 					"points_per_turn": 50,
 					"size": 6,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -117443,105 +117512,62 @@
 			},
 			"coord_name": "N12-D4-1",
 			"name": "mozo start",
-			"notes": "",
+			"notes": "shipyard 1",
 			"planets": [
 				{
 					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "research center 1"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
-						"b": 0.00000038504600752276,
-						"g": 0.44510817527771,
-						"r": 0.581125497817993
-					},
-					"notes": "",
-					"points_per_turn": 500,
-					"size": 9,
-					"type": 0
-				},
-				{
-					"buildings": [],
-					"class_level": 5,
-					"color": {
-						"a": 1.0,
-						"b": 0.555608749389648,
-						"g": 0.0000138616560434457,
-						"r": 0.819078922271729
-					},
-					"notes": "",
-					"points_per_turn": 250,
-					"size": 6,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 9,
-					"color": {
-						"a": 1.0,
-						"b": 0.00000057756903970585,
-						"g": 0.460614562034607,
-						"r": 0.550626218318939
+						"b": 0.0,
+						"g": 1.0,
+						"r": 0.1953125
 					},
 					"notes": "",
 					"points_per_turn": 450,
 					"size": 10,
-					"type": 3
+					"type": 1
 				},
 				{
 					"buildings": [],
-					"class_level": 4,
-					"color": {
-						"a": 1.0,
-						"b": 0.248754471540451,
-						"g": 0.0,
-						"r": 0.866925716400146
-					},
-					"notes": "",
-					"points_per_turn": 200,
-					"size": 4,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 8,
-					"color": {
-						"a": 1.0,
-						"b": 0.296445101499557,
-						"g": 0.559184968471527,
-						"r": 0.000000409111379440219
-					},
-					"notes": "",
-					"points_per_turn": 400,
-					"size": 3,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 9,
-					"color": {
-						"a": 1.0,
-						"b": 0.918916046619415,
-						"g": 0.443883866071701,
-						"r": 0.0
-					},
-					"notes": "",
-					"points_per_turn": 450,
-					"size": 1,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 9,
+					"class_level": 1,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
-						"g": 0.367547512054443,
-						"r": 0.297921299934387
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 450,
-					"size": 7,
-					"type": 0
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -117562,56 +117588,56 @@
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
-						"b": 0.73241126537323,
-						"g": 0.498611390590668,
-						"r": 0.000000866353502715356
+						"b": 0.44140625,
+						"g": 0.44140625,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 150,
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.3671875,
+						"g": 0.3671875,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
 					"size": 3,
-					"type": 3
+					"type": 5
 				},
 				{
 					"buildings": [],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
-						"b": 0.83993262052536,
-						"g": 0.00123407249338925,
-						"r": 0.720444202423096
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 100,
-					"size": 2,
-					"type": 2
+					"points_per_turn": 0,
+					"size": 3,
+					"type": 4
 				},
 				{
 					"buildings": [],
-					"class_level": 2,
+					"class_level": 6,
 					"color": {
 						"a": 1.0,
-						"b": 0.434366554021835,
-						"g": 0.00000019252300376138,
-						"r": 0.843770861625671
+						"b": 0.44921875,
+						"g": 0.44921875,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 100,
-					"size": 6,
-					"type": 1
-				},
-				{
-					"buildings": [],
-					"class_level": 2,
-					"color": {
-						"a": 1.0,
-						"b": 0.0,
-						"g": 0.167246043682098,
-						"r": 0.842503488063812
-					},
-					"notes": "",
-					"points_per_turn": 100,
-					"size": 10,
-					"type": 0
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
 				}
 			]
 		},
@@ -176836,16 +176862,44 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.984375,
 				"r": 1.0
 			},
 			"coord_name": "F6-C4-1",
-			"name": "",
+			"name": "greza",
 			"notes": "",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -176859,8 +176913,25 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
-					"class_level": 5,
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "research center 1"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading (building 1 turn) | 0/2000 points"
+						}
+					],
+					"class_level": 10,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
@@ -176868,9 +176939,28 @@
 						"r": 0.417378157377243
 					},
 					"notes": "",
-					"points_per_turn": 250,
+					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 0.4765625,
+						"g": 0.4765625,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 250,
+					"size": 6,
+					"type": 5
 				}
 			]
 		},
