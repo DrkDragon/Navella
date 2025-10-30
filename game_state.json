@@ -61297,15 +61297,24 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.359375
 			},
 			"coord_name": "K17-A1-1",
-			"name": "",
+			"name": "Hoxlee",
 			"notes": "",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -61317,6 +61326,64 @@
 					"points_per_turn": 200,
 					"size": 6,
 					"type": 0
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "city"
+						},
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading: building 1 turn | 0/2000 points"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading: building 1 turn | 0/2000 points"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading: building 1 turn | 0/2000 points"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.0390625,
+						"r": 0.0
+					},
+					"notes": "",
+					"points_per_turn": 500,
+					"size": 10,
+					"type": 3
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 300,
+					"size": 6,
+					"type": 4
 				}
 			]
 		},
@@ -117506,24 +117573,29 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
-				"r": 0.0
+				"b": 0.537254929542542,
+				"g": 0.941176474094391,
+				"r": 0.721568644046783
 			},
 			"coord_name": "N12-D4-1",
 			"name": "mozo start",
 			"notes": "shipyard 1",
 			"planets": [
 				{
-					"buildings": [],
-					"class_level": 1,
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "1 Paradox ",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -117550,27 +117622,40 @@
 						"g": 1.0,
 						"r": 0.1953125
 					},
-					"notes": "",
-					"points_per_turn": 450,
+					"notes": "3x class 1 (1200 point cargo)",
+					"points_per_turn": 500,
 					"size": 10,
 					"type": 1
 				},
 				{
 					"buildings": [],
-					"class_level": 1,
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "1 Paradox ",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "research center 1: building 2 turns | "
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -117593,7 +117678,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 150,
 					"size": 5,
 					"type": 5
 				},
@@ -117607,7 +117692,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 50,
 					"size": 3,
 					"type": 5
 				},
@@ -117621,7 +117706,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 100,
 					"size": 3,
 					"type": 4
 				},
@@ -117635,7 +117720,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 300,
 					"size": 5,
 					"type": 5
 				}
