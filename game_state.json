@@ -204784,7 +204784,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 Fusion fuel",
+					"notes": "1 Neo-Helium",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -204830,7 +204830,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Orbiting fleet\n 2x class 1 140/800 points stored",
 					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
@@ -204868,7 +204868,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 Fusion fuel",
+					"notes": "1 Neo-Helium",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
