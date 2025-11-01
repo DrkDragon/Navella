@@ -327,6 +327,7 @@
 		"U5-A3-1": [
 			"T4-D1-1"
 		],
+		"W11-C3-1": [],
 		"W2-B1-1": [
 			"X2-B3-1"
 		],
@@ -341,7 +342,8 @@
 			"W1-C2-1"
 		],
 		"X11-A4-1": [
-			"X11-A4-2"
+			"X11-A4-2",
+			"X10-A1-1"
 		],
 		"X11-B2-1": [
 			"X11-B3-1",
@@ -350,6 +352,10 @@
 		"X11-C3-1": [
 			"X11-A4-1"
 		],
+		"X12-B2-1": [
+			"X11-B2-1"
+		],
+		"X13-B3-1": [],
 		"X14-A3-1": [
 			"X14-A3-2"
 		],
@@ -379,6 +385,7 @@
 		"X3-A4-1": [
 			"X2-B1-1"
 		],
+		"Y13-B3-1": [],
 		"Y24-A4-1": [],
 		"Y3-B1-1": [
 			"Y3-B1-2",
@@ -113856,7 +113863,7 @@
 						"g": 0.548637628555298,
 						"r": 0.0
 					},
-					"notes": "",
+					"notes": "Re'Pi Class 2 80+2500(Attacker7)=2580ATK 50+1500(Reinforcer3)1550DEF 40HP",
 					"points_per_turn": 350,
 					"size": 6,
 					"type": 3
@@ -113902,6 +113909,20 @@
 					"points_per_turn": 250,
 					"size": 1,
 					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 manzite",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -113986,6 +114007,20 @@
 					"points_per_turn": 250,
 					"size": 4,
 					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 50,
+					"size": 6,
+					"type": 4
 				}
 			]
 		},
@@ -123957,7 +123992,7 @@
 			},
 			"coord_name": "X11-B2-1",
 			"name": "Varill Start",
-			"notes": "Shipyard 1\n  Building Class 2 | 1 turn\n\nThe system looks like a giant artificial world. each world is a pedal of a flower station ",
+			"notes": "Shipyard 1\n\nThe system looks like a giant artificial world. each world is a pedal of a flower station ",
 			"planets": [
 				{
 					"buildings": [],
@@ -123981,7 +124016,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | updreage: (not in progress) | researching: (research center 2) 1 turns"
+							"type": "research center | upgrade: (2t) | researching: shield 1 4t"
 						},
 						{
 							"level": 1,
@@ -123995,7 +124030,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "class 9  (18 build slots)\nDormant Class 11, tier 6, precursor  ship 20 W, 20 U, 20 D, 6 F | 2 super weapon, 1 precursor cargo tier 1 (1000*tier cargo) 326/1000",
+					"notes": "class 9  (18 build slots)\nDormant Class 11, tier 6, precursor  ship 20 W, 20 U, 20 D, 6 F | 2 super weapon, 1 precursor cargo tier 1 (1000*tier cargo) 46/1000",
 					"points_per_turn": 450,
 					"size": 4,
 					"type": 0
@@ -124094,8 +124129,8 @@
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
+						"b": 0.0,
+						"g": 0.0,
 						"r": 1.0
 					},
 					"notes": "1 Decranium",
@@ -124114,8 +124149,8 @@
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
+						"g": 0.0,
+						"r": 0.6875
 					},
 					"notes": "1 Manzite",
 					"points_per_turn": 0,
@@ -126960,8 +126995,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.968627452850342
 			},
 			"coord_name": "X11-C3-1",
 			"name": "",
@@ -127000,8 +127035,8 @@
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
+						"b": 0.0,
+						"g": 0.0,
 						"r": 1.0
 					},
 					"notes": "1 decranium",
@@ -127043,8 +127078,8 @@
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
+						"g": 0.0,
+						"r": 0.686274528503418
 					},
 					"notes": "1 manzite",
 					"points_per_turn": 0,
@@ -127150,7 +127185,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -127158,7 +127198,7 @@
 						"g": 0.298113405704498,
 						"r": 0.76563286781311
 					},
-					"notes": "",
+					"notes": "Class 1 Cargo 0/400 points",
 					"points_per_turn": 450,
 					"size": 5,
 					"type": 2
@@ -132713,6 +132753,34 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "1 Decranium",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -132720,10 +132788,24 @@
 						"g": 0.472287118434906,
 						"r": 0.525320768356323
 					},
-					"notes": "",
+					"notes": "Class 1 scout. 0/100 points",
 					"points_per_turn": 250,
 					"size": 7,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "1 Decranium",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -132752,6 +132834,20 @@
 					"points_per_turn": 350,
 					"size": 8,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 250,
+					"size": 4,
+					"type": 4
 				}
 			]
 		},
