@@ -9087,7 +9087,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | research center 2 (3 turns)"
+							"type": "research center | upgrade: (not in progress) | research center 2 (2 turns)"
 						},
 						{
 							"level": 1,
@@ -9188,7 +9188,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t"
+							"type": "cargo | 50/2000"
 						}
 					],
 					"class_level": 10,
@@ -9208,6 +9208,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 9,
@@ -9237,7 +9241,12 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -9293,7 +9302,7 @@
 						"r": 0.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 400,
 					"size": 6,
 					"type": 3
 				},
@@ -61434,7 +61443,7 @@
 			},
 			"coord_name": "K17-A1-1",
 			"name": "Hoxlee",
-			"notes": "",
+			"notes": "Shipyard 1",
 			"planets": [
 				{
 					"buildings": [
@@ -116027,7 +116036,7 @@
 			},
 			"coord_name": "E12-A3-2",
 			"name": "",
-			"notes": "Hostile Creature",
+			"notes": "Hostile Creature atk6k rep2k hp1k",
 			"planets": [
 				{
 					"buildings": [],
@@ -119190,12 +119199,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.501960813999176
 			},
 			"coord_name": "D12-C4-1",
 			"name": "",
-			"notes": "",
+			"notes": "Shipyard 1 (building 1 turn)\n\n450 p/t",
 			"planets": [
 				{
 					"buildings": [],
@@ -119240,7 +119249,16 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -121747,7 +121765,7 @@
 			},
 			"coord_name": "D11-B1-1",
 			"name": "",
-			"notes": "400 points\n\nTrade Station 2 (6T)",
+			"notes": "Shipyard 1 (building 1T)\nTrade Station 2 (6T)\n\n400 p/t",
 			"planets": [
 				{
 					"buildings": [],
@@ -122354,10 +122372,19 @@
 			},
 			"coord_name": "E11-A1-1",
 			"name": "",
-			"notes": "shipyard 1\nTrade Station 1",
+			"notes": "shipyard 1\n1 Yaga in production 1t\n\nTrade Station 1\n\n950 p/t",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -122427,7 +122454,16 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpsot"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -122441,7 +122477,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -125562,7 +125607,7 @@
 			},
 			"coord_name": "E11-C3-1",
 			"name": "",
-			"notes": "shipyard 1\nTrade Station 2",
+			"notes": "shipyard 1\n1x yaga in production 1t\n\nTrade Station 2\n\n800 p/t",
 			"planets": [
 				{
 					"buildings": [],
@@ -125579,7 +125624,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -125607,7 +125661,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -126200,7 +126263,7 @@
 			},
 			"coord_name": "E11-A3-1",
 			"name": "Vocell",
-			"notes": "shipyard 2",
+			"notes": "shipyard 2\n2x Yaga's in production 1t\n800 p/t",
 			"planets": [
 				{
 					"buildings": [],
@@ -126217,7 +126280,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -126272,7 +126344,16 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -128096,15 +128177,24 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.501960813999176
 			},
 			"coord_name": "F11-B4-1",
 			"name": "",
-			"notes": "",
+			"notes": "shipyard 1 (building 1t)\n\n250 p/t",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
