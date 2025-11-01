@@ -5,3 +5,6 @@ func _on_mute_button_pressed() -> void:
 
 func _on_rules_button_pressed() -> void:
 	OS.shell_open("https://raw.githubusercontent.com/DrkDragon/Navella/refs/heads/main/Navella.pdf")
+
+func _on_calculator_button_pressed() -> void:
+	$Calculator.visible = true

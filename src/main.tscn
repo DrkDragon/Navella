@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsauiuygv1guk"]
+[gd_scene load_steps=8 format=3 uid="uid://dsauiuygv1guk"]
 
 [ext_resource type="AudioStream" uid="uid://di188j8bf63qe" path="res://slow-travel.wav" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bouhue1v14esh" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bd3le6gt1rqkv" path="res://ui.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://8w0a6imcmh4j" path="res://calculator.tscn" id="4_1bvp3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lquwl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bvp3"]
 
@@ -34,6 +37,12 @@ offset_left = -89.0
 offset_bottom = 31.0
 grow_horizontal = 0
 
+[node name="CalculatorButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lquwl")
+text = "Calculator"
+flat = true
+
 [node name="RulesButton" type="Button" parent="Buttons"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1bvp3")
@@ -45,5 +54,10 @@ layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h2yge")
 text = "Mute"
 
+[node name="Calculator" parent="." instance=ExtResource("4_1bvp3")]
+initial_position = 1
+visible = false
+
+[connection signal="pressed" from="Buttons/CalculatorButton" to="." method="_on_calculator_button_pressed"]
 [connection signal="pressed" from="Buttons/RulesButton" to="." method="_on_rules_button_pressed"]
 [connection signal="pressed" from="Buttons/MuteButton" to="." method="_on_mute_button_pressed"]

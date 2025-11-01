@@ -1,0 +1,179 @@
+[gd_scene load_steps=20 format=3 uid="uid://8w0a6imcmh4j"]
+
+[ext_resource type="Script" uid="uid://hgbp55q7hkx8" path="res://calculator.gd" id="1_kvxsv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7csn"]
+bg_color = Color(0.13319641, 0.13319641, 0.13319635, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tcul7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2giv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pw31j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5aib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_empkj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4cgh1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_www44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_axwnm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4xhqr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1p5o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0jgo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6oqum"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2r0k0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30tsu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvxsv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quc1l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfhry"]
+
+[node name="Calculator" type="Window"]
+oversampling_override = 1.0
+title = "Calculator"
+position = Vector2i(8, 32)
+size = Vector2i(300, 170)
+min_size = Vector2i(300, 170)
+script = ExtResource("1_kvxsv")
+
+[node name="Background" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v7csn")
+
+[node name="Layout" type="HBoxContainer" parent="Background"]
+layout_mode = 2
+
+[node name="Main" type="VBoxContainer" parent="Background/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Value" type="SpinBox" parent="Background/Layout/Main"]
+layout_mode = 2
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="Grid" type="GridContainer" parent="Background/Layout/Main"]
+layout_mode = 2
+columns = 4
+
+[node name="7" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tcul7")
+text = "  7  "
+
+[node name="8" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r2giv")
+text = "  8  "
+
+[node name="9" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pw31j")
+text = "  9  "
+
+[node name="Add" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q5aib")
+text = "  +  "
+
+[node name="4" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_empkj")
+text = "  4  "
+
+[node name="5" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4cgh1")
+text = "  5  "
+
+[node name="6" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_www44")
+text = "  6  "
+
+[node name="Subtract" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_axwnm")
+text = "  -  "
+
+[node name="1" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4xhqr")
+text = "  1  "
+
+[node name="2" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l1p5o")
+text = "  2  "
+
+[node name="3" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x0jgo")
+text = "  3  "
+
+[node name="Multiply" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6oqum")
+text = "*"
+
+[node name="Clear" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2r0k0")
+text = "C"
+
+[node name="0" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_30tsu")
+text = "  0  "
+
+[node name="Equal" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kvxsv")
+text = "="
+
+[node name="Divide" type="Button" parent="Background/Layout/Main/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quc1l")
+text = "  /  "
+
+[node name="Notes" type="TextEdit" parent="Background/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wfhry")
+
+[connection signal="pressed" from="Background/Layout/Main/Grid/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/Add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/Subtract" to="." method="_on_subtract_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/Multiply" to="." method="_on_multiply_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/Equal" to="." method="_on_equal_pressed"]
+[connection signal="pressed" from="Background/Layout/Main/Grid/Divide" to="." method="_on_divide_pressed"]
