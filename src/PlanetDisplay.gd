@@ -2,6 +2,7 @@ class_name PlanetDisplay
 extends CenterContainer
 
 const SCALE := 20.0
+const DOT_SIZE := 2
 
 var binding: PlanetProperties
 var render := ColorRect.new()
@@ -67,6 +68,29 @@ func _process(_delta: float) -> void:
 	queue_redraw()
 
 func _draw() -> void:
+	if binding:
+		var count := len(binding.buildings)
+		var columns := ceili(sqrt(count))
+		
+		var width := columns * (DOT_SIZE * 2.0)
+		var x := (size.x / 2) - (width / 2)
+		var y := ((size.y / 2) - (render.size.x / 2)) - (DOT_SIZE * 2)
+		
+		while count > 0:
+			var row := columns if count > columns else count
+			var row_width := row * DOT_SIZE * 2.0
+			for i in row:
+				draw_circle(
+					Vector2(
+						x + (((i + 1.0) / row) * row_width) + ((width / 2) - (row_width / 2)),
+						y
+					),
+					DOT_SIZE / 2.0,
+					Color.WHITE
+				)
+			y -= DOT_SIZE * 2
+			count -= row
+	
 	if not is_in_group("selected_planet"): return
 	
 	draw_circle(
