@@ -9066,7 +9066,12 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -9087,7 +9092,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | research center 2 (2 turns)"
+							"type": "research center | upgrade: (not in progress) | research center 2 (1 turns)"
 						},
 						{
 							"level": 1,
@@ -9121,7 +9126,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -9143,7 +9157,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 Unique Resource [TBD]",
+					"notes": "1 Zurcium",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
@@ -9245,6 +9259,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 7,
@@ -9292,6 +9310,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 8,
@@ -28520,7 +28542,7 @@
 				"r": 0.0
 			},
 			"coord_name": "E21-B4-1",
-			"name": "",
+			"name": "Aldreann",
 			"notes": "",
 			"planets": [
 				{
@@ -28539,7 +28561,7 @@
 					},
 					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
 					"points_per_turn": 0,
-					"size": 2,
+					"size": 1,
 					"type": 4
 				},
 				{
@@ -28564,25 +28586,6 @@
 				{
 					"buildings": [
 						{
-							"level": 4,
-							"type": "crystal reef"
-						}
-					],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 1.0,
-						"g": 1.0,
-						"r": 1.0
-					},
-					"notes": "orbiting fleet | atk 17000,\tdef 87000,\thp 86000\n  Dravok Matriarch  x1\n  Defender x10\n  Builder x10 \n  Gatherer x10 \n  Hatchling x10 ",
-					"points_per_turn": 0,
-					"size": 4,
-					"type": 4
-				},
-				{
-					"buildings": [
-						{
 							"level": 1,
 							"type": "crystal reef"
 						}
@@ -28596,8 +28599,27 @@
 					},
 					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
 					"points_per_turn": 0,
-					"size": 2,
+					"size": 4,
 					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 4,
+							"type": "crystal reef"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 0.40234375,
+						"g": 0.40234375,
+						"r": 1.0
+					},
+					"notes": "orbiting fleet | atk 17000,\tdef 87000,\thp 86000\n  Dravok Matriarch  x1\n  Defender x10\n  Builder x10 \n  Gatherer x10 \n  Hatchling x10 ",
+					"points_per_turn": 0,
+					"size": 10,
+					"type": 5
 				},
 				{
 					"buildings": [
@@ -28615,7 +28637,7 @@
 					},
 					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
 					"points_per_turn": 0,
-					"size": 2,
+					"size": 4,
 					"type": 4
 				},
 				{
@@ -28653,7 +28675,7 @@
 					},
 					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
 					"points_per_turn": 0,
-					"size": 2,
+					"size": 1,
 					"type": 4
 				},
 				{
@@ -28672,7 +28694,7 @@
 					},
 					"notes": "orbiting fleet | atk 14000,\tdef 78000,\thp 78000\n  Defender x10\n  Builder x10 \n  Gatherer x10\n  Hatchling x10",
 					"points_per_turn": 0,
-					"size": 2,
+					"size": 1,
 					"type": 4
 				}
 			]
@@ -162147,7 +162169,7 @@
 						},
 						{
 							"level": 4,
-							"type": "cargo | 0/32000 points"
+							"type": "cargo | 32000/32000 points"
 						}
 					],
 					"class_level": 7,
@@ -174988,7 +175010,7 @@
 			},
 			"coord_name": "Y6-A3-1",
 			"name": "",
-			"notes": "",
+			"notes": "in transit\n1990 class 1 90/400 (2t)",
 			"planets": [
 				{
 					"buildings": [],
@@ -175736,7 +175758,7 @@
 			},
 			"coord_name": "X6-D3-1",
 			"name": "",
-			"notes": "",
+			"notes": "In transit\nParking meter (3t)",
 			"planets": [
 				{
 					"buildings": [],
