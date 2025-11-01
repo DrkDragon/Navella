@@ -68714,10 +68714,15 @@
 			},
 			"coord_name": "W17-B4-1",
 			"name": "Raptor Start",
-			"notes": "",
+			"notes": "Shipyard 1\n\n2,300 p/t",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -68735,6 +68740,14 @@
 						{
 							"level": 3,
 							"type": "vonuman cylinder type 3 siege attack: 9000 siege  defense: 10000 health: 20000 | mine x3 | 500 p/t >> 1500 p/t"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 | researching anti orbital cannon 2t"
+						},
+						{
+							"level": 1,
+							"type": "fleet academy | upgrading (build time 4t)"
 						}
 					],
 					"class_level": 10,
@@ -68750,7 +68763,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -68778,7 +68796,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "vonuman cylinder siege attack: 90 siege defense: 100 health: 200  | mine 2x | 250 p/t >> 500 p/t"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -68787,7 +68810,7 @@
 						"r": 0.66796875
 					},
 					"notes": "",
-					"points_per_turn": 250,
+					"points_per_turn": 500,
 					"size": 6,
 					"type": 0
 				},
@@ -68801,12 +68824,17 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 150,
 					"size": 3,
 					"type": 5
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -68815,7 +68843,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 200,
 					"size": 5,
 					"type": 5
 				}
