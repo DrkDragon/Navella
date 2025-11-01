@@ -219,11 +219,23 @@
 			"M16-A2-2"
 		],
 		"M16-A2-1": [
-			"M16-A2-2"
+			"M16-A2-2",
+			"N15-C4-1",
+			"N16-B4-1",
+			"N15-A3-1"
 		],
-		"M16-A2-2": [],
+		"M16-A2-2": [
+			"M14-A3-1",
+			"N14-B1-1"
+		],
 		"M16-B3-1": [],
 		"M17-A2-2": [],
+		"M18-A1-1": [
+			"M16-A1-1"
+		],
+		"M18-C3-1": [
+			"M16-A1-1"
+		],
 		"M7-A3-2": [
 			"M7-C4-1",
 			"M6-C1-1"
@@ -235,12 +247,18 @@
 			"N15-C4-2"
 		],
 		"N16-A1-1": [
-			"N16-A1-3"
+			"N16-A1-3",
+			"M16-A1-1"
 		],
 		"N16-A1-2": [
 			"N16-A1-3"
 		],
-		"N18-D3-1": [],
+		"N17-B2-1": [
+			"M16-A2-1"
+		],
+		"N18-D3-1": [
+			"M16-A1-1"
+		],
 		"N25-B3-1": [
 			"I25-D4-1"
 		],
@@ -257,6 +275,9 @@
 		],
 		"O13-C4-1": [
 			"O13-B4-1"
+		],
+		"O17-A2-2": [
+			"M16-A1-1"
 		],
 		"P10-C4-1": [
 			"Q9-A2-2",
@@ -50445,7 +50466,7 @@
 			},
 			"coord_name": "M18-A1-1",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -50491,6 +50512,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -50530,6 +50565,20 @@
 					"points_per_turn": 400,
 					"size": 9,
 					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
 				}
 			]
 		},
@@ -55229,13 +55278,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "M18-C3-1",
 			"name": "",
-			"notes": "",
+			"notes": "hostile creature 10k 2k 4k",
 			"planets": [
 				{
 					"buildings": [],
@@ -56566,7 +56615,7 @@
 			},
 			"coord_name": "N18-D3-1",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -56626,6 +56675,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -56668,6 +56731,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -56679,6 +56756,20 @@
 					"points_per_turn": 350,
 					"size": 7,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.3203125,
+						"g": 0.3203125,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
 				}
 			]
 		},
@@ -64658,7 +64749,7 @@
 			},
 			"coord_name": "O17-A2-2",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -64838,7 +64929,7 @@
 			},
 			"coord_name": "N17-B2-1",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -64867,6 +64958,34 @@
 					"points_per_turn": 300,
 					"size": 6,
 					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.254791259765625,
+						"g": 0.9453125,
+						"r": 0.389658689498901
+					},
+					"notes": "AD 20k",
+					"points_per_turn": 0,
+					"size": 20,
+					"type": 4
 				}
 			]
 		},
@@ -67894,7 +68013,7 @@
 			},
 			"coord_name": "L17-D4-1",
 			"name": "",
-			"notes": "Shipyard 4\nTrade Station 4\n",
+			"notes": "Shipyard 4\n1 Class 1b 0/1,300 point\nTrade Station 4\n",
 			"planets": [
 				{
 					"buildings": [],
@@ -70916,7 +71035,7 @@
 			},
 			"coord_name": "N16-A1-1",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -70976,6 +71095,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -71001,6 +71134,48 @@
 					"points_per_turn": 250,
 					"size": 3,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 0.26953125,
+						"g": 0.26953125,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				}
 			]
 		},
@@ -71540,7 +71715,7 @@
 			},
 			"coord_name": "M16-A1-1",
 			"name": "Naran Trade Union",
-			"notes": "Shipyard 4\nFTL Detection 4\nTrade Station 4",
+			"notes": "Shipyard 4\n4 Class 1b\nFTL Detection 4\nTrade Station 4",
 			"planets": [
 				{
 					"buildings": [
@@ -73016,7 +73191,7 @@
 			},
 			"coord_name": "L16-B2-1",
 			"name": "",
-			"notes": "Shipyard 4\nTrade Station 4",
+			"notes": "Shipyard 4\n1 Class 1b 0/1,300 point\nTrade Station 4",
 			"planets": [
 				{
 					"buildings": [],
@@ -73597,7 +73772,7 @@
 			},
 			"coord_name": "L16-B2-2",
 			"name": "",
-			"notes": "Shipyard 4\nFTL Detection 4\nTrade Station 4",
+			"notes": "Shipyard 4\n1 Class 1b 0/1,300 point\nFTL Detection 4\nTrade Station 4\n",
 			"planets": [
 				{
 					"buildings": [],
@@ -74527,7 +74702,7 @@
 			},
 			"coord_name": "M16-A2-1",
 			"name": "",
-			"notes": "Shipyard 4\nTrade Station 4",
+			"notes": "Shipyard 4\n2 class 1b\nTrade Station 4",
 			"planets": [
 				{
 					"buildings": [
@@ -79397,13 +79572,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "N16-B4-1",
 			"name": "",
-			"notes": "",
+			"notes": "Centravetra atk 6k, def 3k, hp 4k",
 			"planets": [
 				{
 					"buildings": [],
@@ -79432,6 +79607,48 @@
 					"points_per_turn": 450,
 					"size": 2,
 					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 Creezan",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 7,
+					"color": {
+						"a": 1.0,
+						"b": 0.43359375,
+						"g": 0.43359375,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 1.0,
+						"r": 0.3125
+					},
+					"notes": "ad 11k",
+					"points_per_turn": 0,
+					"size": 11,
+					"type": 4
 				}
 			]
 		},
@@ -85906,7 +86123,7 @@
 			},
 			"coord_name": "N15-A3-1",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -87591,7 +87808,7 @@
 						"g": 0.789825201034546,
 						"r": 0.913044810295105
 					},
-					"notes": "Stealthed fleet:\n  Precursor battleship 2x Class 9 tier 5\n  Precursor crusier x3 class 5 tier 5\n  Precursor destroyer x2 class 4 tier 5",
+					"notes": "in orbit\n1 Class 1b 0/1,300 point\n\nStealthed fleet:\n  Precursor battleship 2x Class 9 tier 5\n  Precursor crusier x3 class 5 tier 5\n  Precursor destroyer x2 class 4 tier 5",
 					"points_per_turn": 300,
 					"size": 20,
 					"type": 0
@@ -91072,7 +91289,7 @@
 			},
 			"coord_name": "N14-B1-1",
 			"name": "",
-			"notes": "",
+			"notes": "1 Class 1b 0/1,300 point",
 			"planets": [
 				{
 					"buildings": [],
@@ -91118,6 +91335,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -91157,6 +91388,34 @@
 					"points_per_turn": 50,
 					"size": 8,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.34765625,
+						"g": 0.34765625,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
 				}
 			]
 		},
@@ -93813,13 +94072,13 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "M14-A3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Hostile creature 1k 1k 2k\nHostile creature 3k 2k 6k\nHostile creature 5k 2k 1k",
 			"planets": [
 				{
 					"buildings": [],
@@ -93851,17 +94110,17 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 7,
+					"class_level": 4,
 					"color": {
 						"a": 1.0,
-						"b": 0.0751928314566612,
-						"g": 0.0,
-						"r": 0.876168072223663
+						"b": 0.306754469871521,
+						"g": 0.2421875,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 350,
+					"points_per_turn": 200,
 					"size": 10,
-					"type": 1
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -93879,17 +94138,17 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 7,
+					"class_level": 3,
 					"color": {
 						"a": 1.0,
-						"b": 0.00000009626150188069,
-						"g": 0.433344066143036,
-						"r": 0.602244913578033
+						"b": 0.2421875,
+						"g": 0.2421875,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 350,
+					"points_per_turn": 150,
 					"size": 10,
-					"type": 2
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -93918,6 +94177,20 @@
 					"points_per_turn": 500,
 					"size": 9,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 0.2578125,
+						"g": 0.2578125,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -93963,17 +94236,17 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 8,
+					"class_level": 4,
 					"color": {
 						"a": 1.0,
-						"b": 0.659968435764313,
-						"g": 0.000111374560219701,
-						"r": 0.790384232997894
+						"b": 0.21484375,
+						"g": 0.21484375,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 400,
+					"points_per_turn": 100,
 					"size": 8,
-					"type": 3
+					"type": 5
 				},
 				{
 					"buildings": [],
