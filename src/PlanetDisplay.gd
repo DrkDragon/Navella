@@ -69,6 +69,21 @@ func _process(_delta: float) -> void:
 
 func _draw() -> void:
 	if binding:
+		if not binding.notes.is_empty():
+			draw_rect(
+				Rect2(
+					(size / 2) + Vector2(
+						0,
+						(render.size.x / 2) + (DOT_SIZE * 4)
+					) - (Vector2.ONE * DOT_SIZE),
+					Vector2.ONE * 2 * DOT_SIZE
+				),
+				Color.CYAN.lerp(
+					Color.MAGENTA,
+					clampf((sin(Time.get_ticks_msec() / 1000.0 * TAU) + 1) / 2, 0, 1)
+				) if is_in_group("selected_planet") else Color.WHITE
+			)
+		
 		var count := len(binding.buildings)
 		var columns := ceili(sqrt(count))
 		

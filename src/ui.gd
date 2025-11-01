@@ -65,6 +65,8 @@ func save_data(data: PackedByteArray, file: String, mime_type: String) -> void:
 		add_child(dialog)
 		dialog.show()
 
+var game_state_reload_id := 0
+
 func download_game_state() -> void:
 	var http := HTTPClient.new()
 	
@@ -87,11 +89,17 @@ func download_game_state() -> void:
 	
 	print("Requesting game state...")
 	
-	var error := http.request(HTTPClient.METHOD_GET, "/Navella/game_state.json", PackedStringArray())
+	var error := http.request(
+		HTTPClient.METHOD_GET,
+		"/Navella/game_state.json?reload=" + str(game_state_reload_id),
+		PackedStringArray()
+	)
 	if error != OK:
 		http.close()
 		OS.alert("Game state could not be downloaded from the server. Error: " + error_string(error))
 		return
+	
+	game_state_reload_id += 1
 	
 	print("Waiting for game state...")
 	
