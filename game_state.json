@@ -68709,26 +68709,115 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.9765625,
+				"r": 0.0
 			},
 			"coord_name": "W17-B4-1",
-			"name": "",
+			"name": "Raptor Start",
 			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
-					"class_level": 7,
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
-						"b": 0.0,
-						"g": 0.415035784244537,
-						"r": 0.63217568397522
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 Anti matter",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [
+						{
+							"level": 3,
+							"type": "vonuman cylinder type 3 siege attack: 9000 siege  defense: 10000 health: 20000 | mine x3 | 500 p/t >> 1500 p/t"
+						}
+					],
+					"class_level": 10,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.984710693359375,
+						"r": 0.34765625
 					},
 					"notes": "",
-					"points_per_turn": 350,
+					"points_per_turn": 1500,
+					"size": 10,
+					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 Anti matter",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.31640625,
+						"g": 1.0,
+						"r": 0.930572509765625
+					},
+					"notes": "AD 11k",
+					"points_per_turn": 0,
+					"size": 11,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 0.66796875,
+						"g": 0.66796875,
+						"r": 0.66796875
+					},
+					"notes": "",
+					"points_per_turn": 250,
+					"size": 6,
+					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.44140625,
+						"g": 0.44140625,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
 					"size": 3,
-					"type": 1
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 0.40625,
+						"g": 0.40625,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
 				}
 			]
 		},
@@ -95495,7 +95584,12 @@
 			"notes": "Ship Yard 1",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -95543,7 +95637,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrade: (building 1 turn) | 0/2000"
+							"type": "cargo | upgrade: | 150/2000"
 						}
 					],
 					"class_level": 9,
@@ -95647,6 +95741,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 8,
@@ -118174,7 +118272,7 @@
 						"g": 1.0,
 						"r": 0.1953125
 					},
-					"notes": "3x class 1 (1200 point cargo)",
+					"notes": "3x class 1 (300/1200 point cargo)",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 1
@@ -118201,7 +118299,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1: building 2 turns | "
+							"type": "research center 1: building 1 turns | "
 						},
 						{
 							"level": 1,
@@ -118263,7 +118361,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
