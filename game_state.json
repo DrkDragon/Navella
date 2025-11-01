@@ -68714,7 +68714,7 @@
 			},
 			"coord_name": "W17-B4-1",
 			"name": "Raptor Start",
-			"notes": "Shipyard 1\n\n2,300 p/t",
+			"notes": "Shipyard 1\n\n2,450 p/t",
 			"planets": [
 				{
 					"buildings": [
@@ -68743,11 +68743,19 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | researching anti orbital cannon 2t"
+							"type": "research center 1 | researching anti orbital cannon 1t"
 						},
 						{
 							"level": 1,
-							"type": "fleet academy | upgrading (build time 4t)"
+							"type": "fleet academy | upgrading (build time 3t)"
+						},
+						{
+							"level": 1,
+							"type": "cargo | building 1t 0/2000 points"
+						},
+						{
+							"level": 1,
+							"type": "cargo | building 1t 0/2000 points"
 						}
 					],
 					"class_level": 10,
@@ -68757,7 +68765,7 @@
 						"g": 0.984710693359375,
 						"r": 0.34765625
 					},
-					"notes": "",
+					"notes": "Orbiting fleet\n2 class 1 cargo 140/800 points",
 					"points_per_turn": 1500,
 					"size": 10,
 					"type": 2
@@ -68800,6 +68808,10 @@
 						{
 							"level": 1,
 							"type": "vonuman cylinder siege attack: 90 siege defense: 100 health: 200  | mine 2x | 250 p/t >> 500 p/t"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 | upgrading (building 2t)"
 						}
 					],
 					"class_level": 5,
@@ -68815,7 +68827,12 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
