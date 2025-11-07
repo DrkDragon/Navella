@@ -80,6 +80,7 @@
 		"F16-D2-1": [
 			"F16-B2-1"
 		],
+		"F23-C3-1": [],
 		"F6-C2-1": [
 			"F6-C4-1"
 		],
@@ -283,13 +284,16 @@
 			"Q9-A2-2",
 			"P9-C1-1"
 		],
+		"P15-D4-1": [],
 		"P17-A2-1": [
 			"N15-A3-1"
 		],
 		"P19-A1-1": [],
+		"Q16-C3-1": [],
 		"Q16-D3-1": [
 			"U15-D3-1"
 		],
+		"Q17-D3-1": [],
 		"Q21-D4-1": [],
 		"Q9-A2-1": [
 			"Q9-B2-1",
@@ -403,6 +407,7 @@
 		"X22-B2-2": [
 			"Y13-B3-1"
 		],
+		"X24-A1-1": [],
 		"X3-A4-1": [
 			"X2-B1-1"
 		],
@@ -4237,12 +4242,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.756862759590149
 			},
 			"coord_name": "X24-A1-1",
 			"name": "",
-			"notes": "",
+			"notes": "Yorin presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -4253,7 +4258,7 @@
 						"g": 0.557937383651733,
 						"r": 0.183914840221405
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
 					"points_per_turn": 450,
 					"size": 9,
 					"type": 1
@@ -4281,7 +4286,7 @@
 						"g": 0.0000024065375328064,
 						"r": 0.827995896339417
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
 					"points_per_turn": 200,
 					"size": 7,
 					"type": 1
@@ -66854,12 +66859,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.756862759590149
 			},
 			"coord_name": "Q17-D3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Yorin presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -66898,7 +66903,7 @@
 						"g": 0.509100198745728,
 						"r": 0.426956593990326
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard\n10 Yorin Soldiers\n10 Yorin Workers",
 					"points_per_turn": 200,
 					"size": 4,
 					"type": 1
@@ -77405,12 +77410,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.756862759590149
 			},
 			"coord_name": "Q16-C3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Yorin presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -77421,7 +77426,7 @@
 						"g": 0.559009790420532,
 						"r": 0.00000158831483076938
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
 					"points_per_turn": 50,
 					"size": 9,
 					"type": 1
@@ -88721,12 +88726,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.756862759590149
 			},
 			"coord_name": "P15-D4-1",
 			"name": "",
-			"notes": "",
+			"notes": "Yorin presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -88751,10 +88756,24 @@
 						"g": 0.539160370826721,
 						"r": 0.000000336915263687843
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
 					"points_per_turn": 500,
 					"size": 9,
-					"type": 2
+					"type": 1
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -88783,6 +88802,20 @@
 					"points_per_turn": 250,
 					"size": 5,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.421875,
+						"g": 0.421875,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 5,
+					"type": 5
 				}
 			]
 		},
@@ -90085,13 +90118,41 @@
 			},
 			"coord_name": "O14-C1-1",
 			"name": "Yo Momma",
-			"notes": "",
+			"notes": "Major Yorin presence detected.",
 			"planets": [
 				{
 					"buildings": [
 						{
 							"level": 4,
 							"type": "yorin super hive | siege attack: 100000, siege defense: 100000, health: 200000 | when hive dies all building rot away."
+						},
+						{
+							"level": 4,
+							"type": "yorin worker site | 1500 p/t x4= 6000 p/t"
+						},
+						{
+							"level": 4,
+							"type": "yorin super cargo | 0/96,000 poitns stored"
+						},
+						{
+							"level": 4,
+							"type": "yorin super cargo | 0/96,000 poitns stored"
+						},
+						{
+							"level": 4,
+							"type": "yorin anti orbital 3600 atack power: 8000 health: 8000"
+						},
+						{
+							"level": 4,
+							"type": "yorin anti orbital 3600 atack power: 8000 health: 8000"
+						},
+						{
+							"level": 4,
+							"type": "yorin anti orbital 3600 atack power: 8000 health: 8000"
+						},
+						{
+							"level": 4,
+							"type": "yorin anti orbital 3600 atack power: 8000 health: 8000"
 						},
 						{
 							"level": 4,
@@ -90149,8 +90210,8 @@
 						"g": 0.953125,
 						"r": 0.0
 					},
-					"notes": "Fleet orbiting | 59000 Atack, 211000 Defense, 212500 health\n  Yorin Queen x1\n  Royal Guard x10\n  Solider x50\n  Worker x100\n  Larvea x350\nAnti-Orbital Support | 43200 Attack, 96000 Defense, 96000 Health",
-					"points_per_turn": 1500,
+					"notes": "Fleet orbiting\n  Yorin Queen x1\n  Yorin Royal Guard x5\n  Yorin Worker x50\n  Yorin Larvea x350\n  Yorin Larvea x2100\nAnti-Orbital Support",
+					"points_per_turn": 6000,
 					"size": 40,
 					"type": 1
 				}
