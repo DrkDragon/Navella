@@ -118650,6 +118650,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo| building 1t | 0/2000"
 						}
 					],
 					"class_level": 10,
@@ -118659,13 +118663,18 @@
 						"g": 1.0,
 						"r": 0.1953125
 					},
-					"notes": "3x class 1 (300/1200 point cargo)",
+					"notes": "3x class 1 (100/1200 point cargo)",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -118686,7 +118695,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1: building 1 turns | "
+							"type": "research center 1: upgrading: | "
 						},
 						{
 							"level": 1,
@@ -118706,7 +118715,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -118734,7 +118748,12 @@
 					"type": 5
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
