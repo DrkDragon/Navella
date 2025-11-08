@@ -206355,7 +206355,7 @@
 					"buildings": [
 						{
 							"level": 1,
-							"type": "space colony station | upgrade: (building 2t) | def power: 500xtier attack power: 900xtier, cargo: 100xtier^2"
+							"type": "space colony station | upgrade: () | def power: 500xtier attack power: 900xtier, cargo: 100xtier^2"
 						}
 					],
 					"class_level": 6,
@@ -206365,7 +206365,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "Orbiting fleet\n 2x class 1 140/800 points stored",
+					"notes": "Orbiting fleet\n 2x class 1 40/800 points stored",
 					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
@@ -206375,6 +206375,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 9,
@@ -206423,7 +206427,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -206431,7 +206440,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "1 Fusion fuel",
+					"notes": "1 Neo-Helium",
 					"points_per_turn": 0,
 					"size": 1,
 					"type": 4
