@@ -9111,6 +9111,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 6,
@@ -9133,7 +9137,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | research center 2 (1 turns)"
+							"type": "research center | upgrade: (2t) | researching ftl 1 2t"
 						},
 						{
 							"level": 1,
@@ -9153,7 +9157,16 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -9218,7 +9231,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -9282,7 +9300,16 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -9319,7 +9346,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -9333,7 +9365,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
