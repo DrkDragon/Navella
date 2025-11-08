@@ -96090,7 +96090,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | researching: ftl 1 (2t)"
+							"type": "research center | upgrade: (not in progress) | researching: ftl 1 (1t)"
 						},
 						{
 							"level": 1,
@@ -96098,7 +96098,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrade: | 0/2000"
+							"type": "cargo | upgrade: | 100/2000"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading: (building 1t) | 0/2000"
 						}
 					],
 					"class_level": 9,
@@ -96179,7 +96183,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -96201,6 +96210,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 | upgrading: (building 2t)"
 						}
 					],
 					"class_level": 10,
@@ -96224,6 +96237,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 | upgrading: (building 2t) |"
 						}
 					],
 					"class_level": 8,
@@ -206424,6 +206441,14 @@
 						{
 							"level": 1,
 							"type": "space colony station | upgrade: () | def power: 500xtier attack power: 900xtier, cargo: 100xtier^2"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 | upgrading: (building 2t) |"
 						}
 					],
 					"class_level": 6,
@@ -206433,7 +206458,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "Orbiting fleet\n 2x class 1 40/800 points stored",
+					"notes": "Orbiting fleet\n 2x class 1 190/800 points stored",
 					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
