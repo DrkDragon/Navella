@@ -96008,6 +96008,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 6,
@@ -96049,7 +96053,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | "
+							"type": "research center | upgrade: (not in progress) | researching: ftl 1 (2t)"
 						},
 						{
 							"level": 1,
@@ -96057,7 +96061,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrade: | 150/2000"
+							"type": "cargo | upgrade: | 0/2000"
 						}
 					],
 					"class_level": 9,
@@ -96073,7 +96077,16 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -96106,7 +96119,16 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -175471,7 +175493,7 @@
 			},
 			"coord_name": "Y6-A3-1",
 			"name": "",
-			"notes": "in transit\n1990 class 1 90/400 (2t)",
+			"notes": "in transit\n1990 class 1 90/400 (1t)",
 			"planets": [
 				{
 					"buildings": [],
@@ -176219,7 +176241,7 @@
 			},
 			"coord_name": "X6-D3-1",
 			"name": "",
-			"notes": "In transit\nParking meter (3t)",
+			"notes": "In transit\nParking meter (2t)",
 			"planets": [
 				{
 					"buildings": [],
