@@ -177364,7 +177364,16 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -177407,11 +177416,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo"
+							"type": "cargo 150/2000"
 						},
 						{
 							"level": 1,
-							"type": "cargo"
+							"type": "cargo 0/2000"
 						}
 					],
 					"class_level": 10,
