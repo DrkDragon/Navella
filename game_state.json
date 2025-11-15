@@ -61260,7 +61260,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -61676,7 +61685,7 @@
 						"g": 0.0390625,
 						"r": 0.0
 					},
-					"notes": "orbiting fleet\nclass 1 400/400 cargo\nClass 1 400/400 cargo",
+					"notes": "",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
@@ -65900,7 +65909,16 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -65932,6 +65950,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 10,
@@ -65941,13 +65963,22 @@
 						"g": 0.505364060401917,
 						"r": 0.438623398542404
 					},
-					"notes": "",
+					"notes": "class 1 140/400 cargo\nClass 1 0/400 cargo\nClass 1 0/400 cargo\nClass 1 0/400 cargo",
 					"points_per_turn": 500,
 					"size": 6,
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -175466,7 +175497,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -175494,7 +175530,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -175521,7 +175562,7 @@
 						"g": 0.536512553691864,
 						"r": 0.321361243724823
 					},
-					"notes": "",
+					"notes": "class 1 cargo 200/800 points\nclass 1 cargo 0/800 points",
 					"points_per_turn": 100,
 					"size": 1,
 					"type": 3
@@ -178596,7 +178637,7 @@
 						"g": 0.316606074571609,
 						"r": 0.417378157377243
 					},
-					"notes": "in orbit\nClass 1 400/400 cargo\nClass 1 400/400 points",
+					"notes": "in orbit\nClass 1 210/400 points",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
@@ -179693,6 +179734,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 9,
@@ -179702,7 +179747,7 @@
 						"g": 0.368505388498306,
 						"r": 0.695424973964691
 					},
-					"notes": "",
+					"notes": "class 1 cargo 0/400 points.",
 					"points_per_turn": 450,
 					"size": 8,
 					"type": 2
@@ -179712,6 +179757,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 10,
@@ -179741,7 +179790,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -179749,7 +179803,7 @@
 						"g": 0.0000976091614575125,
 						"r": 0.793049991130829
 					},
-					"notes": "",
+					"notes": "class 1 cargo 0/400 points.\n",
 					"points_per_turn": 400,
 					"size": 5,
 					"type": 1
