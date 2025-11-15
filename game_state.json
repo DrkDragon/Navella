@@ -119850,7 +119850,7 @@
 			},
 			"coord_name": "D12-C4-1",
 			"name": "",
-			"notes": "Shipyard 1\n1x yaga 1T\n450 p/t",
+			"notes": "Shipyard 1\n\n600 p/t",
 			"planets": [
 				{
 					"buildings": [],
@@ -119868,14 +119868,14 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 1,
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
 						"b": 0.3046875,
 						"g": 0.9239501953125,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "ad 2k",
 					"points_per_turn": 0,
 					"size": 2,
 					"type": 4
@@ -119933,7 +119933,7 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 1,
+					"class_level": 0,
 					"color": {
 						"a": 1.0,
 						"b": 0.576568603515625,
@@ -122411,7 +122411,7 @@
 			},
 			"coord_name": "D11-B1-1",
 			"name": "",
-			"notes": "Shipyard 1 \nTrade Station 2 (4T)\n\n400 p/t",
+			"notes": "Shipyard 1 \nTrade Station 2 (4T)\n\n700 p/t",
 			"planets": [
 				{
 					"buildings": [],
@@ -123018,7 +123018,7 @@
 			},
 			"coord_name": "E11-A1-1",
 			"name": "",
-			"notes": "shipyard 1\n1x yaga 1T\n\nTrade Station 1\n\n950 p/t",
+			"notes": "shipyard 1\n\nTrade Station 1\n\n950 p/t",
 			"planets": [
 				{
 					"buildings": [
@@ -123038,7 +123038,7 @@
 						"g": 0.402545928955078,
 						"r": 0.128230720758438
 					},
-					"notes": "in orbit\n4 Yaga Class 3",
+					"notes": "in orbit\n7 Yaga Class 3\n1 Yaga Class 3 30/300",
 					"points_per_turn": 350,
 					"size": 4,
 					"type": 0
@@ -123146,7 +123146,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -123160,7 +123169,12 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -123174,7 +123188,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -126253,10 +126276,19 @@
 			},
 			"coord_name": "E11-C3-1",
 			"name": "",
-			"notes": "shipyard 1\n1x Yaga 1T\nTrade Station 2\n\n800 p/t",
+			"notes": "shipyard 1\nTrade Station 2\n\n1050 p/t",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -126293,7 +126325,12 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -126909,10 +126946,19 @@
 			},
 			"coord_name": "E11-A3-1",
 			"name": "Vocell",
-			"notes": "shipyard 2\n1x yaga 1T\n\n800 p/t",
+			"notes": "shipyard 2\n\n1200 p/t",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -128833,7 +128879,7 @@
 			},
 			"coord_name": "F11-B4-1",
 			"name": "",
-			"notes": "shipyard 1 \n250 p/t",
+			"notes": "shipyard 1 \n550 p/t",
 			"planets": [
 				{
 					"buildings": [
@@ -128853,7 +128899,7 @@
 						"g": 0.449388027191162,
 						"r": 0.573029100894928
 					},
-					"notes": "in orbit\nclass 1 cargo 70/400",
+					"notes": "in orbit\nclass 1 cargo 20/400",
 					"points_per_turn": 250,
 					"size": 7,
 					"type": 3
@@ -188614,11 +188660,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 0/2000"
+							"type": "cargo | building 1t | 600/2000"
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | upgrading (building 2t) |"
+							"type": "research center 1 | upgrading (building 1t) |"
 						}
 					],
 					"class_level": 9,
@@ -188648,7 +188694,16 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -188666,6 +188721,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 4,
@@ -191022,11 +191081,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 0/2000 points"
+							"type": "cargo | building 1t | 2000/2000 points"
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 0/2000 points"
+							"type": "cargo | building 1t | 10/2000 points"
 						}
 					],
 					"class_level": 7,
@@ -191036,7 +191095,7 @@
 						"g": 0.0,
 						"r": 0.87173467874527
 					},
-					"notes": "Fleet in orbit.\nClass 1 cargo 400/400 points",
+					"notes": "Fleet in orbit.\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points",
 					"points_per_turn": 350,
 					"size": 6,
 					"type": 2
@@ -191099,7 +191158,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | building 2t"
+							"type": "research center 1 | building 1t"
 						}
 					],
 					"class_level": 8,
@@ -191328,7 +191387,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center"
+							"type": "research center| researching 4t"
 						},
 						{
 							"level": 1,
@@ -191350,13 +191409,18 @@
 						"g": 0.367054641246796,
 						"r": 0.299474656581879
 					},
-					"notes": "Fleet in orbit\nClass 1 cargo 156/400 points",
+					"notes": "Fleet in orbit\nClass 1 cargo 300/400 points",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -191393,7 +191457,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -206448,7 +206517,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | upgrading: (building 2t) |"
+							"type": "research center 1 | upgrading: (building 1t) |"
 						}
 					],
 					"class_level": 6,
@@ -206458,7 +206527,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "Orbiting fleet\n 2x class 1 190/800 points stored",
+					"notes": "Orbiting fleet\n 2x class 1 440/800 points stored",
 					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
@@ -206506,7 +206575,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "space colony station | upgrade: (building 4t) | def power: 500xtier attack power: 900xtier, cargo: 100xtier^2"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
