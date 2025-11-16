@@ -9205,6 +9205,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 2,
+							"type": "research center 2 | upgrading (building 4t) | researching:"
 						}
 					],
 					"class_level": 5,
