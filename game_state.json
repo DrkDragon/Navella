@@ -266,6 +266,9 @@
 		"N6-B3-1": [
 			"N6-C3-1"
 		],
+		"O12-B3-1": [
+			"N12-D4-1"
+		],
 		"O13-A3-1": [
 			"O13-A3-2",
 			"O13-B3-1"
@@ -425,6 +428,9 @@
 		],
 		"Y4-A1-1": [
 			"Y4-A1-2"
+		],
+		"Y6-A3-1": [
+			"Y6-A3-2"
 		]
 	},
 	"systems": [
@@ -2297,7 +2303,16 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -3204,7 +3219,7 @@
 						"g": 0.0000630512804491445,
 						"r": 0.800829708576202
 					},
-					"notes": "in orbit\nClass 1 cargo 0/400",
+					"notes": "",
 					"points_per_turn": 450,
 					"size": 10,
 					"type": 3
@@ -3242,6 +3257,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 8,
@@ -3588,7 +3607,7 @@
 						"g": 0.0,
 						"r": 0.861331164836884
 					},
-					"notes": "",
+					"notes": "Class 1 Cargo 110/400\nClass 1 Cargo 0/400\nClass 1 Cargo 0/400",
 					"points_per_turn": 400,
 					"size": 1,
 					"type": 0
@@ -3626,6 +3645,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 7,
@@ -6021,11 +6044,19 @@
 						},
 						{
 							"level": 1,
-							"type": "research center"
+							"type": "research center | trade station 1 2t"
 						},
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo | building 1 t | 0/2000"
+						},
+						{
+							"level": 1,
+							"type": "cargo | building 1 t | 0/2000"
 						}
 					],
 					"class_level": 10,
@@ -6035,7 +6066,7 @@
 						"g": 0.0,
 						"r": 0.847345530986786
 					},
-					"notes": "in Orbit\nClass 1 Cargo 300/400\nClass 1 Cargo 110/400\nClass 1 Cargo 0/400",
+					"notes": "in Orbit\nClass 1 Cargo 0/400",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
@@ -9093,7 +9124,16 @@
 			"notes": "Ship Yard 1",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
@@ -9137,7 +9177,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (2t) | researching ftl 1 2t"
+							"type": "research center | upgrade: (1t) | researching ftl 1 1t"
 						},
 						{
 							"level": 1,
@@ -9203,7 +9243,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -9217,7 +9262,16 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -9235,6 +9289,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 4,
@@ -9350,6 +9408,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 4,
@@ -9407,7 +9469,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
@@ -68976,11 +69047,15 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | researching anti orbital cannon 1t"
+							"type": "research center 1 | "
 						},
 						{
 							"level": 1,
-							"type": "fleet academy | upgrading (build time 3t)"
+							"type": "fleet academy | upgrading (build time 2t)"
+						},
+						{
+							"level": 1,
+							"type": "cargo | building 1t 0/2000 points"
 						},
 						{
 							"level": 1,
@@ -68988,7 +69063,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t 0/2000 points"
+							"type": "anti orbital 1 | building 1t| def power: 800*tier atack power: 1200*tier health: 1000*tier "
+						},
+						{
+							"level": 1,
+							"type": "anti orbital 1 | building 1t| def power: 800*tier atack power: 1200*tier health: 1000*tier "
 						}
 					],
 					"class_level": 10,
@@ -68998,7 +69077,7 @@
 						"g": 0.984710693359375,
 						"r": 0.34765625
 					},
-					"notes": "Orbiting fleet\n2 class 1 cargo 140/800 points",
+					"notes": "Orbiting fleet\n2 class 1 cargo 590/800 points",
 					"points_per_turn": 1500,
 					"size": 10,
 					"type": 2
@@ -116280,6 +116359,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.76171875,
+						"g": 0.923675537109375,
+						"r": 1.0
+					},
+					"notes": "AD 15k",
+					"points_per_turn": 0,
+					"size": 15,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -116291,6 +116384,20 @@
 					"points_per_turn": 200,
 					"size": 2,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 paradox",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -116308,6 +116415,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "1 paradox",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -116322,6 +116443,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 250,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -116333,6 +116468,34 @@
 					"points_per_turn": 450,
 					"size": 9,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.90625,
+						"r": 0.0
+					},
+					"notes": "AD 16k",
+					"points_per_turn": 0,
+					"size": 16,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 3,
+					"type": 4
 				}
 			]
 		},
@@ -118813,7 +118976,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1"
+							"type": "research center 1 | upgrade: ( ) | researching: ftl 1 (1t)"
 						},
 						{
 							"level": 1,
@@ -118821,7 +118984,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo| building 1t | 0/2000"
+							"type": "cargo | 1310/2000"
 						}
 					],
 					"class_level": 10,
@@ -118831,7 +118994,7 @@
 						"g": 1.0,
 						"r": 0.1953125
 					},
-					"notes": "3x class 1 (100/1200 point cargo)",
+					"notes": "5x class 1 cargo (0/2000 point cargo)",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 1
@@ -118863,7 +119026,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1: upgrading: | "
+							"type": "research center 1: upgrading: building 1t | "
 						},
 						{
 							"level": 1,
@@ -175634,7 +175797,7 @@
 			},
 			"coord_name": "Y6-A3-1",
 			"name": "",
-			"notes": "in transit\n1990 class 1 90/400 (1t)",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -175645,7 +175808,7 @@
 						"g": 0.341059744358063,
 						"r": 0.368356645107269
 					},
-					"notes": "",
+					"notes": "1990 class 1 90/400 ()",
 					"points_per_turn": 450,
 					"size": 5,
 					"type": 3
@@ -175691,6 +175854,20 @@
 					"points_per_turn": 50,
 					"size": 7,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.5859375,
+						"g": 0.5859375,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -175753,6 +175930,20 @@
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
 						"b": 0.256818741559982,
 						"g": 0.561529219150543,
 						"r": 0.000000649765127036517
@@ -175761,6 +175952,20 @@
 					"points_per_turn": 50,
 					"size": 6,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 0,
+					"size": 6,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -176382,7 +176587,7 @@
 			},
 			"coord_name": "X6-D3-1",
 			"name": "",
-			"notes": "In transit\nParking meter (2t)",
+			"notes": "In transit\nParking meter (1t)",
 			"planets": [
 				{
 					"buildings": [],
