@@ -372,6 +372,13 @@
 			"T4-D1-1"
 		],
 		"W11-C3-1": [],
+		"W17-B4-1": [
+			"W17-B4-2",
+			"W16-B2-1"
+		],
+		"W17-C4-1": [
+			"W17-B4-1"
+		],
 		"W2-B1-1": [
 			"X2-B3-1"
 		],
@@ -67773,8 +67780,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.976470589637756,
+				"r": 0.0
 			},
 			"coord_name": "W17-C4-1",
 			"name": "",
@@ -67828,6 +67835,20 @@
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 50,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
 						"g": 0.37916424870491,
 						"r": 0.257284969091415
 					},
@@ -67849,6 +67870,20 @@
 					"points_per_turn": 200,
 					"size": 4,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 50,
+					"size": 1,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -67908,6 +67943,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 2,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -67919,6 +67968,20 @@
 					"points_per_turn": 200,
 					"size": 8,
 					"type": 0
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 3,
+					"type": 4
 				}
 			]
 		},
@@ -69182,7 +69245,7 @@
 			},
 			"coord_name": "W17-B4-1",
 			"name": "Raptor Start",
-			"notes": "Shipyard 1\n\n2,450 p/t",
+			"notes": "Shipyard 1\n",
 			"planets": [
 				{
 					"buildings": [
@@ -69211,11 +69274,15 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | "
+							"type": "research center 1 | research: class 3 warship 2t"
 						},
 						{
 							"level": 1,
-							"type": "fleet academy | upgrading (build time 2t)"
+							"type": "fleet academy | upgrading (build time 1t)"
+						},
+						{
+							"level": 1,
+							"type": "cargo | building 1t 100/2000 points"
 						},
 						{
 							"level": 1,
@@ -69223,15 +69290,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t 0/2000 points"
+							"type": "anti orbital 1 | building | def power: 800*tier atack power: 1200*tier health: 1000*tier "
 						},
 						{
 							"level": 1,
-							"type": "anti orbital 1 | building 1t| def power: 800*tier atack power: 1200*tier health: 1000*tier "
-						},
-						{
-							"level": 1,
-							"type": "anti orbital 1 | building 1t| def power: 800*tier atack power: 1200*tier health: 1000*tier "
+							"type": "anti orbital 1 | building | def power: 800*tier atack power: 1200*tier health: 1000*tier "
 						}
 					],
 					"class_level": 10,
@@ -69241,7 +69304,7 @@
 						"g": 0.984710693359375,
 						"r": 0.34765625
 					},
-					"notes": "Orbiting fleet\n2 class 1 cargo 590/800 points",
+					"notes": "Orbiting fleet\nclass 1 cargo 400/400 points",
 					"points_per_turn": 1500,
 					"size": 10,
 					"type": 2
@@ -69287,7 +69350,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | upgrading (building 2t)"
+							"type": "research center 1 | upgrading | research ftl 1 (2t)"
 						}
 					],
 					"class_level": 5,
@@ -70068,8 +70131,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.976470589637756,
+				"r": 0.0
 			},
 			"coord_name": "W17-B4-2",
 			"name": "",
@@ -70090,7 +70153,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "vonuman cylinder type 1 | siege attack: 90 siege defense: 100 health: 200 | mine 2x. 450*2=900"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -70098,7 +70166,7 @@
 						"g": 0.0,
 						"r": 0.850745737552643
 					},
-					"notes": "",
+					"notes": "class 1 cargo /400points\nclass 1 cargo /400points",
 					"points_per_turn": 450,
 					"size": 6,
 					"type": 1
@@ -70161,6 +70229,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 50,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -70189,6 +70271,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "Anti matter",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -70214,6 +70310,34 @@
 					"points_per_turn": 100,
 					"size": 3,
 					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 200,
+					"size": 4,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 0.50390625,
+						"g": 0.50390625,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 6,
+					"type": 5
 				}
 			]
 		},
@@ -73568,8 +73692,8 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "W16-B2-1",
@@ -73592,17 +73716,73 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.1051025390625,
+						"g": 0.9609375,
+						"r": 0.332433700561523
+					},
+					"notes": "AD 17k",
+					"points_per_turn": 0,
+					"size": 17,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 0.30859375,
+						"g": 0.30859375,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 250,
+					"size": 6,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 0.0,
+						"r": 1.0
+					},
+					"notes": "AD 11k",
+					"points_per_turn": 0,
+					"size": 11,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 0.51953125,
+						"g": 0.51953125,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 250,
+					"size": 10,
+					"type": 5
+				},
+				{
+					"buildings": [],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
-						"b": 0.500655829906464,
-						"g": 0.539784789085388,
-						"r": 0.000000962614990385191
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
 					},
 					"notes": "",
 					"points_per_turn": 100,
-					"size": 8,
-					"type": 3
+					"size": 1,
+					"type": 4
 				}
 			]
 		},
