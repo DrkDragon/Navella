@@ -8975,7 +8975,7 @@
 			},
 			"coord_name": "T24-C4-1",
 			"name": "",
-			"notes": "hostile creature 1k 1k 1k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -9126,7 +9126,7 @@
 						"g": 0.0,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "hostile creature 1k 1k 1k",
 					"points_per_turn": 0,
 					"size": 6,
 					"type": 5
@@ -55514,7 +55514,7 @@
 			},
 			"coord_name": "M18-C3-1",
 			"name": "",
-			"notes": "hostile creature 10k 2k 4k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -58786,11 +58786,11 @@
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
-						"b": 0.877628266811371,
-						"g": 0.00184437038842589,
-						"r": 0.701709568500519
+						"b": 0.0,
+						"g": 0.37058824300766,
+						"r": 0.878431379795074
 					},
-					"notes": "",
+					"notes": "hostile creature 10k 2k 4k",
 					"points_per_turn": 450,
 					"size": 9,
 					"type": 3
@@ -62282,7 +62282,7 @@
 			},
 			"coord_name": "J17-B1-1",
 			"name": "",
-			"notes": "Hostile creature 1k 1k 1k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -62335,7 +62335,7 @@
 						"g": 0.0,
 						"r": 0.869458734989166
 					},
-					"notes": "",
+					"notes": "Hostile creature 1k 1k 1k",
 					"points_per_turn": 300,
 					"size": 3,
 					"type": 1
@@ -73740,7 +73740,7 @@
 						"g": 0.30859375,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Centravetra 1k atk, 1k def, 1k hp",
 					"points_per_turn": 250,
 					"size": 6,
 					"type": 5
@@ -73768,7 +73768,7 @@
 						"g": 0.51953125,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Centravetra 3k atk, 2k def, 5k hp",
 					"points_per_turn": 250,
 					"size": 10,
 					"type": 5
@@ -80089,7 +80089,7 @@
 			},
 			"coord_name": "N16-B4-1",
 			"name": "",
-			"notes": "Centravetra atk 6k, def 3k, hp 4k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -80142,7 +80142,7 @@
 						"g": 0.43359375,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Centravetra atk 6k, def 3k, hp 4k",
 					"points_per_turn": 0,
 					"size": 5,
 					"type": 5
@@ -94645,7 +94645,7 @@
 			},
 			"coord_name": "M14-A3-1",
 			"name": "",
-			"notes": "Hostile creature 1k 1k 2k\nHostile creature 3k 2k 6k\nHostile creature 5k 2k 1k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -94684,7 +94684,7 @@
 						"g": 0.2421875,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Hostile creature 1k 1k 2k\n",
 					"points_per_turn": 200,
 					"size": 10,
 					"type": 5
@@ -94712,7 +94712,7 @@
 						"g": 0.2421875,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Hostile creature 3k 2k 6k\n",
 					"points_per_turn": 150,
 					"size": 10,
 					"type": 5
@@ -94754,7 +94754,7 @@
 						"g": 0.2578125,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Hostile creature 5k 2k 1k",
 					"points_per_turn": 0,
 					"size": 5,
 					"type": 5
@@ -117274,7 +117274,7 @@
 			},
 			"coord_name": "E12-A3-2",
 			"name": "",
-			"notes": "Hostile Creature atk6k rep2k hp1k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -117355,7 +117355,7 @@
 						"g": 0.515625,
 						"r": 1.0
 					},
-					"notes": "",
+					"notes": "Hostile Creature atk6k def2k hp1k",
 					"points_per_turn": 150,
 					"size": 8,
 					"type": 5
@@ -127012,7 +127012,7 @@
 			},
 			"coord_name": "X11-B3-1",
 			"name": "",
-			"notes": "Centravetra atk 6k, def 1k, hp 2k",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -127114,17 +127114,17 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 2,
+					"class_level": 1,
 					"color": {
 						"a": 1.0,
-						"b": 1.0,
-						"g": 0.333777964115143,
-						"r": 0.384196996688843
+						"b": 0.3515625,
+						"g": 0.3515625,
+						"r": 1.0
 					},
-					"notes": "",
-					"points_per_turn": 100,
+					"notes": "Centravetra atk 6k, def 1k, hp 2k",
+					"points_per_turn": 50,
 					"size": 9,
-					"type": 2
+					"type": 5
 				},
 				{
 					"buildings": [],
