@@ -9281,8 +9281,8 @@
 							"type": "city | upgrade: (not in progress) | siege attack: 9000, siege defense: 10000, health: 20000"
 						},
 						{
-							"level": 1,
-							"type": "research center | upgrade: (1t) | researching ftl 1 1t"
+							"level": 2,
+							"type": "research center 2 | upgrade:  | researching:"
 						},
 						{
 							"level": 1,
@@ -9313,7 +9313,7 @@
 						},
 						{
 							"level": 2,
-							"type": "research center 2 | upgrading (building 4t) | researching:"
+							"type": "research center 2 | upgrading (building 3t) | researching:"
 						}
 					],
 					"class_level": 5,
@@ -96547,7 +96547,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | researching: ftl 1 (1t)"
+							"type": "research center | upgrade: (not in progress) | researching: class 3 (1t)"
 						},
 						{
 							"level": 1,
@@ -96555,11 +96555,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrade: | 100/2000"
+							"type": "cargo | upgrade: | 2000/2000"
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrading: (building 1t) | 0/2000"
+							"type": "cargo | upgrading: | 1000/2000"
 						}
 					],
 					"class_level": 9,
@@ -96583,6 +96583,14 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading (building 1t) "
+						},
+						{
+							"level": 1,
+							"type": "research center | upgrading: (building 2t) |"
 						}
 					],
 					"class_level": 2,
@@ -96670,7 +96678,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | upgrading: (building 2t)"
+							"type": "research center 1 | upgrading: | research salvage 2t"
 						}
 					],
 					"class_level": 10,
@@ -96697,7 +96705,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | upgrading: (building 2t) |"
+							"type": "research center 1 | upgrading: |"
 						}
 					],
 					"class_level": 8,
@@ -207421,7 +207429,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | upgrade: (not in progress) | research: not in progress"
+							"type": "research center | upgrade: (not in progress) | research: research center 2 (2t)"
 						},
 						{
 							"level": 1,
@@ -207462,7 +207470,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "Orbiting fleet\n 2x class 1 440/800 points stored",
+					"notes": "Orbiting fleet\n 4x class 1 1330/1600 points stored",
 					"points_per_turn": 300,
 					"size": 6,
 					"type": 4
