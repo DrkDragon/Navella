@@ -116620,9 +116620,9 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"b": 0.20392157137394,
+				"g": 0.803921580314636,
+				"r": 0.47843137383461
 			},
 			"coord_name": "O12-B3-1",
 			"name": "",
@@ -116637,7 +116637,7 @@
 						"g": 0.33560386300087,
 						"r": 0.380336046218872
 					},
-					"notes": "",
+					"notes": "5x class 1 cargo (0/2000 point cargo)\n1x class 1 0/100 point cargo",
 					"points_per_turn": 200,
 					"size": 4,
 					"type": 2
@@ -116657,7 +116657,16 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -116699,7 +116708,16 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 8,
 					"color": {
 						"a": 1.0,
@@ -116839,7 +116857,16 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -119371,9 +119398,9 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 0.537254929542542,
-				"g": 0.941176474094391,
-				"r": 0.721568644046783
+				"b": 0.204315185546875,
+				"g": 0.8046875,
+				"r": 0.47827136516571
 			},
 			"coord_name": "N12-D4-1",
 			"name": "mozo start",
@@ -119414,7 +119441,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | 1310/2000"
+							"type": "cargo | 760/2000"
 						}
 					],
 					"class_level": 10,
@@ -119424,7 +119451,7 @@
 						"g": 1.0,
 						"r": 0.1953125
 					},
-					"notes": "5x class 1 cargo (0/2000 point cargo)",
+					"notes": "",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 1
