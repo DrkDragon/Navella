@@ -85,3 +85,7 @@ func _on_multiply_pressed() -> void:
 func _on_divide_pressed() -> void:
 	var line: LineEdit = value.get_line_edit()
 	line.text = "(" + line.text + ")/"
+
+func _on_decimal_pressed() -> void:
+	var line: LineEdit = value.get_line_edit()
+	line.text = line.text + "."
