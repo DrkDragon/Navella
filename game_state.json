@@ -4386,7 +4386,7 @@
 						"g": 0.557937383651733,
 						"r": 0.183914840221405
 					},
-					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 900/5000 Cargo",
 					"points_per_turn": 450,
 					"size": 9,
 					"type": 1
@@ -4414,7 +4414,7 @@
 						"g": 0.0000024065375328064,
 						"r": 0.827995896339417
 					},
-					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 400/5000 Cargo",
 					"points_per_turn": 200,
 					"size": 7,
 					"type": 1
@@ -67216,7 +67216,7 @@
 						"g": 0.509100198745728,
 						"r": 0.426956593990326
 					},
-					"notes": "1 Yorin Royal Guard\n10 Yorin Soldiers\n10 Yorin Workers",
+					"notes": "1 Yorin Royal Guard\n10 Yorin Soldiers\n10 Yorin Workers 200/5000 points",
 					"points_per_turn": 200,
 					"size": 4,
 					"type": 1
@@ -77920,7 +77920,7 @@
 						"g": 0.559009790420532,
 						"r": 0.00000158831483076938
 					},
-					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 0/5000 Cargo",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 100/5000 Cargo",
 					"points_per_turn": 50,
 					"size": 9,
 					"type": 1
@@ -78004,7 +78004,7 @@
 						"g": 0.463725328445435,
 						"r": 0.0
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 300/5000 Cargo",
 					"points_per_turn": 300,
 					"size": 4,
 					"type": 1
@@ -78046,7 +78046,7 @@
 						"g": 0.323983013629913,
 						"r": 0.742772459983826
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 400/5000 Cargo",
 					"points_per_turn": 200,
 					"size": 3,
 					"type": 1
@@ -117450,12 +117450,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.756862759590149
 			},
 			"coord_name": "W12-B3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Yorin Presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -117466,7 +117466,7 @@
 						"g": 0.000136113769258372,
 						"r": 0.786290049552917
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 350/5000 Cargo",
 					"points_per_turn": 350,
 					"size": 9,
 					"type": 1
@@ -177098,12 +177098,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.756862759590149
 			},
 			"coord_name": "X6-D3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Yorin presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -177170,7 +177170,7 @@
 						"g": 0.0000842288136482239,
 						"r": 0.795452296733856
 					},
-					"notes": "",
+					"notes": "1 Yorin Royal Guard 0/100 Cargo\n10 Yorin Soldiers 0/1500 Cargo\n10 Yorin Workers 250/5000 Cargo",
 					"points_per_turn": 250,
 					"size": 10,
 					"type": 1
@@ -180460,7 +180460,7 @@
 						"g": 0.00175080425105989,
 						"r": 0.704388797283173
 					},
-					"notes": "",
+					"notes": "Nanobee x1000  1k atk, 1k def, 1k hp",
 					"points_per_turn": 400,
 					"size": 1,
 					"type": 0
@@ -187042,12 +187042,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.250980406999588,
+				"r": 0.0
 			},
 			"coord_name": "V5-C2-1",
 			"name": "",
-			"notes": "",
+			"notes": "Cobal hive presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -187114,7 +187114,7 @@
 						"g": 0.000000048130750940345,
 						"r": 0.8492351770401
 					},
-					"notes": "",
+					"notes": "Nanobee x1000  1k atk, 1k def, 1k hp",
 					"points_per_turn": 450,
 					"size": 10,
 					"type": 0
@@ -193460,12 +193460,12 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.250980406999588,
+				"r": 0.0
 			},
 			"coord_name": "X4-A1-1",
 			"name": "",
-			"notes": "",
+			"notes": "Cobal hive presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -193574,7 +193574,7 @@
 						"g": 0.512538433074951,
 						"r": 0.00000134766105475137
 					},
-					"notes": "",
+					"notes": "Nanobee x1000  1k atk, 1k def, 1k hp",
 					"points_per_turn": 500,
 					"size": 4,
 					"type": 0
@@ -197891,7 +197891,7 @@
 			},
 			"coord_name": "W4-C4-1",
 			"name": "The Hive",
-			"notes": "",
+			"notes": "Cobal hive presence",
 			"planets": [
 				{
 					"buildings": [],
@@ -197902,7 +197902,7 @@
 						"g": 0.1796875,
 						"r": 0.0
 					},
-					"notes": "AD 3k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"notes": "AD 3k\n\nOrbiting Fleet \n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
 					"points_per_turn": 0,
 					"size": 3,
 					"type": 4
@@ -197916,7 +197916,7 @@
 						"g": 0.554128646850586,
 						"r": 0.8828125
 					},
-					"notes": "AD 4k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"notes": "AD 4k\n\nOrbiting Fleet \n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
 					"points_per_turn": 0,
 					"size": 4,
 					"type": 4
@@ -197939,7 +197939,7 @@
 						"g": 0.2734375,
 						"r": 0.0
 					},
-					"notes": "Orbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40\n\nLanded Fleet Atk:56100,\tDef:57100,\tHP:61100\n  Queen x1\n  Driller Drone x20\n  Collector Bee x40\n  Nanobee x10",
+					"notes": "Orbiting Fleet\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40\n\nLanded Fleet\n  Queen x1\n  Driller Drone x30\n  Collector Bee x30 Turning into drillers +3T\n  Collector Bee x15 Turning into drillers +4T\n  Collector Bee x5\n  Nanobee x1000  1k atk, 1k def, 1k hp Turning into Collectors 1T\n  Nanobee x1000  1k atk, 1k def, 1k hp  Turning into Collectors 2T\n",
 					"points_per_turn": 1000,
 					"size": 4,
 					"type": 0
@@ -197953,7 +197953,7 @@
 						"g": 0.6953125,
 						"r": 0.021728515625
 					},
-					"notes": "AD 3k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"notes": "AD 3k\n\nOrbiting Fleet\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
 					"points_per_turn": 0,
 					"size": 3,
 					"type": 4
@@ -197967,7 +197967,7 @@
 						"g": 0.0,
 						"r": 1.0
 					},
-					"notes": "AD 3k\n\nOrbiting Fleet Atk:27900,\tDef:27900,\tHP;28900\n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
+					"notes": "AD 3k\n\nOrbiting Fleet \n  Driller Drone x10\n  Collector Bee x25\n  Nanobee x40",
 					"points_per_turn": 0,
 					"size": 3,
 					"type": 4
