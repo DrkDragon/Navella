@@ -371,6 +371,9 @@
 		"U5-A3-1": [
 			"T4-D1-1"
 		],
+		"V10-D2-1": [
+			"V10-D2-2"
+		],
 		"W11-C3-1": [],
 		"W17-B4-1": [
 			"W17-B4-2",
@@ -391,6 +394,9 @@
 		],
 		"X1-A2-1": [
 			"W1-C2-1"
+		],
+		"X10-A1-1": [
+			"V10-D2-2"
 		],
 		"X11-A4-1": [
 			"X11-A4-2",
@@ -114706,8 +114712,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.0,
+				"r": 0.968627452850342
 			},
 			"coord_name": "X12-B2-1",
 			"name": "",
@@ -114742,7 +114748,16 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 7,
 					"color": {
 						"a": 1.0,
@@ -114750,7 +114765,7 @@
 						"g": 0.548637628555298,
 						"r": 0.0
 					},
-					"notes": "Re'Pi Class 2 80+2500(Attacker7)=2580ATK 50+1500(Reinforcer3)1550DEF 40HP",
+					"notes": "  1 Re'Pi Class 2 |ftl 1, 80+2500(Attacker7)=2660ATK150+3000(Reinforcer3)3150DEF 80HP /150 cargo\n  1 Te'ro Class 2 |ftl 1, 80 ATK, 150 DEF+3000(Reinforcer3)3150DEF, 40 Health /350 Cargo",
 					"points_per_turn": 350,
 					"size": 6,
 					"type": 3
@@ -125126,10 +125141,19 @@
 			},
 			"coord_name": "X11-B2-1",
 			"name": "Varill Start",
-			"notes": "Shipyard 1\n\nThe system looks like a giant artificial world. each world is a pedal of a flower station ",
+			"notes": "Shipyard 1\n building\n\nThe system looks like a giant artificial world. each world is a pedal of a flower station ",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -125149,12 +125173,16 @@
 							"type": "city | updrade: (not in progess) siege attack: 9000, siege defense: 10000, siege health: 20000"
 						},
 						{
-							"level": 1,
-							"type": "research center | upgrade: (2t) | researching: shield 1 4t"
+							"level": 2,
+							"type": "research center 2 | upgrade:  | researching: stealth 1 (1t)"
 						},
 						{
 							"level": 1,
 							"type": "mine | upgrade: (not in progress) | 450 points per turn"
+						},
+						{
+							"level": 1,
+							"type": "fleet academy | building: 4t | training commander (na building)"
 						}
 					],
 					"class_level": 9,
@@ -125164,7 +125192,7 @@
 						"g": 1.0,
 						"r": 1.0
 					},
-					"notes": "class 9  (18 build slots)\nDormant Class 11, tier 6, precursor  ship 20 W, 20 U, 20 D, 6 F | 2 super weapon, 1 precursor cargo tier 1 (1000*tier cargo) 46/1000",
+					"notes": "class 9  (18 build slots)\nDormant Class 11, tier 6, precursor  ship 20 W, 20 U, 20 D, 6 F | 2 super weapon, 1 precursor cargo tier 1 (1000*tier cargo) 412/1000\n",
 					"points_per_turn": 450,
 					"size": 4,
 					"type": 0
@@ -125184,7 +125212,16 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -125202,6 +125239,10 @@
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 7,
@@ -125240,7 +125281,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -125249,7 +125295,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 100,
 					"size": 3,
 					"type": 4
 				},
@@ -133959,7 +134005,7 @@
 						"g": 0.472287118434906,
 						"r": 0.525320768356323
 					},
-					"notes": "Class 1 scout. 0/100 points",
+					"notes": "",
 					"points_per_turn": 250,
 					"size": 7,
 					"type": 1
@@ -135679,8 +135725,8 @@
 		{
 			"color": {
 				"a": 1.0,
-				"b": 1.0,
-				"g": 1.0,
+				"b": 0.0,
+				"g": 0.0,
 				"r": 1.0
 			},
 			"coord_name": "V10-D2-1",
@@ -135745,6 +135791,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.94140625,
+						"g": 0.0,
+						"r": 0.82373046875
+					},
+					"notes": "1 Manzite",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -135756,6 +135816,20 @@
 					"points_per_turn": 100,
 					"size": 10,
 					"type": 2
+				},
+				{
+					"buildings": [],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 0.4765625,
+						"g": 0.4765625,
+						"r": 1.0
+					},
+					"notes": "Centravetra atk 2k, def 3k, hp 9k",
+					"points_per_turn": 300,
+					"size": 6,
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -136968,6 +137042,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 0,
+					"color": {
+						"a": 1.0,
+						"b": 0.87890625,
+						"g": 0.0,
+						"r": 0.665579259395599
+					},
+					"notes": "1 manzite",
+					"points_per_turn": 0,
+					"size": 1,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -136993,6 +137081,20 @@
 					"points_per_turn": 250,
 					"size": 3,
 					"type": 3
+				},
+				{
+					"buildings": [],
+					"class_level": 5,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 200,
+					"size": 3,
+					"type": 4
 				},
 				{
 					"buildings": [],
