@@ -176466,7 +176466,7 @@
 						"g": 0.341059744358063,
 						"r": 0.368356645107269
 					},
-					"notes": "1990 class 1 90/400 ()",
+					"notes": "",
 					"points_per_turn": 450,
 					"size": 5,
 					"type": 3
@@ -176523,7 +176523,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 150,
 					"size": 6,
 					"type": 5
 				},
@@ -176570,7 +176570,12 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						}
+					],
 					"class_level": 10,
 					"color": {
 						"a": 1.0,
@@ -176593,7 +176598,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 50,
 					"size": 4,
 					"type": 4
 				},
@@ -176621,7 +176626,7 @@
 						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 0,
+					"points_per_turn": 150,
 					"size": 6,
 					"type": 4
 				},
@@ -177270,7 +177275,7 @@
 						"g": 0.0000066420434450265,
 						"r": 0.825001180171967
 					},
-					"notes": "Parking meter 0/400 points",
+					"notes": "",
 					"points_per_turn": 500,
 					"size": 3,
 					"type": 3
@@ -178359,7 +178364,12 @@
 			"notes": "Ship Yard 1",
 			"planets": [
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -178381,6 +178391,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 | building 1t."
 						}
 					],
 					"class_level": 4,
@@ -178396,7 +178410,12 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -178416,8 +178435,8 @@
 							"type": "city | upgrade: (not in progress) | siege attack: 9000, siege defense: 10000, health: 20000"
 						},
 						{
-							"level": 1,
-							"type": "research center | upgrade: (not in progress) |"
+							"level": 2,
+							"type": "research center 2 | upgrade: (2t) |"
 						},
 						{
 							"level": 1,
@@ -178425,7 +178444,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo 150/2000"
+							"type": "cargo 0/2000"
 						},
 						{
 							"level": 1,
@@ -178439,7 +178458,7 @@
 						"g": 0.69803923368454,
 						"r": 0.0
 					},
-					"notes": "",
+					"notes": "Parking meter 0/400 points",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 2
