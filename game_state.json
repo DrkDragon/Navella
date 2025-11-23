@@ -116517,7 +116517,7 @@
 			},
 			"coord_name": "D12-D3-1",
 			"name": "",
-			"notes": "Ship missing",
+			"notes": "",
 			"planets": [
 				{
 					"buildings": [],
@@ -116534,7 +116534,12 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
