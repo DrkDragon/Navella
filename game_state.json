@@ -67392,7 +67392,7 @@
 			},
 			"coord_name": "W17-D3-2",
 			"name": "",
-			"notes": "",
+			"notes": "in transit\nClass 1 Scout (3t)",
 			"planets": [
 				{
 					"buildings": [],
@@ -67895,7 +67895,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "vonuman cylinder"
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -67903,8 +67908,8 @@
 						"g": 0.470436275005341,
 						"r": 0.529484033584595
 					},
-					"notes": "",
-					"points_per_turn": 450,
+					"notes": "class 1 cargo 100/400points\nclass 1 cargo /400points",
+					"points_per_turn": 900,
 					"size": 6,
 					"type": 0
 				},
@@ -67923,7 +67928,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "vonuman cylinder "
+						}
+					],
 					"class_level": 9,
 					"color": {
 						"a": 1.0,
@@ -67932,7 +67942,7 @@
 						"r": 0.0
 					},
 					"notes": "",
-					"points_per_turn": 450,
+					"points_per_turn": 900,
 					"size": 7,
 					"type": 2
 				},
@@ -69283,15 +69293,15 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | research: class 3 warship 2t"
+							"type": "research center 1 | research:  medium weapon"
 						},
 						{
 							"level": 1,
-							"type": "fleet academy | upgrading (build time 1t)"
+							"type": "fleet academy | upgrading: | training: (4t)"
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t 100/2000 points"
+							"type": "cargo | building 1t 1650/2000 points"
 						},
 						{
 							"level": 1,
@@ -69359,7 +69369,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center 1 | upgrading | research ftl 1 (2t)"
+							"type": "research center 1 | upgrading | research: ftl detection"
 						}
 					],
 					"class_level": 5,
@@ -70279,7 +70289,12 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 0,
 					"color": {
 						"a": 1.0,
@@ -70321,7 +70336,12 @@
 					"type": 2
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -70335,7 +70355,12 @@
 					"type": 4
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -71649,7 +71674,7 @@
 			},
 			"coord_name": "V16-D1-1",
 			"name": "",
-			"notes": "",
+			"notes": "in transit\nClass 1 Scout (3t)",
 			"planets": [
 				{
 					"buildings": [],
