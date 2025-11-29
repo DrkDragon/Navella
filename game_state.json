@@ -9309,6 +9309,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 (2 turns)"
 						}
 					],
 					"class_level": 1,
@@ -9354,7 +9358,7 @@
 						},
 						{
 							"level": 2,
-							"type": "research center 2 | upgrade:  | researching:"
+							"type": "research center 2 | upgrade:  | researching: research center 3 (2 turns)"
 						},
 						{
 							"level": 1,
@@ -9385,7 +9389,7 @@
 						},
 						{
 							"level": 2,
-							"type": "research center 2 | upgrading (building 3t) | researching:"
+							"type": "research center 2 | upgrading (building 1t) | researching:"
 						}
 					],
 					"class_level": 5,
@@ -9409,6 +9413,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 (1 turns)"
 						}
 					],
 					"class_level": 7,
@@ -9451,6 +9459,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 (1 turns)"
 						}
 					],
 					"class_level": 3,
@@ -9474,6 +9486,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 (1 turns)"
 						}
 					],
 					"class_level": 4,
@@ -9501,6 +9517,10 @@
 						{
 							"level": 1,
 							"type": "cargo | 50/2000"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 (1 turns)"
 						}
 					],
 					"class_level": 10,
@@ -9524,6 +9544,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "research center 1 (1 turns)"
 						}
 					],
 					"class_level": 9,
