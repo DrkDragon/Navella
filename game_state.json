@@ -346,11 +346,17 @@
 			"T24-D3-1",
 			"T24-C4-1"
 		],
+		"T25-C4-1": [
+			"T25-D4-1"
+		],
 		"T25-D4-1": [
 			"T24-C3-1"
 		],
 		"T4-D1-1": [
 			"T4-D1-2"
+		],
+		"T4-D1-2": [
+			"T4-B2-1"
 		],
 		"U14-A3-1": [
 			"U14-A3-2"
@@ -1459,6 +1465,20 @@
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 6,
+					"type": 4
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
 						"b": 0.194694727659225,
 						"g": 0.564418196678162,
 						"r": 0.0
@@ -1519,7 +1539,7 @@
 						"g": 0.398992896080017,
 						"r": 0.655865490436554
 					},
-					"notes": "",
+					"notes": "in orbit\nClass 1 cargo 100/400",
 					"points_per_turn": 400,
 					"size": 4,
 					"type": 3
@@ -1554,6 +1574,20 @@
 				},
 				{
 					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 150,
+					"size": 3,
+					"type": 4
+				},
+				{
+					"buildings": [],
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
@@ -1565,6 +1599,25 @@
 					"points_per_turn": 50,
 					"size": 4,
 					"type": 2
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 300,
+					"size": 2,
+					"type": 4
 				},
 				{
 					"buildings": [],
@@ -2300,7 +2353,7 @@
 			},
 			"coord_name": "T25-D4-1",
 			"name": "",
-			"notes": "",
+			"notes": "Ship yard 1 building 2t\nTrade post 1 building 3t",
 			"planets": [
 				{
 					"buildings": [],
@@ -2348,7 +2401,7 @@
 						"g": 0.5266472697258,
 						"r": 0.00000250279913416307
 					},
-					"notes": "in orbit\nClass 1 cargo 0/400",
+					"notes": "",
 					"points_per_turn": 500,
 					"size": 4,
 					"type": 2
@@ -3282,7 +3335,7 @@
 			},
 			"coord_name": "T24-C1-1",
 			"name": "",
-			"notes": "",
+			"notes": "Ship yard 1 building 2t\n",
 			"planets": [
 				{
 					"buildings": [
@@ -3293,6 +3346,10 @@
 						{
 							"level": 1,
 							"type": "mine"
+						},
+						{
+							"level": 1,
+							"type": "cargo | upgrading (building 1t) | 0/2000 "
 						}
 					],
 					"class_level": 9,
@@ -3702,13 +3759,17 @@
 			},
 			"coord_name": "U24-A1-1",
 			"name": "",
-			"notes": "",
+			"notes": "Ship yard 1 building 2t\nTrade post 1 building 3t",
 			"planets": [
 				{
 					"buildings": [
 						{
 							"level": 1,
 							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
 						}
 					],
 					"class_level": 8,
@@ -3738,7 +3799,12 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 6,
 					"color": {
 						"a": 1.0,
@@ -6145,7 +6211,7 @@
 			},
 			"coord_name": "T24-C3-1",
 			"name": "Velzel",
-			"notes": "Ship yard 1",
+			"notes": "Ship yard 1\nTrade station 1 building (3t)",
 			"planets": [
 				{
 					"buildings": [
@@ -6155,7 +6221,7 @@
 						},
 						{
 							"level": 1,
-							"type": "research center | trade station 1 1t"
+							"type": "research center | "
 						},
 						{
 							"level": 1,
@@ -6163,11 +6229,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1 t | 0/2000"
+							"type": "cargo | 200/2000"
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1 t | 0/2000"
+							"type": "cargo  | 0/2000"
 						}
 					],
 					"class_level": 10,
@@ -6177,7 +6243,7 @@
 						"g": 0.0,
 						"r": 0.847345530986786
 					},
-					"notes": "in Orbit\nClass 1 Cargo 400/400\nClass 1 Cargo 300/400\nClass 1 Cargo 300/400",
+					"notes": "in Orbit\nClass 1 Cargo 400/400\nClass 1 Cargo 400/400\nClass 1 Cargo 400/400",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
@@ -61506,7 +61572,16 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -61854,7 +61929,7 @@
 						},
 						{
 							"level": 1,
-							"type": "outpost"
+							"type": "research center | trade post 1 (1t)"
 						},
 						{
 							"level": 1,
@@ -61862,7 +61937,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrading: | 0/2000 points"
+							"type": "cargo | upgrading: | 800/2000 points"
 						},
 						{
 							"level": 1,
@@ -64564,7 +64639,7 @@
 						"g": 0.519192576408386,
 						"r": 0.0000011551380794117
 					},
-					"notes": "",
+					"notes": "C1C 50/400",
 					"points_per_turn": 500,
 					"size": 8,
 					"type": 2
@@ -66120,7 +66195,7 @@
 			},
 			"coord_name": "K17-B3-1",
 			"name": "",
-			"notes": "",
+			"notes": "Shipyard 1(2t)",
 			"planets": [
 				{
 					"buildings": [
@@ -66200,7 +66275,7 @@
 						"g": 0.505364060401917,
 						"r": 0.438623398542404
 					},
-					"notes": "class 1 90/400 cargo",
+					"notes": "class 1 390/400 cargo",
 					"points_per_turn": 500,
 					"size": 6,
 					"type": 1
@@ -75244,20 +75319,11 @@
 			},
 			"coord_name": "M16-A2-1",
 			"name": "",
-			"notes": "Shipyard 4\n2 class 1b\nTrade Station 4",
+			"notes": "",
 			"planets": [
 				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "output"
-						},
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 8,
+					"buildings": [],
+					"class_level": 4,
 					"color": {
 						"a": 1.0,
 						"b": 0.0,
@@ -75265,74 +75331,51 @@
 						"r": 0.784160733222961
 					},
 					"notes": "",
-					"points_per_turn": 400,
+					"points_per_turn": 200,
 					"size": 6,
-					"type": 2
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "output"
-						},
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 9,
-					"color": {
-						"a": 1.0,
-						"b": 0.000000288784519852925,
-						"g": 0.403020322322845,
-						"r": 0.650121867656708
-					},
-					"notes": "",
-					"points_per_turn": 450,
-					"size": 6,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 5,
-					"color": {
-						"a": 1.0,
-						"b": 1.0,
-						"g": 0.364516884088516,
-						"r": 0.307296514511108
-					},
-					"notes": "",
-					"points_per_turn": 250,
-					"size": 9,
-					"type": 3
-				},
-				{
-					"buildings": [],
-					"class_level": 7,
-					"color": {
-						"a": 1.0,
-						"b": 0.611391246318817,
-						"g": 0.523104786872864,
-						"r": 0.0
-					},
-					"notes": "",
-					"points_per_turn": 350,
-					"size": 2,
-					"type": 1
+					"type": 5
 				},
 				{
 					"buildings": [],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
-						"b": 0.619358360767365,
-						"g": 0.52170741558075,
-						"r": 0.0
+						"b": 0.3125,
+						"g": 0.3125,
+						"r": 1.0
 					},
 					"notes": "",
 					"points_per_turn": 200,
-					"size": 4,
-					"type": 3
+					"size": 6,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 0.305882334709167,
+						"g": 0.305882334709167,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
+					"size": 9,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 3,
+					"color": {
+						"a": 1.0,
+						"b": 0.0,
+						"g": 0.0,
+						"r": 0.61176472902298
+					},
+					"notes": "",
+					"points_per_turn": 150,
+					"size": 2,
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -75340,13 +75383,13 @@
 					"color": {
 						"a": 1.0,
 						"b": 0.0,
-						"g": 0.409134209156036,
-						"r": 0.64114636182785
+						"g": 0.0,
+						"r": 0.619607865810394
 					},
 					"notes": "",
 					"points_per_turn": 100,
-					"size": 5,
-					"type": 3
+					"size": 4,
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -75354,73 +75397,69 @@
 					"color": {
 						"a": 1.0,
 						"b": 0.0,
-						"g": 0.415819376707077,
-						"r": 0.630961120128632
+						"g": 0.0,
+						"r": 0.639215707778931
+					},
+					"notes": "",
+					"points_per_turn": 50,
+					"size": 5,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.171661376953125,
+						"g": 0.171661376953125,
+						"r": 0.9765625
 					},
 					"notes": "",
 					"points_per_turn": 50,
 					"size": 3,
-					"type": 3
+					"type": 5
 				},
 				{
 					"buildings": [],
-					"class_level": 2,
-					"color": {
-						"a": 1.0,
-						"b": 0.00000019252300376138,
-						"g": 0.505562901496887,
-						"r": 0.438014417886734
-					},
-					"notes": "",
-					"points_per_turn": 100,
-					"size": 3,
-					"type": 0
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "output"
-						},
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
-					"class_level": 9,
-					"color": {
-						"a": 1.0,
-						"b": 0.819778203964233,
-						"g": 0.000974936468992382,
-						"r": 0.729808151721954
-					},
-					"notes": "",
-					"points_per_turn": 450,
-					"size": 1,
-					"type": 2
-				},
-				{
-					"buildings": [
-						{
-							"level": 1,
-							"type": "outpost"
-						},
-						{
-							"level": 1,
-							"type": "mine"
-						}
-					],
 					"class_level": 1,
 					"color": {
 						"a": 1.0,
-						"b": 0.95779687166214,
-						"g": 0.429036974906921,
-						"r": 0.0
+						"b": 0.0,
+						"g": 0.0,
+						"r": 0.505882382392883
+					},
+					"notes": "",
+					"points_per_turn": 50,
+					"size": 3,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 4,
+					"color": {
+						"a": 1.0,
+						"b": 0.24609375,
+						"g": 0.24609375,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 200,
+					"size": 1,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 1,
+					"color": {
+						"a": 1.0,
+						"b": 0.29296875,
+						"g": 0.29296875,
+						"r": 1.0
 					},
 					"notes": "",
 					"points_per_turn": 50,
 					"size": 8,
-					"type": 2
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -75447,40 +75486,40 @@
 							"type": "mine"
 						}
 					],
-					"class_level": 10,
-					"color": {
-						"a": 1.0,
-						"b": 0.80970686674118,
-						"g": 0.000865198380779475,
-						"r": 0.734326004981995
-					},
-					"notes": "",
-					"points_per_turn": 500,
-					"size": 3,
-					"type": 2
-				},
-				{
-					"buildings": [],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
-						"b": 0.264942198991776,
-						"g": 0.561081767082214,
-						"r": 0.00000141985719892546
+						"b": 0.26171875,
+						"g": 0.26171875,
+						"r": 1.0
 					},
 					"notes": "",
 					"points_per_turn": 250,
+					"size": 3,
+					"type": 5
+				},
+				{
+					"buildings": [],
+					"class_level": 2,
+					"color": {
+						"a": 1.0,
+						"b": 0.203125,
+						"g": 0.203125,
+						"r": 1.0
+					},
+					"notes": "",
+					"points_per_turn": 100,
 					"size": 9,
-					"type": 3
+					"type": 5
 				},
 				{
 					"buildings": [],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
-						"b": 0.36328125,
-						"g": 0.36328125,
-						"r": 1.0
+						"b": 0.206222534179688,
+						"g": 0.206222534179688,
+						"r": 0.99609375
 					},
 					"notes": "",
 					"points_per_turn": 250,
@@ -75498,31 +75537,31 @@
 							"type": "mine"
 						}
 					],
-					"class_level": 7,
+					"class_level": 3,
 					"color": {
 						"a": 1.0,
-						"b": 1.0,
-						"g": 0.392334431409836,
-						"r": 0.197260737419128
+						"b": 0.196078419685364,
+						"g": 0.196078419685364,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 350,
+					"points_per_turn": 150,
 					"size": 8,
-					"type": 1
+					"type": 5
 				},
 				{
 					"buildings": [],
-					"class_level": 5,
+					"class_level": 2,
 					"color": {
 						"a": 1.0,
-						"b": 0.46452921628952,
-						"g": 0.0,
-						"r": 0.838412940502167
+						"b": 0.2421875,
+						"g": 0.2421875,
+						"r": 1.0
 					},
 					"notes": "",
-					"points_per_turn": 250,
+					"points_per_turn": 100,
 					"size": 10,
-					"type": 3
+					"type": 5
 				},
 				{
 					"buildings": [],
@@ -176403,7 +176442,7 @@
 						"g": 0.536512553691864,
 						"r": 0.321361243724823
 					},
-					"notes": "class 1 cargo 50/400 points",
+					"notes": "class 1 cargo 400/400 points",
 					"points_per_turn": 100,
 					"size": 1,
 					"type": 3
@@ -179516,7 +179555,7 @@
 			},
 			"coord_name": "F6-C4-1",
 			"name": "greza",
-			"notes": "Shipyard 1\nProducing 1 Yada 1T",
+			"notes": "Shipyard 1",
 			"planets": [
 				{
 					"buildings": [
@@ -179576,7 +179615,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | upgrading () | 418/2000 points"
+							"type": "cargo | upgrading () | 1068/2000 points"
 						}
 					],
 					"class_level": 10,
@@ -179586,7 +179625,7 @@
 						"g": 0.316606074571609,
 						"r": 0.417378157377243
 					},
-					"notes": "in orbit\nClass 1 400/400 points\nClass 1 100/400 points\nClass 1 0/400 points",
+					"notes": "in orbit\nClass 1 400/400 points\nClass 1 400/400 points\nClass 1 400/400 points\n1 Yada",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
@@ -180726,7 +180765,7 @@
 				},
 				{
 					"buildings": [],
-					"class_level": 4,
+					"class_level": 5,
 					"color": {
 						"a": 1.0,
 						"b": 1.0,
@@ -180752,7 +180791,7 @@
 						"g": 0.0000976091614575125,
 						"r": 0.793049991130829
 					},
-					"notes": "class 1 cargo 50/400 points.\n",
+					"notes": "class 1 cargo 350/400 points.\n",
 					"points_per_turn": 400,
 					"size": 5,
 					"type": 1
@@ -180781,7 +180820,16 @@
 					"type": 0
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 5,
 					"color": {
 						"a": 1.0,
@@ -185074,7 +185122,7 @@
 						"g": 0.0,
 						"r": 0.837683022022247
 					},
-					"notes": "class 1 cargo 400/400 points.",
+					"notes": "class 1 cargo 50/400 points.",
 					"points_per_turn": 500,
 					"size": 9,
 					"type": 3
@@ -185113,7 +185161,12 @@
 					"type": 5
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 4,
 					"color": {
 						"a": 1.0,
@@ -189742,11 +189795,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 600/2000"
+							"type": "cargo |1 600/2000"
 						},
 						{
-							"level": 1,
-							"type": "research center 1 | upgrading (building 1t) |"
+							"level": 2,
+							"type": "research center 2 | upgrading | research center 3 (3t)"
 						}
 					],
 					"class_level": 9,
@@ -189762,7 +189815,16 @@
 					"type": 3
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "outpost"
+						},
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 2,
 					"color": {
 						"a": 1.0,
@@ -189891,7 +189953,12 @@
 					"type": 1
 				},
 				{
-					"buildings": [],
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
 					"class_level": 3,
 					"color": {
 						"a": 1.0,
@@ -192186,11 +192253,11 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 2000/2000 points"
+							"type": "cargo | 2000/2000 points"
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 10/2000 points"
+							"type": "cargo | 2000/2000 points"
 						}
 					],
 					"class_level": 7,
@@ -192200,7 +192267,7 @@
 						"g": 0.0,
 						"r": 0.87173467874527
 					},
-					"notes": "Fleet in orbit.\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points",
+					"notes": "Fleet in orbit.\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points\nClass 1 cargo 400/400 points",
 					"points_per_turn": 350,
 					"size": 6,
 					"type": 2
@@ -192500,7 +192567,7 @@
 						},
 						{
 							"level": 1,
-							"type": "cargo | building 1t | 58/2000 points"
+							"type": "cargo | building 1t | 1508/2000 points"
 						},
 						{
 							"level": 1,
@@ -192514,7 +192581,7 @@
 						"g": 0.367054641246796,
 						"r": 0.299474656581879
 					},
-					"notes": "Fleet in orbit\nClass 1 cargo 300/400 points",
+					"notes": "",
 					"points_per_turn": 500,
 					"size": 10,
 					"type": 3
@@ -194439,8 +194506,8 @@
 			"color": {
 				"a": 1.0,
 				"b": 1.0,
-				"g": 1.0,
-				"r": 1.0
+				"g": 0.368627458810806,
+				"r": 0.949019610881805
 			},
 			"coord_name": "T4-B2-1",
 			"name": "",
@@ -194459,6 +194526,25 @@
 					"points_per_turn": 100,
 					"size": 7,
 					"type": 1
+				},
+				{
+					"buildings": [
+						{
+							"level": 1,
+							"type": "mine"
+						}
+					],
+					"class_level": 6,
+					"color": {
+						"a": 1.0,
+						"b": 1.0,
+						"g": 1.0,
+						"r": 1.0
+					},
+					"notes": "Fleet in orbit\nClass 1 cargo 100/400 points",
+					"points_per_turn": 300,
+					"size": 2,
+					"type": 4
 				},
 				{
 					"buildings": [],
